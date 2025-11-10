@@ -8,6 +8,25 @@
           "build/netstandard2.0/coverlet.collector.targets": {}
         }
       },
+      "Microsoft.AspNetCore.OpenApi/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.17"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.CodeCoverage/17.11.1": {
         "type": "package",
         "compile": {
@@ -39,6 +58,19 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
+        }
+      },
+      "Microsoft.OpenApi/1.6.17": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "Microsoft.TestPlatform.ObjectModel/17.11.1": {
@@ -411,6 +443,71 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Inno_Shop.ProductService.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Inno_Shop.ProductService.Application": "1.0.0",
+          "Inno_Shop.ProductService.Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.OpenApi": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Api.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Inno_Shop.ProductService.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Inno_Shop.ProductService.Domain": "1.0.0",
+          "Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Application.dll": {}
+        }
+      },
+      "Inno_Shop.ProductService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
+        }
+      },
+      "Inno_Shop.ProductService.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Inno_Shop.ProductService.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Infrastructure.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -483,6 +580,22 @@
         "coverlet-icon.png",
         "coverlet.collector.6.0.2.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.0": {
+      "sha512": "FqUK5j1EOPNuFT7IafltZQ3cakqhSwVzH5ZW1MhZDe4pPXs9sJ2M5jom1Omsu+mwF2tNKKlRAzLRHQTZzbd+6Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/17.11.1": {
@@ -571,6 +684,21 @@
         "lib/netcoreapp3.1/_._",
         "microsoft.net.test.sdk.17.11.1.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/1.6.17": {
+      "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.17.nupkg.sha512",
+        "microsoft.openapi.nuspec"
       ]
     },
     "Microsoft.TestPlatform.ObjectModel/17.11.1": {
@@ -932,10 +1060,36 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Inno_Shop.ProductService.Api/1.0.0": {
+      "type": "project",
+      "path": "../../src/ProductService/Api/ProductService.Api.csproj",
+      "msbuildProject": "../../src/ProductService/Api/ProductService.Api.csproj"
+    },
+    "Inno_Shop.ProductService.Application/1.0.0": {
+      "type": "project",
+      "path": "../../src/ProductService/Application/ProductService.Application.csproj",
+      "msbuildProject": "../../src/ProductService/Application/ProductService.Application.csproj"
+    },
+    "Inno_Shop.ProductService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../src/ProductService/Domain/ProductService.Domain.csproj",
+      "msbuildProject": "../../src/ProductService/Domain/ProductService.Domain.csproj"
+    },
+    "Inno_Shop.ProductService.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../src/ProductService/Infrastructure/ProductService.Infrastructure.csproj",
+      "msbuildProject": "../../src/ProductService/Infrastructure/ProductService.Infrastructure.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../../src/Shared/Shared.csproj",
+      "msbuildProject": "../../src/Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Inno_Shop.ProductService.Api >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -973,7 +1127,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Api\\ProductService.Api.csproj": {
+              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Api\\ProductService.Api.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

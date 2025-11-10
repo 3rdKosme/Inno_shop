@@ -4,10 +4,17 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<RootNamespace>Inno_Shop.ProductService.Api</RootNamespace>
+	<AssemblyName>Inno_Shop.ProductService.Api</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\ProductService.Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\ProductService.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

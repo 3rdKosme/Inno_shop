@@ -1,7 +1,72 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\userservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\userservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\valueobjects\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\valueobjects\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\userservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\userservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\userservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\userservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\userservice.api.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\userservice.api.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{620FBEC0-A05B-4337-9B66-631FB8999B4F}|src\\ProductService\\Api\\ProductService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\productservice\\api\\productservice.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{620FBEC0-A05B-4337-9B66-631FB8999B4F}|src\\ProductService\\Api\\ProductService.Api.csproj|solutionrelative:src\\productservice\\api\\productservice.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1677E82F-5710-4CFA-9237-58C693E17A20}|src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\productservice\\infrastructure\\productservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1677E82F-5710-4CFA-9237-58C693E17A20}|src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj|solutionrelative:src\\productservice\\infrastructure\\productservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61DACFF4-B7C4-4893-8270-595E7509A11C}|src\\ProductService\\Domain\\ProductService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\productservice\\domain\\productservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{61DACFF4-B7C4-4893-8270-595E7509A11C}|src\\ProductService\\Domain\\ProductService.Domain.csproj|solutionrelative:src\\productservice\\domain\\productservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1632560-406D-47D9-9E96-508BFFEF2E25}|src\\ProductService\\Application\\ProductService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\productservice\\application\\productservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C1632560-406D-47D9-9E96-508BFFEF2E25}|src\\ProductService\\Application\\ProductService.Application.csproj|solutionrelative:src\\productservice\\application\\productservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{229385D5-0BC6-4A56-B1F7-23FE37990727}|tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\tests\\productservice.integrationtests\\productservice.integrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{229385D5-0BC6-4A56-B1F7-23FE37990727}|tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj|solutionrelative:tests\\productservice.integrationtests\\productservice.integrationtests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +99,212 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T13:11:59.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:27:48.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:21:40.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T10:44:17.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Email.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T15:18:24.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T11:42:47.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserService.Domain.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\UserService.Domain.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
+              "RelativeToolTip": "src\\UserService\\Domain\\UserService.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-07T11:37:51.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Entities\\User.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T11:30:16.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.Infrastructure.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:15:35.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserService.Application.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\UserService.Application.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
+              "RelativeToolTip": "src\\UserService\\Application\\UserService.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:14:41.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductService.Infrastructure.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
+              "RelativeToolTip": "src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:14:03.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductService.Domain.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\ProductService\\Domain\\ProductService.Domain.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj",
+              "RelativeToolTip": "src\\ProductService\\Domain\\ProductService.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:13:35.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductService.Application.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj",
+              "RelativeDocumentMoniker": "src\\ProductService\\Application\\ProductService.Application.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj",
+              "RelativeToolTip": "src\\ProductService\\Application\\ProductService.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:12:47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductService.Api.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Api\\ProductService.Api.csproj",
+              "RelativeDocumentMoniker": "src\\ProductService\\Api\\ProductService.Api.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Api\\ProductService.Api.csproj",
+              "RelativeToolTip": "src\\ProductService\\Api\\ProductService.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:09:34.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserService.Api.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Api\\UserService.Api.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
+              "RelativeToolTip": "src\\UserService\\Api\\UserService.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:08:43.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductService.IntegrationTests.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
+              "RelativeDocumentMoniker": "tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
+              "RelativeToolTip": "tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:08:21.959Z",
+              "EditorCaption": ""
             }
           ]
         }

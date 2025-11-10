@@ -411,6 +411,40 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Inno_Shop.ProductService.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Inno_Shop.ProductService.Domain": "1.0.0",
+          "Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Application.dll": {}
+        }
+      },
+      "Inno_Shop.ProductService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -932,10 +966,27 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Inno_Shop.ProductService.Application/1.0.0": {
+      "type": "project",
+      "path": "../../src/ProductService/Application/ProductService.Application.csproj",
+      "msbuildProject": "../../src/ProductService/Application/ProductService.Application.csproj"
+    },
+    "Inno_Shop.ProductService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../src/ProductService/Domain/ProductService.Domain.csproj",
+      "msbuildProject": "../../src/ProductService/Domain/ProductService.Domain.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../../src/Shared/Shared.csproj",
+      "msbuildProject": "../../src/Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Inno_Shop.ProductService.Application >= 1.0.0",
+      "Inno_Shop.ProductService.Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
@@ -973,7 +1024,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj": {
+              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj"
+            },
+            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj": {
+              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

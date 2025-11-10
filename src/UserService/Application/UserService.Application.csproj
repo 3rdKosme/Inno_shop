@@ -1,9 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\UserService.Domain.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<RootNamespace>Inno_Shop.UserService.Application</RootNamespace>
+	<AssemblyName>Inno_Shop.UserService.Application</AssemblyName>
   </PropertyGroup>
 
 </Project>

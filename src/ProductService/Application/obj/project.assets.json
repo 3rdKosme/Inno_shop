@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Inno_Shop.ProductService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Inno_Shop.ProductService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/ProductService.Domain.csproj",
+      "msbuildProject": "../Domain/ProductService.Domain.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Shared.csproj",
+      "msbuildProject": "../../Shared/Shared.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Inno_Shop.ProductService.Domain >= 1.0.0",
+      "Shared >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\vmois\\.nuget\\packages\\": {},
@@ -15,7 +50,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj",
-      "projectName": "ProductService.Application",
+      "projectName": "Inno_Shop.ProductService.Application",
       "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj",
       "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
       "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\obj\\",
@@ -38,7 +73,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj": {
+              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj"
+            },
+            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj": {
+              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
