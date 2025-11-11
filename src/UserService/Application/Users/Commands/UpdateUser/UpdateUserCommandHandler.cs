@@ -8,7 +8,7 @@ using Inno_Shop.UserService.Application.Constants.ErrorMessages;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.AddUser;
 
-public class AddUserCommandHandler(IUserRepository userRepository, IEmailService emailService, IPasswordHasher passwordHasher) : IRequestHandler<AddUserCommand, int>
+public class UpdateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, IPasswordHasher passwordHasher) : IRequestHandler<AddUserCommand, int>
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IEmailService _emailService = emailService;

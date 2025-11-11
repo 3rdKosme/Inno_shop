@@ -11,6 +11,7 @@ public static class ErrorMessages
     public static string IncorrectEmailFormat = "";
     public static string PasswordIsRequired = "";
     public static string PasswordMustBeAtLeast = "";
+    public static string EmailAlreadyExists = "";
 
     public static string UserNotFound = "";
 }

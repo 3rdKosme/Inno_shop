@@ -29,8 +29,13 @@ public class UserRepository(AppDbContext context) : IUserRepository
         return await _context.SaveChangesAsync(cancellationToken) > 0;
     }
 
-    public async Task<bool> ExistsAsync(int id, CancellationToken cancellationToken = default)
+    public async Task<bool> ExistsByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         return await _context.Users.AnyAsync(u => u.Id == id, cancellationToken);
+    }
+
+    public async Task<bool> ExistsByEmailAsync(string email, CancellationToken cancellationToken = default)
+    {
+        return await _context.Users.AnyAsync(u => u.Email == email, cancellationToken);
     }
 }

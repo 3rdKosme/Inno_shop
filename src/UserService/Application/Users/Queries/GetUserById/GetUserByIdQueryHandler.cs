@@ -20,13 +20,13 @@ public class GetUserByIdQueryHandler(IUserRepository userRepository) : IRequestH
         }
 
         return new UserDto
-        {
-            Id = user.Id,
-            Name = user.Name,
-            Email = user.Email,
-            Role = user.UserRole.ToString(),
-            isEmailConfirmed = user.IsEmailConfirmed,
-            isActive = user.IsActive
-        };
+        (
+            Id: user.Id,
+            Name: user.Name,
+            Email: user.Email,
+            Role: user.UserRole.ToString(),
+            IsEmailConfirmed: user.IsEmailConfirmed,
+            IsActive: user.IsActive
+        );
     }
 }
