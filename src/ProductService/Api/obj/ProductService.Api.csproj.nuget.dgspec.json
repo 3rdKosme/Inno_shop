@@ -116,8 +116,8 @@
               "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj": {
                 "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj"
               },
-              "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj": {
-                "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj"
+              "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj": {
+                "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj"
               }
             }
           }
@@ -291,14 +291,14 @@
         }
       }
     },
-    "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj": {
+    "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj",
-        "projectName": "Shared",
-        "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj",
+        "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj",
+        "projectName": "Shared.Application",
+        "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj",
         "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
-        "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\obj\\",
+        "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

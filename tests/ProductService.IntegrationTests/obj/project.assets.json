@@ -467,7 +467,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Inno_Shop.ProductService.Domain": "1.0.0",
-          "Shared": "1.0.0"
+          "Shared.Application": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Inno_Shop.ProductService.Application.dll": {}
@@ -499,14 +499,14 @@
           "bin/placeholder/Inno_Shop.ProductService.Infrastructure.dll": {}
         }
       },
-      "Shared/1.0.0": {
+      "Shared.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/Shared.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/Shared.Application.dll": {}
         }
       }
     }
@@ -1081,10 +1081,10 @@
       "path": "../../src/ProductService/Infrastructure/ProductService.Infrastructure.csproj",
       "msbuildProject": "../../src/ProductService/Infrastructure/ProductService.Infrastructure.csproj"
     },
-    "Shared/1.0.0": {
+    "Shared.Application/1.0.0": {
       "type": "project",
-      "path": "../../src/Shared/Shared.csproj",
-      "msbuildProject": "../../src/Shared/Shared.csproj"
+      "path": "../../src/Shared/Application/Shared.Application.csproj",
+      "msbuildProject": "../../src/Shared/Application/Shared.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {

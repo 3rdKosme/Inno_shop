@@ -12,14 +12,14 @@
           "bin/placeholder/Inno_Shop.ProductService.Domain.dll": {}
         }
       },
-      "Shared/1.0.0": {
+      "Shared.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/Shared.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Shared.dll": {}
+          "bin/placeholder/Shared.Application.dll": {}
         }
       }
     }
@@ -30,16 +30,16 @@
       "path": "../Domain/ProductService.Domain.csproj",
       "msbuildProject": "../Domain/ProductService.Domain.csproj"
     },
-    "Shared/1.0.0": {
+    "Shared.Application/1.0.0": {
       "type": "project",
-      "path": "../../Shared/Shared.csproj",
-      "msbuildProject": "../../Shared/Shared.csproj"
+      "path": "../../Shared/Application/Shared.Application.csproj",
+      "msbuildProject": "../../Shared/Application/Shared.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Inno_Shop.ProductService.Domain >= 1.0.0",
-      "Shared >= 1.0.0"
+      "Shared.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -77,8 +77,8 @@
             "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj": {
               "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj"
             },
-            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj": {
-              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Shared.csproj"
+            "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj": {
+              "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Shared.Application.csproj"
             }
           }
         }
