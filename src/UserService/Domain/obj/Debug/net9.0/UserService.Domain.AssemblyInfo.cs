@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inno_Shop.UserService.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+740f9982fedfee9b279d3e6a0c296df8002ed8a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+290fca96db174f54a0ac8ee20278513128aba825")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inno_Shop.UserService.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inno_Shop.UserService.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

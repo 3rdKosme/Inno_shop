@@ -39,6 +39,30 @@ namespace Inno_Shop.UserService.Domain.Entities
                 CreatedAt = DateTime.Now,
             };
         }
+
+        public void ChangeName(string name)
+        {
+            Guard.AgainstNullOrWhiteSpace(name, nameof(name));
+            Name = name;
+        }
+
+        public void ChangeEmail(string email)
+        {
+            Guard.AgainstNullOrWhiteSpace(email, nameof(email));
+            Email = Email;
+            IsEmailConfirmed = false;
+        }
+
+        public void ChangePassword(string passwordHash)
+        {
+            Guard.AgainstNullOrWhiteSpace(passwordHash, nameof(passwordHash));
+            PasswordHash = passwordHash;
+        }
+
+        public void PromoteToAdmin()
+        {
+            UserRole = UserRole.Admin;
+        }
         public void ConfirmEmail()
         {
             if (IsEmailConfirmed) throw new EmailAlreadyConfirmedException();
@@ -47,9 +71,17 @@ namespace Inno_Shop.UserService.Domain.Entities
 
         public void Deactivate()
         {
+            if (!IsActive)
+            {
+                throw new AlreadyDeactivatedException();
+            }
             IsActive = false;
         }
         public void Activate() {
+            if (IsActive)
+            {
+                throw new AlreadyActivatedException();
+            }
             IsActive = true;
         }
     }

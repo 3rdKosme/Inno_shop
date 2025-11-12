@@ -8,14 +8,14 @@ public static class Guard
     {
         if (value == null) 
         {
-            throw new DomainException(parameterName);
+            throw new DomainArgumentNullException(parameterName);
         }
     }
     public static void AgainstNullOrWhiteSpace(string value, string parameterName)
     {
         if (string.IsNullOrWhiteSpace(value))
         {
-            throw new DomainException(parameterName);
+            throw new DomainArgumentNullException(parameterName);
         }
     }
 }

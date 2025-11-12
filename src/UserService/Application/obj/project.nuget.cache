@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "HavhQeZJZ7k=",
+  "dgSpecHash": "mcyeyLwa6pw=",
   "success": true,
   "projectFilePath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vmois\\.nuget\\packages\\fluentvalidation\\12.1.0\\fluentvalidation.12.1.0.nupkg.sha512",
+    "C:\\Users\\vmois\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.0\\fluentvalidation.dependencyinjectionextensions.12.1.0.nupkg.sha512",
     "C:\\Users\\vmois\\.nuget\\packages\\mediatr\\13.1.0\\mediatr.13.1.0.nupkg.sha512",
     "C:\\Users\\vmois\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\vmois\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",

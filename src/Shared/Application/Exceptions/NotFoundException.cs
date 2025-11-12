@@ -1,10 +1,7 @@
 namespace Inno_Shop.Shared.Application.Exceptions;
 
-public class NotFoundException : Exception
+public class NotFoundException(string message) : Exception(message)
 {
-    int statusCode;
-    public NotFoundException(string message) : base(message)
-    {
-        statusCode = 404;
-    }
+    public int statusCode = 404;
+    
 }

@@ -1,0 +1,14 @@
+using MediatR;
+using FluentValidation;
+using Inno_Shop.UserService.Application.DTOs;
+using Inno_Shop.UserService.Application.Constants.ErrorMessages;
+
+namespace Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
+
+public class ActivateUserCommandValidator : AbstractValidator<ActivateUserCommand>
+{
+    public ActivateUserCommandValidator()
+    {
+        RuleFor(x => x.Password).NotEmpty().WithMessage(ErrorMessages.PasswordIsRequired);
+    }
+}

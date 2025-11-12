@@ -1,41 +1,72 @@
+using FluentValidation;
+using Inno_Shop.Shared.Application.Exceptions;
+using Inno_Shop.UserService.Application;
+using Inno_Shop.UserService.Application.Exceptions;
+using Inno_Shop.UserService.Infrastructure;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+
+
+
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplicationServices();
+
+
+builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        options.SuppressModelStateInvalidFilter = true;
+    });
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseExceptionHandler("/error");
 
-var summaries = new[]
+app.Map("/error", (HttpContext context) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    var ex = context.Features.Get<IExceptionHandlerFeature>()?.Error;
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    return ex switch
+    {
+        ValidationException validationException => Results.Problem(
+            detail: validationException.Message,
+            statusCode: 400),
+
+        BusinessRuleValidationException businessRuleValudationException => Results.Problem(
+            detail: businessRuleValudationException.Message,
+            statusCode: businessRuleValudationException.statusCode
+            ),
+
+        EmailAlreadyExistsException emailAlreadyExistsException => Results.Problem(
+            detail: emailAlreadyExistsException.Message,
+            statusCode: emailAlreadyExistsException.statusCode),
+
+        InvalidCredentialsException invalidCredentialsException => Results.Problem(
+            detail: invalidCredentialsException.Message,
+            statusCode: invalidCredentialsException.statusCode),
+
+        NotFoundException notFoundException => Results.Problem(
+            detail: notFoundException.Message,
+            statusCode: notFoundException.statusCode),
+
+        _ => Results.Problem(
+            detail: "Internal server error",
+            statusCode: 500)
+    };
+});
+
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
