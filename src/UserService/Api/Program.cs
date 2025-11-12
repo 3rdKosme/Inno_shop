@@ -5,6 +5,7 @@ using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddApplicationServices();
 
 
 builder.Services.AddControllers()
+    .AddApplicationPart(Assembly.GetExecutingAssembly())
     .ConfigureApiBehaviorOptions(options =>
     {
         options.SuppressModelStateInvalidFilter = true;
@@ -67,6 +69,7 @@ app.Map("/error", (HttpContext context) =>
     };
 });
 
+app.UseHttpsRedirection();
 app.MapControllers();
-
 app.Run();
+

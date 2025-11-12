@@ -389,33 +389,6 @@
           }
         }
       },
-      "Inno_Shop.UserService.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "FluentValidation.DependencyInjectionExtensions": "12.1.0",
-          "Inno_Shop.UserService.Domain": "1.0.0",
-          "Shared.Application": "1.0.0",
-          "fluentvalidation": "12.1.0",
-          "mediatr": "13.1.0"
-        },
-        "compile": {
-          "bin/placeholder/Inno_Shop.UserService.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Inno_Shop.UserService.Application.dll": {}
-        }
-      },
-      "Inno_Shop.UserService.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Inno_Shop.UserService.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Inno_Shop.UserService.Domain.dll": {}
-        }
-      },
       "Shared.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -424,6 +397,33 @@
         },
         "runtime": {
           "bin/placeholder/Shared.Application.dll": {}
+        }
+      },
+      "UserService.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FluentValidation.DependencyInjectionExtensions": "12.1.0",
+          "Shared.Application": "1.0.0",
+          "UserService.Domain": "1.0.0",
+          "fluentvalidation": "12.1.0",
+          "mediatr": "13.1.0"
+        },
+        "compile": {
+          "bin/placeholder/UserService.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserService.Application.dll": {}
+        }
+      },
+      "UserService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/UserService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserService.Domain.dll": {}
         }
       }
     }
@@ -1001,28 +1001,28 @@
         "postgresql.png"
       ]
     },
-    "Inno_Shop.UserService.Application/1.0.0": {
-      "type": "project",
-      "path": "../Application/UserService.Application.csproj",
-      "msbuildProject": "../Application/UserService.Application.csproj"
-    },
-    "Inno_Shop.UserService.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Domain/UserService.Domain.csproj",
-      "msbuildProject": "../Domain/UserService.Domain.csproj"
-    },
     "Shared.Application/1.0.0": {
       "type": "project",
       "path": "../../Shared/Application/Shared.Application.csproj",
       "msbuildProject": "../../Shared/Application/Shared.Application.csproj"
+    },
+    "UserService.Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/UserService.Application.csproj",
+      "msbuildProject": "../Application/UserService.Application.csproj"
+    },
+    "UserService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/UserService.Domain.csproj",
+      "msbuildProject": "../Domain/UserService.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Inno_Shop.UserService.Application >= 1.0.0",
-      "Inno_Shop.UserService.Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.10",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
+      "UserService.Application >= 1.0.0",
+      "UserService.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {

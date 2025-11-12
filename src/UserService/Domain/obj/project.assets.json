@@ -15,7 +15,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
-      "projectName": "Inno_Shop.UserService.Domain",
+      "projectName": "UserService.Domain",
       "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
       "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
       "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\obj\\",

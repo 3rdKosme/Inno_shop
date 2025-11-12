@@ -64,25 +64,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.17"
-        },
-        "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Microsoft.EntityFrameworkCore/9.0.10": {
         "type": "package",
         "dependencies": {
@@ -517,41 +498,14 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "Inno_Shop.UserService.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "FluentValidation.DependencyInjectionExtensions": "12.1.0",
-          "Inno_Shop.UserService.Domain": "1.0.0",
-          "Shared.Application": "1.0.0",
-          "fluentvalidation": "12.1.0",
-          "mediatr": "13.1.0"
-        },
-        "compile": {
-          "bin/placeholder/Inno_Shop.UserService.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Inno_Shop.UserService.Application.dll": {}
-        }
-      },
-      "Inno_Shop.UserService.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Inno_Shop.UserService.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Inno_Shop.UserService.Domain.dll": {}
-        }
-      },
       "Inno_Shop.UserService.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Inno_Shop.UserService.Application": "1.0.0",
-          "Inno_Shop.UserService.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.10",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
+          "UserService.Application": "1.0.0",
+          "UserService.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Inno_Shop.UserService.Infrastructure.dll": {}
@@ -568,6 +522,33 @@
         },
         "runtime": {
           "bin/placeholder/Shared.Application.dll": {}
+        }
+      },
+      "UserService.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FluentValidation.DependencyInjectionExtensions": "12.1.0",
+          "Shared.Application": "1.0.0",
+          "UserService.Domain": "1.0.0",
+          "fluentvalidation": "12.1.0",
+          "mediatr": "13.1.0"
+        },
+        "compile": {
+          "bin/placeholder/UserService.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserService.Application.dll": {}
+        }
+      },
+      "UserService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/UserService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserService.Domain.dll": {}
         }
       }
     }
@@ -637,22 +618,6 @@
         "lib/netstandard2.0/MediatR.Contracts.xml",
         "mediatr.contracts.2.0.1.nupkg.sha512",
         "mediatr.contracts.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.OpenApi/9.0.0": {
-      "sha512": "FqUK5j1EOPNuFT7IafltZQ3cakqhSwVzH5ZW1MhZDe4pPXs9sJ2M5jom1Omsu+mwF2tNKKlRAzLRHQTZzbd+6Q==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.openapi/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
-        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore/9.0.10": {
@@ -1586,16 +1551,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Inno_Shop.UserService.Application/1.0.0": {
-      "type": "project",
-      "path": "../Application/UserService.Application.csproj",
-      "msbuildProject": "../Application/UserService.Application.csproj"
-    },
-    "Inno_Shop.UserService.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Domain/UserService.Domain.csproj",
-      "msbuildProject": "../Domain/UserService.Domain.csproj"
-    },
     "Inno_Shop.UserService.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../Infrastructure/UserService.Infrastructure.csproj",
@@ -1605,14 +1560,25 @@
       "type": "project",
       "path": "../../Shared/Application/Shared.Application.csproj",
       "msbuildProject": "../../Shared/Application/Shared.Application.csproj"
+    },
+    "UserService.Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/UserService.Application.csproj",
+      "msbuildProject": "../Application/UserService.Application.csproj"
+    },
+    "UserService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/UserService.Domain.csproj",
+      "msbuildProject": "../Domain/UserService.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Inno_Shop.UserService.Application >= 1.0.0",
       "Inno_Shop.UserService.Infrastructure >= 1.0.0",
-      "Microsoft.AspNetCore.OpenApi >= 9.0.0",
-      "SwashBuckle.AspNetCore >= 10.0.0"
+      "MediatR >= 13.1.0",
+      "MediatR.Contracts >= 2.0.1",
+      "SwashBuckle.AspNetCore >= 10.0.0",
+      "UserService.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1623,7 +1589,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
-      "projectName": "Inno_Shop.UserService.Api",
+      "projectName": "UserService.Api",
       "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
       "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
       "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\obj\\",
@@ -1672,9 +1638,13 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": {
+          "MediatR": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[13.1.0, )"
+          },
+          "MediatR.Contracts": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "SwashBuckle.AspNetCore": {
             "target": "Package",

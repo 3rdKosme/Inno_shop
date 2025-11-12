@@ -22,7 +22,7 @@ public class UserController(IMediator mediator) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddUser(AddUserRequest request)
+    public async Task<IActionResult> AddUser([FromBody] AddUserRequest request)
     {
         var command = new AddUserCommand(
                 request.Name,
@@ -36,7 +36,7 @@ public class UserController(IMediator mediator) : ControllerBase
     }
 
     [HttpPut("{id:int}")]
-    public async Task<ActionResult> UpdateUser(int id, UpdateUserRequest request)
+    public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserRequest request)
     {
         var command = new UpdateUserCommand(
                 Id: id,
@@ -52,7 +52,7 @@ public class UserController(IMediator mediator) : ControllerBase
     }
 
     [HttpDelete("{id:int}")]
-    public async Task<ActionResult> DeactivateUser(int id, DeactivateUserRequest request)
+    public async Task<ActionResult> DeactivateUser(int id, [FromBody] DeactivateUserRequest request)
     {
         var command = new DeactivateUserCommand(
                 id,
@@ -65,7 +65,7 @@ public class UserController(IMediator mediator) : ControllerBase
     }
 
     [HttpPost("{id:int}")]
-    public async Task<ActionResult> ActivateUser(int id, ActivateUserRequest request)
+    public async Task<ActionResult> ActivateUser(int id, [FromBody] ActivateUserRequest request)
     {
         var command = new ActivateUserCommand(
                 id,

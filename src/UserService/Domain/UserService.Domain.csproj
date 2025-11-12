@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<RootNamespace>Inno_Shop.UserService.Domain</RootNamespace>
-	<AssemblyName>Inno_Shop.UserService.Domain</AssemblyName>
+	
   </PropertyGroup>
 
 </Project>

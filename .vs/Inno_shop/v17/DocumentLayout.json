@@ -3,12 +3,96 @@
   "WorkspaceRootPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\userservice.api.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\userservice.api.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\applicationserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\applicationserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\assemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\assemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\userservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\userservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\userservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\userservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\userservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\userservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\deactivateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\deactivateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\activateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\activateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\constants\\errormessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\constants\\errormessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,32 +103,12 @@
       "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\applicationserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\applicationserviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0673D15-5F0D-4927-AC76-846E893E4CDE}|src\\Shared\\Application\\Shared.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\shared\\application\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0673D15-5F0D-4927-AC76-846E893E4CDE}|src\\Shared\\Application\\Shared.Application.csproj|solutionrelative:src\\shared\\application\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\services\\paaswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\services\\paaswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\users\\commands\\activateuser\\activateusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -73,10 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\exceptions\\emailalreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\exceptions\\emailalreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\common\\guard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,20 +171,8 @@
       "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\users\\commands\\deactivateuser\\deactivateusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\deactivateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\deactivateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\activateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\activateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\adduserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\adduserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\dtos\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\dtos\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\users\\commands\\updateuser\\updateusercommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,10 +207,6 @@
       "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\valueobjects\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\valueobjects\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -171,20 +215,8 @@
       "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\constants\\errormessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\constants\\errormessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\users\\commands\\adduser\\addusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\users\\commands\\adduser\\addusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\abstractions\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\abstractions\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1632560-406D-47D9-9E96-508BFFEF2E25}|src\\ProductService\\Application\\ProductService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\productservice\\application\\productservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -207,22 +239,6 @@
       "RelativeMoniker": "D:0:0:{1677E82F-5710-4CFA-9237-58C693E17A20}|src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj|solutionrelative:src\\productservice\\infrastructure\\productservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\application\\userservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6AA6BDDD-495A-4B1A-BBB4-A57A6537CABE}|src\\UserService\\Application\\UserService.Application.csproj|solutionrelative:src\\userservice\\application\\userservice.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\domain\\userservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F349EC7D-FA73-4D71-993B-FFDCC45CC73C}|src\\UserService\\Domain\\UserService.Domain.csproj|solutionrelative:src\\userservice\\domain\\userservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\infrastructure\\userservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4CF89A3D-155E-4888-9AE5-EB6ECC018358}|src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj|solutionrelative:src\\userservice\\infrastructure\\userservice.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\userservice\\api\\userservice.api.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{6041DA57-FD10-46F6-A262-EB077BE5EB12}|src\\UserService\\Api\\UserService.Api.csproj|solutionrelative:src\\userservice\\api\\userservice.api.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{61DACFF4-B7C4-4893-8270-595E7509A11C}|src\\ProductService\\Domain\\ProductService.Domain.csproj|f:\\visualstudioprojects\\innowise\\inno_shop\\src\\productservice\\domain\\productservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{61DACFF4-B7C4-4893-8270-595E7509A11C}|src\\ProductService\\Domain\\ProductService.Domain.csproj|solutionrelative:src\\productservice\\domain\\productservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -242,164 +258,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
-              "RelativeDocumentMoniker": "src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
-              "RelativeToolTip": "src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:21:31.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Shared.Application.AssemblyInfo.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
-              "RelativeToolTip": "src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:20:00.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\UserService\\Api\\appsettings.json",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\appsettings.json",
-              "RelativeToolTip": "src\\UserService\\Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T10:17:56.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ValidationBehavior.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T09:09:07.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationServiceRegistration.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\ApplicationServiceRegistration.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\ApplicationServiceRegistration.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\ApplicationServiceRegistration.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\ApplicationServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T09:02:21.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\Program.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Api\\Program.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\Program.cs",
-              "RelativeToolTip": "src\\UserService\\Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T08:24:49.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PaaswordHasher.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Services\\PaaswordHasher.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Services\\PaaswordHasher.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Services\\PaaswordHasher.cs",
-              "RelativeToolTip": "src\\UserService\\Infrastructure\\Services\\PaaswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:56:39.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ActivateUserCommandHandler.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:50:07.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "src\\UserService\\Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T15:31:03.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NotFoundException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
-              "RelativeDocumentMoniker": "src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
-              "RelativeToolTip": "src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T06:27:52.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ActivateUserCommandValidator.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:49:42.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ActivateUserCommand.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:49:27.039Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -426,202 +286,168 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Api\\Program.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\Program.cs",
+              "RelativeToolTip": "src\\UserService\\Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T08:24:49.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.Api.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Api\\UserService.Api.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
+              "RelativeToolTip": "src\\UserService\\Api\\UserService.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:08:43.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserController.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Api\\Controllers\\UserController.cs",
               "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\Controllers\\UserController.cs",
               "RelativeToolTip": "src\\UserService\\Api\\Controllers\\UserController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAuwEwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwFQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T07:33:37.597Z",
+              "WhenOpened": "2025-11-11T07:33:37.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.Application.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\UserService.Application.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
+              "RelativeToolTip": "src\\UserService\\Application\\UserService.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:14:41.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:21:40.096Z",
+              "DocumentIndex": 6,
+              "Title": "UserService.Infrastructure.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-06T18:15:35.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DeactivateUserCommandHandler.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:29:25.015Z",
+              "WhenOpened": "2025-11-10T12:27:48.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService.Domain.csproj",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\UserService.Domain.csproj",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
+              "RelativeToolTip": "src\\UserService\\Domain\\UserService.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-07T11:37:51.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AlreadyDeactivatedException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ApplicationServiceRegistration.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\ApplicationServiceRegistration.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\ApplicationServiceRegistration.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\ApplicationServiceRegistration.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\ApplicationServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:40:04.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T09:02:21.088Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BusinessRuleValidationException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AssemblyMarker.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\AssemblyMarker.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\AssemblyMarker.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\AssemblyMarker.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\AssemblyMarker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:46:18.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T20:46:40.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 11,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Services\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Services\\PasswordHasher.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Services\\PasswordHasher.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\Services\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:56:39.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Domain\\Entities\\User.cs",
               "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Entities\\User.cs",
               "RelativeToolTip": "src\\UserService\\Domain\\Entities\\User.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAiwFIAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T11:30:16.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-07T11:30:16.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DomainArgumentNullException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:46:18.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Guard.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Guard.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Guard.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Guard.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Guard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:56:21.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "EmailAlreadyConfirmedException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
+              "DocumentIndex": 14,
+              "Title": "UpdateUserRequest.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
+              "RelativeToolTip": "src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T14:16:59.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T14:47:36.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EmailAlreadyExistsException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T12:59:09.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T15:31:03.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AlreadyActivatedException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:40:36.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UpdateUserCommandHandler.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T15:36:04.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UpdateUserCommand.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAACBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T14:45:39.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "DeactivateUserCommandValidator.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:27:26.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "DeactivateUserCommand.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:26:34.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 15,
               "Title": "DeactivateUserRequest.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\DeactivateUserRequest.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Api\\DTOs\\DeactivateUserRequest.cs",
@@ -629,12 +455,35 @@
               "RelativeToolTip": "src\\UserService\\Api\\DTOs\\DeactivateUserRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:23:29.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T07:23:29.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 10,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Services\\EmailService.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Services\\EmailService.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:30:54.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IAuthService.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IAuthService.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IAuthService.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T11:53:15.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ActivateUserRequest.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\ActivateUserRequest.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Api\\DTOs\\ActivateUserRequest.cs",
@@ -642,205 +491,23 @@
               "RelativeToolTip": "src\\UserService\\Api\\DTOs\\ActivateUserRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T07:23:59.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T07:23:59.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UpdateUserRequest.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
-              "RelativeToolTip": "src\\UserService\\Api\\DTOs\\UpdateUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABhAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T14:47:36.806Z"
+              "WhenOpened": "2025-11-10T12:21:40.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UpdateUserCommandValidator.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T15:36:05.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AddUserRequest.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
-              "RelativeToolTip": "src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T14:30:28.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "InvalidCredentialsException.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T19:50:52.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "GetUserByIdQueryHandler.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswBwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T07:30:18.633Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\UserDto.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T05:46:27.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UpdateUserDto.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T10:44:17.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "AddUserDto.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\AddUserDto.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\AddUserDto.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\AddUserDto.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\AddUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T08:12:51.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AddUserCommandValidator.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T08:16:10.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Email.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\ValueObjects\\Email.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\ValueObjects\\Email.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\ValueObjects\\Email.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\ValueObjects\\Email.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T15:18:24.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
-              "RelativeToolTip": "src\\UserService\\Infrastructure\\Persistence\\UserRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA3wCYAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:27:48.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T13:11:59.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Enums\\UserRole.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Enums\\UserRole.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Enums\\UserRole.cs",
-              "RelativeToolTip": "src\\UserService\\Domain\\Enums\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T11:42:47.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "ErrorMessages.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Constants\\ErrorMessages.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Constants\\ErrorMessages.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Constants\\ErrorMessages.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Constants\\ErrorMessages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T07:20:42.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "AddUserCommandHandler.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T08:15:50.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IAuthService.cs",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IAuthService.cs",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IAuthService.cs",
-              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T11:53:15.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 20,
               "Title": "IPasswordHasher.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IPasswordHasher.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IPasswordHasher.cs",
@@ -852,7 +519,427 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ErrorMessages.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Constants\\ErrorMessages.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Constants\\ErrorMessages.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Constants\\ErrorMessages.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Constants\\ErrorMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T07:20:42.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IEmailService.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IEmailService.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IEmailService.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:33:16.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IJwtProvider.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IJwtProvider.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Abstractions\\IJwtProvider.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Abstractions\\IJwtProvider.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Abstractions\\IJwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T12:34:35.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": ".NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
+              "RelativeToolTip": "src\\Shared\\Application\\obj\\Debug\\net9.0\\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T10:21:31.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\UserService\\Api\\appsettings.json",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\appsettings.json",
+              "RelativeToolTip": "src\\UserService\\Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-12T10:17:56.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Shared.Application.AssemblyInfo.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
+              "RelativeToolTip": "src\\Shared\\Application\\obj\\Debug\\net9.0\\Shared.Application.AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T10:20:00.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T09:09:07.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ActivateUserCommandHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:50:07.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "src\\Shared\\Application\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T06:27:52.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ActivateUserCommandValidator.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:49:42.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ActivateUserCommand.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\ActivateUser\\ActivateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:49:27.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DeactivateUserCommandHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:29:25.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AlreadyDeactivatedException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyDeactivatedException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:40:04.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BusinessRuleValidationException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Exceptions\\BusinessRuleValidationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:46:18.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DomainArgumentNullException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\DomainArgumentNullException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:46:18.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Guard.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Guard.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Guard.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Guard.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Guard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T13:56:21.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EmailAlreadyConfirmedException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\EmailAlreadyConfirmedException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T14:16:59.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EmailAlreadyExistsException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Exceptions\\EmailAlreadyExistsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T12:59:09.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AlreadyActivatedException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Common\\Exceptions\\AlreadyActivatedException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:40:36.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UpdateUserCommandHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T15:36:04.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UpdateUserCommand.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAACBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T14:45:39.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DeactivateUserCommandValidator.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:27:26.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DeactivateUserCommand.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\DeactivateUser\\DeactivateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:26:34.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UpdateUserCommandValidator.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\UpdateUser\\UpdateUserCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T15:36:05.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AddUserRequest.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
+              "RelativeToolTip": "src\\UserService\\Api\\DTOs\\AddUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T14:30:28.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "InvalidCredentialsException.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Exceptions\\InvalidCredentialsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T19:50:52.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "GetUserByIdQueryHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryHandler.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T07:30:18.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\UserDto.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T05:46:27.417Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 47,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T10:44:17.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "AddUserDto.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\AddUserDto.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\DTOs\\AddUserDto.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\DTOs\\AddUserDto.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\DTOs\\AddUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T08:12:51.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "AddUserCommandValidator.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T08:16:10.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Email.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\ValueObjects\\Email.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T15:18:24.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "src\\UserService\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T13:11:59.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "src\\UserService\\Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T11:42:47.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AddUserCommandHandler.cs",
+              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
+              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
+              "RelativeToolTip": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T08:15:50.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
               "Title": "AddUserCommand.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommand.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Commands\\AddUser\\AddUserCommand.cs",
@@ -864,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 54,
               "Title": "ProductService.Application.csproj",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Application\\ProductService.Application.csproj",
               "RelativeDocumentMoniker": "src\\ProductService\\Application\\ProductService.Application.csproj",
@@ -872,11 +959,12 @@
               "RelativeToolTip": "src\\ProductService\\Application\\ProductService.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:12:47Z"
+              "WhenOpened": "2025-11-06T18:12:47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 58,
               "Title": "ProductService.Infrastructure.csproj",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
               "RelativeDocumentMoniker": "src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
@@ -884,11 +972,12 @@
               "RelativeToolTip": "src\\ProductService\\Infrastructure\\ProductService.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:14:03.384Z"
+              "WhenOpened": "2025-11-06T18:14:03.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 57,
               "Title": "GetUserByIdQuery.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQuery.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQuery.cs",
@@ -900,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 56,
               "Title": "GetUserByIdQueryValidator.cs",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryValidator.cs",
               "RelativeDocumentMoniker": "src\\UserService\\Application\\Users\\Queries\\GetUserById\\GetUserByIdQueryValidator.cs",
@@ -912,43 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "UserService.Domain.csproj",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
-              "RelativeDocumentMoniker": "src\\UserService\\Domain\\UserService.Domain.csproj",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
-              "RelativeToolTip": "src\\UserService\\Domain\\UserService.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-07T11:37:51.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "UserService.Application.csproj",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
-              "RelativeDocumentMoniker": "src\\UserService\\Application\\UserService.Application.csproj",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
-              "RelativeToolTip": "src\\UserService\\Application\\UserService.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:14:41.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "UserService.Api.csproj",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
-              "RelativeDocumentMoniker": "src\\UserService\\Api\\UserService.Api.csproj",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
-              "RelativeToolTip": "src\\UserService\\Api\\UserService.Api.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:08:43.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "ProductService.Domain.csproj",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Domain\\ProductService.Domain.csproj",
               "RelativeDocumentMoniker": "src\\ProductService\\Domain\\ProductService.Domain.csproj",
@@ -956,23 +1009,12 @@
               "RelativeToolTip": "src\\ProductService\\Domain\\ProductService.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:13:35.13Z"
+              "WhenOpened": "2025-11-06T18:13:35.13Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "UserService.Infrastructure.csproj",
-              "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
-              "ToolTip": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
-              "RelativeToolTip": "src\\UserService\\Infrastructure\\UserService.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:15:35.222Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "ProductService.Api.csproj",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\ProductService\\Api\\ProductService.Api.csproj",
               "RelativeDocumentMoniker": "src\\ProductService\\Api\\ProductService.Api.csproj",
@@ -980,11 +1022,12 @@
               "RelativeToolTip": "src\\ProductService\\Api\\ProductService.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:09:34.131Z"
+              "WhenOpened": "2025-11-06T18:09:34.131Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "ProductService.IntegrationTests.csproj",
               "DocumentMoniker": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
               "RelativeDocumentMoniker": "tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
@@ -992,7 +1035,8 @@
               "RelativeToolTip": "tests\\ProductService.IntegrationTests\\ProductService.IntegrationTests.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-06T18:08:21.959Z"
+              "WhenOpened": "2025-11-06T18:08:21.959Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -3,6 +3,8 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
+namespace Inno_Shop.UserService.Infrastructure.Services;
+
 public class PasswordHasher : IPasswordHasher
 {
     private int SaltSize = 16;

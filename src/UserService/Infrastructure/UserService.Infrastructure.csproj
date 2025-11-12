@@ -15,7 +15,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<RootNamespace>Inno_Shop.UserService.Infrastructure</RootNamespace>
-	<AssemblyName>Inno_Shop.UserService.Infrastructure</AssemblyName>
+	<AssemblyName>Inno_Shop.UserService.Infrastructure</AssemblyName> 
   </PropertyGroup>
 
 </Project>

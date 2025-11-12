@@ -73,7 +73,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
-        "projectName": "Inno_Shop.UserService.Api",
+        "projectName": "UserService.Api",
         "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\UserService.Api.csproj",
         "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
         "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Api\\obj\\",
@@ -122,9 +122,13 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "MediatR": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[13.1.0, )"
+            },
+            "MediatR.Contracts": {
+              "target": "Package",
+              "version": "[2.0.1, )"
             },
             "SwashBuckle.AspNetCore": {
               "target": "Package",
@@ -158,7 +162,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
-        "projectName": "Inno_Shop.UserService.Application",
+        "projectName": "UserService.Application",
         "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\UserService.Application.csproj",
         "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
         "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Application\\obj\\",
@@ -244,7 +248,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
-        "projectName": "Inno_Shop.UserService.Domain",
+        "projectName": "UserService.Domain",
         "projectPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\UserService.Domain.csproj",
         "packagesPath": "C:\\Users\\vmois\\.nuget\\packages\\",
         "outputPath": "F:\\VisualStudioProjects\\Innowise\\Inno_shop\\src\\UserService\\Domain\\obj\\",

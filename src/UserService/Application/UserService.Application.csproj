@@ -16,7 +16,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<RootNamespace>Inno_Shop.UserService.Application</RootNamespace>
-	<AssemblyName>Inno_Shop.UserService.Application</AssemblyName>
+	
   </PropertyGroup>
 
 </Project>
