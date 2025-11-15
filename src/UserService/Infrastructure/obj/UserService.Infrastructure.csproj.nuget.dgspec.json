@@ -300,6 +300,14 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.14.0, )"
+            },
+            "microsoft.aspnetcore.http.abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "microsoft.extensions.http": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
           "imports": [

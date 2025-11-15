@@ -9,15 +9,19 @@ using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 
-public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, IPasswordHasher passwordHasher) : IRequestHandler<DeactivateUserCommand, Unit>
+public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, 
+    IPasswordHasher passwordHasher, ICurrentUserService currentUserService) : IRequestHandler<DeactivateUserCommand, Unit>
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IEmailService _emailService = emailService;
     private readonly IPasswordHasher _passwordHasher = passwordHasher;
+    private readonly ICurrentUserService _currentUserService = currentUserService;
 
     public async Task<Unit> Handle(DeactivateUserCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken);
+        var userId = _currentUserService.UserId ?? throw new UnauthorizedAccessException();
+
+        var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
 
         if (user == null) {
             throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);

@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Inno_Shop.UserService.Application.Users.Queries.GetCurrentUser;
+using Inno_Shop.UserService.Application.Users.Queries.GetUserById;
 using Inno_Shop.UserService.Application.Users.Commands.AddUser;
 using Inno_Shop.UserService.Api.DTOs;
 using Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
@@ -9,24 +9,25 @@ using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Abstractions;
 using System.Security.Claims;
+using Inno_Shop.UserService.Application.Users.Queries.GetUserByIdAdmin;
 
-[Authorize]
+[Authorize(Roles = "Admin")]
 [ApiController]
 [Route("api/[controller]")]
-public class UserController(IMediator mediator) : ControllerBase
+public class AdminController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
 
-    [HttpGet("me")]
-    public async Task<IActionResult> GetCurrentUser()
+    [HttpGet("{int:id}")]
+    public async Task<IActionResult> GetUserById(int id)
     {
-        var query = new GetCurrentUserQuery();
+        var query = new GetUserByIdAdminQuery(id);
         var userDto = await _mediator.Send(query);
         return Ok(userDto);
     }
 
-    [HttpPut("me")]
-    public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
+    [HttpPut("{int:id}")]
+    public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserRequest request)
     {
         var command = new UpdateUserCommand(
                 Password: request.Password,

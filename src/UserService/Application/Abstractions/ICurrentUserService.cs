@@ -2,5 +2,7 @@ namespace Inno_Shop.UserService.Application.Abstractions;
 
 public interface ICurrentUserService
 {
-    int UserId { get; }
+    int? UserId { get; }
+
+    string? Role {  get; }
 }
