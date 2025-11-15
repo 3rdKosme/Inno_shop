@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.Contracts;
 
-namespace Inno_Shop.UserService.Application.Constants.ErrorMessages;
+namespace Inno_Shop.UserService.Application.Common.Constants;
 
 public static class ErrorMessages
 {
@@ -14,6 +14,7 @@ public static class ErrorMessages
     public static string EmailAlreadyExists = "a8";
     public static string IncorrectPassword = "a9";
     public static string CurrentPasswordIsRequired = "a10";
+    public static string RefreshTokenIsRequired = "a11";
 
-    public static string UserNotFound = "a11";
+    public static string UserNotFound = "a12";
 }

@@ -14,10 +14,15 @@ public static class DependencyInjection
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
+        services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
-        services.AddScoped<IEmailService, EmailService>();
+        
+        services.AddScoped<IEmailService, SmtpEmailService>();
         services.AddScoped<IPasswordHasher, PasswordHasher>();
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+        services.AddScoped<IJwtTokenService, JwtTokenService>();
 
         return services;
     }

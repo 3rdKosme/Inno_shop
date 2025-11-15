@@ -3,7 +3,7 @@ using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.DTOs;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.Shared.Application.Exceptions;
-using Inno_Shop.UserService.Application.Constants.ErrorMessages;
+using Inno_Shop.UserService.Application.Common.Constants;
 
 namespace Inno_Shop.UserService.Application.Users.Queries.GetUserById;
 

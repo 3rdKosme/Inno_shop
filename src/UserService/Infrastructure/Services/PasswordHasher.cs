@@ -7,10 +7,10 @@ namespace Inno_Shop.UserService.Infrastructure.Services;
 
 public class PasswordHasher : IPasswordHasher
 {
-    private int SaltSize = 16;
-    private int KeySize = 32;
-    private int Iterations = 100000;
-    private char Delimiter = ';';
+    private readonly int SaltSize = 16;
+    private readonly int KeySize = 32;
+    private readonly int Iterations = 100000;
+    private readonly char Delimiter = ';';
 
     public string HashPassword(string password)
     {

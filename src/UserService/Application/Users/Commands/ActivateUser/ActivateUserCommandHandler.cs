@@ -4,7 +4,7 @@ using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Abstractions;
 using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
-using Inno_Shop.UserService.Application.Constants.ErrorMessages;
+using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
@@ -17,11 +17,7 @@ public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailSe
 
     public async Task<Unit> Handle(ActivateUserCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken);
-
-        if (user == null) {
-            throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
-        }
+        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
 
         if (!_passwordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {

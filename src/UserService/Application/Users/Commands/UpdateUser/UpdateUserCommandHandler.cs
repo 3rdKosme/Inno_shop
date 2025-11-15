@@ -4,7 +4,7 @@ using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Abstractions;
 using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
-using Inno_Shop.UserService.Application.Constants.ErrorMessages;
+using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.Shared.Application.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.UpdateUser;

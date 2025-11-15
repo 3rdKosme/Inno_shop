@@ -11,16 +11,17 @@ namespace Inno_Shop.UserService.Domain.Entities
 {
     public class User
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public string Email { get; private set; }
-        public string PasswordHash { get; private set; }
-        public UserRole UserRole { get; private set; }
-        public bool IsEmailConfirmed { get; private set; }
-        public bool IsActive { get; private set; }
-        public DateTime CreatedAt { get; private set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
+        public UserRole UserRole { get; set; }
+        public bool IsEmailConfirmed { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public List<RefreshToken> RefreshTokens { get; set; } = new();
 
-        private User() { }
+        public User() { }
 
         public static User Create(string name, string email, string passwordHash)
         {
@@ -36,7 +37,7 @@ namespace Inno_Shop.UserService.Domain.Entities
                 UserRole = UserRole.User,
                 IsEmailConfirmed = false,
                 IsActive = true,
-                CreatedAt = DateTime.Now,
+                CreatedAt = DateTime.UtcNow,
             };
         }
 

@@ -6,36 +6,29 @@ using Inno_Shop.UserService.Api.DTOs;
 using Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
 using Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
+using Microsoft.AspNetCore.Authorization;
+using Inno_Shop.UserService.Application.Abstractions;
+using System.Security.Claims;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class UserController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
 
-    [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetUserById(int id)
+    [HttpGet("me")]
+    public async Task<IActionResult> GetUserById()
     {
-        var query = new GetUserByIdQuery(id);
+        int userId;
+        if (!int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out userId)) throw new UnauthorizedAccessException();
+        
+        var query = new GetUserByIdQuery(userId);
         var userDto = await _mediator.Send(query);
         return Ok(userDto);
     }
 
-    [HttpPost]
-    public async Task<IActionResult> AddUser([FromBody] AddUserRequest request)
-    {
-        var command = new AddUserCommand(
-                request.Name,
-                request.Email,
-                request.Password
-            );
-
-        var userId = await _mediator.Send(command);
-
-        return Ok(new { Id = userId });
-    }
-
-    [HttpPut("{id:int}")]
+    [HttpPut("me")]
     public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserRequest request)
     {
         var command = new UpdateUserCommand(
