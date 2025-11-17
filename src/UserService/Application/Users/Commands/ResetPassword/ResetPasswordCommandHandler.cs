@@ -7,6 +7,7 @@ using MediatR;
 using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Exceptions;
+using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ResetPassword;
 
@@ -28,9 +29,18 @@ public class ResetPasswordCommandHandler(IUserRepository userRepository, IPasswo
 
         var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
-        user.ChangePassword(_passwordHasher.HashPassword(request.NewPassword));
-
+        try
+        {
+            user.ChangePassword(_passwordHasher.HashPassword(request.NewPassword));
+            stored.Revoke();
+        }
+        catch (DomainArgumentNullException ex)
+        {
+            throw new BusinessRuleValidationException(ex.Message);
+        }
+       
         await _userRepository.UpdateAsync(user, cancellationToken);       
+        await _passwordTokenRepository.UpdateAsync(stored, cancellationToken);
 
         return Unit.Value;
     }

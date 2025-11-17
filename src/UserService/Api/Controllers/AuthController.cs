@@ -6,6 +6,7 @@ using Inno_Shop.UserService.Application.Users.Commands.RefreshToken;
 using Inno_Shop.UserService.Application.Users.Commands.AddUser;
 using Inno_Shop.UserService.Application.Users.Commands.SendPasswordResetCode;
 using Microsoft.AspNetCore.Authorization;
+using Inno_Shop.UserService.Application.Users.Commands.ResetPassword;
 
 [AllowAnonymous]
 [ApiController]
@@ -63,7 +64,7 @@ public class AuthController(IMediator mediator) : ControllerBase
     [HttpPost("validateResetToken")]
     public async Task<ActionResult> ValidateResetToken([FromBody] ResetPasswordRequest request)
     {
-        var command = new ResetPasswordRequest(request.Token, request.NewPassword);
+        var command = new ResetPasswordCommand(request.Token, request.NewPassword);
 
         await _mediator.Send(command);
 

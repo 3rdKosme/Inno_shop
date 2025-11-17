@@ -37,9 +37,7 @@ public class UserController(IMediator mediator) : ControllerBase
                 NewPassword: request.NewPassword
             );
 
-        await _mediator.Send(command);
-
-        return NoContent();
+        return Ok(await _mediator.Send(command));
     }
 
     [HttpPost("me/deactivate")]
@@ -62,7 +60,7 @@ public class UserController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("me/sendEmailConformationCode")]
+    [HttpPost("me/sendEmailConfirmationCode")]
     public async Task<ActionResult> SendEmailConfirmationCode()
     {
         var command = new SendEmailConfirmationCodeCommand();

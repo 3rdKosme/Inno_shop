@@ -1,35 +1,35 @@
 using Inno_Shop.UserService.Application.Abstractions;
+using Inno_Shop.UserService.Application.Emails;
+using Inno_Shop.UserService.Application.Emails.Templates;
+using Inno_Shop.UserService.Infrastructure.Options;
 using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
+using System.Runtime;
 
 namespace Inno_Shop.UserService.Infrastructure.Services;
 
 public class SmtpEmailService(IOptions<SmtpSettings> options) : IEmailService
 {
     private readonly SmtpSettings _smtpSettings = options.Value;
-    public async Task SendAsync(string to , string subject , string body, CancellationToken cancellationToken = default)
+    public async Task SendAsync(string to, EmailTemplate emailTemplate, object model, CancellationToken cancellationToken = default)
     {
-        using var smtpClient = new SmtpClient(_smtpSettings.Host, _smtpSettings.Port)
+        var (subject, html) = EmailTemplateRenderer.Render(emailTemplate, model);
+
+        using var client = new SmtpClient(_smtpSettings.Host, _smtpSettings.Port)
         {
             Credentials = new NetworkCredential(_smtpSettings.Username, _smtpSettings.Password),
             EnableSsl = _smtpSettings.EnableSsl
         };
 
-        var mailMessage = new MailMessage
+        using var message = new MailMessage(_smtpSettings.FromAddress, to)
         {
-            From = new MailAddress(_smtpSettings.FromAddress, _smtpSettings.FromName),
             Subject = subject,
-            Body = body,
+            Body = html,
             IsBodyHtml = true
         };
 
-        mailMessage.To.Add(to);
-
-        using (cancellationToken.Register(() => smtpClient.Dispose()))
-        {
-            await smtpClient.SendMailAsync(mailMessage);
-        }
-
+        await client.SendMailAsync(message, cancellationToken);
     }
+
 }

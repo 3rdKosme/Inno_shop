@@ -13,6 +13,5 @@ public class SmtpSettings
     public string Username { get; set; } = null!;
     public string Password { get; set; } = null!;
     public string FromAddress { get; set; } = null!;
-    public string FromName { get; set; } = "Inno Shop";
     public bool EnableSsl { get; set; } = true;
 }

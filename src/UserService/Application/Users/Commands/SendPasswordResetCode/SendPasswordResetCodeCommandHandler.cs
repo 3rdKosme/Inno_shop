@@ -6,6 +6,8 @@ using Microsoft.Extensions.Options;
 using MediatR;
 using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Domain.Entities;
+using Inno_Shop.UserService.Application.Emails.Models;
+using Inno_Shop.UserService.Application.Emails;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.SendPasswordResetCode;
 
@@ -32,7 +34,8 @@ public class ResetPasswordCommandHandler(IUserRepository userRepository, IEmailS
         await _passwordTokenRepository.AddAsync(resetToken, cancellationToken);
 
         var resetLink = $"{_appSettings.FrontendUrl}/reset-password?token={token}";
-        await _emailService.SendPasswordResetLinkAsync(user.Email, resetLink);
+
+        await _emailService.SendAsync(user.Email, EmailTemplate.PasswordReset, new PasswordResetModel { ResetLink = resetLink }, cancellationToken);
 
         return Unit.Value;
     }

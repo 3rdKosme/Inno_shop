@@ -9,5 +9,12 @@ using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Domain.Entities;
 
-public class RefreshToken(int userId, string token, DateTime expiresAt)
-    : BaseToken(userId, token, expiresAt) { }
+public class RefreshToken : BaseToken
+{
+    protected RefreshToken() { }
+
+    public RefreshToken(int userId, string token, DateTime expiresAt) : base(userId, token, expiresAt)
+    {
+
+    }
+}

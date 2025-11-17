@@ -6,6 +6,8 @@ using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
+using Inno_Shop.UserService.Application.Emails;
+using Inno_Shop.UserService.Application.Emails.Models;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 
@@ -38,7 +40,7 @@ public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailSe
 
         await _userRepository.UpdateAsync(user);
 
-        //MAIL SENDING
+        await _emailService.SendAsync(user.Email, EmailTemplate.Activated, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

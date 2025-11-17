@@ -53,7 +53,7 @@ namespace Inno_Shop.UserService.Domain.Entities
         public void ChangeEmail(string email)
         {
             Guard.AgainstNullOrWhiteSpace(email, nameof(email));
-            Email = Email;
+            Email = email;
             IsEmailConfirmed = false;
         }
 

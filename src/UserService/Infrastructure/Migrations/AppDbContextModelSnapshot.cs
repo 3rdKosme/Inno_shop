@@ -22,6 +22,74 @@ namespace Inno_Shop.UserService.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.EmailConfirmationToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsRevoked")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Token")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("EmailConfirmationTokens");
+                });
+
+            modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.PasswordResetToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsRevoked")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Token")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PasswordResetTokens");
+                });
+
             modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.RefreshToken", b =>
                 {
                     b.Property<int>("Id")
@@ -79,6 +147,9 @@ namespace Inno_Shop.UserService.Infrastructure.Migrations
                     b.Property<bool>("IsEmailConfirmed")
                         .HasColumnType("boolean");
 
+                    b.Property<bool>("IsLocked")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -105,10 +176,29 @@ namespace Inno_Shop.UserService.Infrastructure.Migrations
                             Email = "admin@innoshop.local",
                             IsActive = true,
                             IsEmailConfirmed = true,
+                            IsLocked = false,
                             Name = "admin",
                             PasswordHash = "100000;7S4vRC7ZJjsaA1CS+18xRg==;yqKI3ru76delDG4BLgt2HIQQkwiaOHqAJObzEr8CS/o=",
                             UserRole = 0
                         });
+                });
+
+            modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.EmailConfirmationToken", b =>
+                {
+                    b.HasOne("Inno_Shop.UserService.Domain.Entities.User", null)
+                        .WithMany("EmailConfirmationTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.PasswordResetToken", b =>
+                {
+                    b.HasOne("Inno_Shop.UserService.Domain.Entities.User", null)
+                        .WithMany("PasswordResetTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.RefreshToken", b =>
@@ -122,6 +212,10 @@ namespace Inno_Shop.UserService.Infrastructure.Migrations
 
             modelBuilder.Entity("Inno_Shop.UserService.Domain.Entities.User", b =>
                 {
+                    b.Navigation("EmailConfirmationTokens");
+
+                    b.Navigation("PasswordResetTokens");
+
                     b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618

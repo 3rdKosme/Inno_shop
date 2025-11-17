@@ -6,14 +6,14 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace Inno_Shop.UserService.Infrastructure.Persistence;
 
-public class TokenRepository<T>(AppDbContext context) : Repository<T>(context), ITokenRepository<T> where T : BaseEntity
+public class TokenRepository<T>(AppDbContext context) : Repository<T>(context), ITokenRepository<T> where T : BaseToken
 {
-    public readonly AppDbContext _context = context;
+    //public readonly AppDbContext _context = context;
     private readonly DbSet<T> _dbSet = context.Set<T>();
 
     public virtual async Task<T?> GetByTokenAsync(string token, CancellationToken cancellationToken = default)
     {
-        return await _dbSet.FindAsync(token, cancellationToken);
+        return await _dbSet.FirstOrDefaultAsync(x => x.Token == token, cancellationToken);
     }
 
     public virtual async Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default)
@@ -23,5 +23,10 @@ public class TokenRepository<T>(AppDbContext context) : Repository<T>(context), 
 
         _dbSet.Remove(entity);
         return await _context.SaveChangesAsync(cancellationToken) > 0;
+    }
+
+    public virtual async Task<IEnumerable<BaseToken>> GetObsoleteTokensAsync(DateTime threshold, CancellationToken cancellationToken = default)
+    {
+        return await _dbSet.AsQueryable().Where(t => t.IsRevoked || t.ExpiresAt < DateTime.UtcNow && t.ExpiresAt < threshold).ToListAsync(cancellationToken);
     }
 }

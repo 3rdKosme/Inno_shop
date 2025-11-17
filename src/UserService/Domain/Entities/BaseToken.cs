@@ -16,11 +16,14 @@ namespace Inno_Shop.UserService.Domain.Entities
         public DateTime ExpiresAt { get; set; }
         public bool IsRevoked { get; set; }
 
+        protected BaseToken() { }
+
         public BaseToken(int userId, string token, DateTime expiresAt)
         {
             UserId = userId;
             Token = token;
             ExpiresAt = expiresAt;
+            IsRevoked = false;
         }
         public bool IsExpired => DateTime.UtcNow >= ExpiresAt;
 

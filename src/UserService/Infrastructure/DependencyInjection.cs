@@ -4,6 +4,7 @@ using Inno_Shop.UserService.Infrastructure.Persistence;
 using Inno_Shop.UserService.Infrastructure.Services;
 using Inno_Shop.UserService.Application.Abstractions;
 using Microsoft.Extensions.Configuration;
+using Inno_Shop.UserService.Infrastructure.Options;
 
 namespace Inno_Shop.UserService.Infrastructure;
 
@@ -16,7 +17,7 @@ public static class DependencyInjection
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
         services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
-        services.Configure<SmtpSettings>(configuration.GetSection("TokenGeneratorSettings"));
+        services.Configure<TokenGeneratorSettings>(configuration.GetSection("TokenGeneratorSettings"));
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();

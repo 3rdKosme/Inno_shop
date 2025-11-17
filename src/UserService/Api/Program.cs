@@ -123,6 +123,10 @@ app.Map("/error", (HttpContext context) =>
             detail: notFoundException.Message,
             statusCode: notFoundException.statusCode),
 
+        TokenIsExpiredOrRevokedException tokenIsExpiredOrRevokedException => Results.Problem(
+            detail: tokenIsExpiredOrRevokedException.Message,
+            statusCode: tokenIsExpiredOrRevokedException.statusCode),
+
         _ => Results.Problem(
             detail: "Internal server error",
             statusCode: 500)

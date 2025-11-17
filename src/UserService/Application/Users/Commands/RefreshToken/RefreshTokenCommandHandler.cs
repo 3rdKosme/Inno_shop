@@ -30,7 +30,9 @@ public class RefreshTokenCommandHandler(IRefreshTokenRepository refreshTokenRepo
             throw new UnauthorizedAccessException();
         }
 
-        await _refreshTokenRepository.RevokeAsync(stored, cancellationToken);
+        stored.Revoke();
+
+        await _refreshTokenRepository.UpdateAsync(stored, cancellationToken);
 
         var newAccess = _jwtTokenService.GenerateAccessToken(user.Id, user.Email, user.UserRole.ToString());
         var newRefresh = _jwtTokenService.GenerateRefreshToken();

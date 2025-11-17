@@ -1,5 +1,7 @@
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Constants;
+using Inno_Shop.UserService.Application.Emails.Models;
+using Inno_Shop.UserService.Application.Emails;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 using MediatR;
@@ -18,7 +20,7 @@ public class UnlockUserCommandHandler(IUserRepository userRepository,
 
         try
         {
-            user.Lock();
+            user.Unlock();
         }
         catch (AlreadyDoneException ex)
         {
@@ -27,7 +29,7 @@ public class UnlockUserCommandHandler(IUserRepository userRepository,
 
         await _userRepository.UpdateAsync(user);
 
-        //MAIL SENDING
+        await _emailService.SendAsync(user.Email, EmailTemplate.Unlocked, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

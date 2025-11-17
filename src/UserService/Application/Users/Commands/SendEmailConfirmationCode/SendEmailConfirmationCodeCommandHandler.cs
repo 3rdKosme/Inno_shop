@@ -6,6 +6,8 @@ using Microsoft.Extensions.Options;
 using MediatR;
 using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Domain.Entities;
+using Inno_Shop.UserService.Application.Emails.Models;
+using Inno_Shop.UserService.Application.Emails;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.SendEmailConfirmationCode;
 
@@ -34,8 +36,9 @@ public class SendEmailConfirmationCodeCommandHandler(IUserRepository userReposit
 
         await _emailConfirmationTokenRepository.AddAsync(token, cancellationToken);
 
-        var emailConfirmationLink = $"{_appSettings.FrontendUrl}/confirm-email?token={token}";
-        await _emailService.SendEmailConfirmationLinkAsync(user.Email, emailConfirmationLink);
+        var emailConfirmationLink = $"{_appSettings.FrontendUrl}/confirm-email?token={emailToken}";
+
+        await _emailService.SendAsync(user.Email, EmailTemplate.EmailConfirmation, new EmailConfirmationModel { ConfirmationLink = emailConfirmationLink }, cancellationToken);
 
         return Unit.Value;
     }

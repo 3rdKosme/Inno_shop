@@ -23,6 +23,7 @@ public abstract class UserQueryHandlerBase(IUserRepository userRepository)
             Role: user.UserRole.ToString(),
             IsEmailConfirmed: user.IsEmailConfirmed,
             IsActive: user.IsActive,
+            IsLocked: user.IsLocked,
             CreatedAt: user.CreatedAt
         );
     }

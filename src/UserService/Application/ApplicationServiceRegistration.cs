@@ -18,6 +18,8 @@ public static class ApplicationServiceRegistration
         services.Configure<EmailConfirmationTokenSettings>(configuration.GetSection("EmailConfirmationTokenSettings"));
         services.Configure<PasswordResetTokenSettings>(configuration.GetSection("PasswordResetTokenSettings"));
         services.Configure<RefreshTokenSettings>(configuration.GetSection("RefreshTokenSettings"));
+        services.Configure<TokenCleanupPolicy>(configuration.GetSection("TokenLifetime"));
+
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(assembly));
         

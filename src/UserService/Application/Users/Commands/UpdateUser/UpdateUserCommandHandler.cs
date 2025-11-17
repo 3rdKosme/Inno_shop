@@ -6,18 +6,27 @@ using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.Shared.Application.Exceptions;
+using Inno_Shop.UserService.Application.Common.Settings;
+using Microsoft.Extensions.Options;
+using Inno_Shop.UserService.Domain.Common.Exceptions;
+using Inno_Shop.UserService.Application.Emails.Models;
+using Inno_Shop.UserService.Application.Emails;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
 
 public class UpdateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, 
-    IPasswordHasher passwordHasher, ICurrentUserService currentUserService) : IRequestHandler<UpdateUserCommand, Unit>
+    IPasswordHasher passwordHasher, ICurrentUserService currentUserService, IJwtTokenService jwtTokenService, 
+    IOptions<RefreshTokenSettings> refreshTokenSettings, IRefreshTokenRepository refreshTokenRepository) : IRequestHandler<UpdateUserCommand, EmailChangeResultDto>
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IEmailService _emailService = emailService;
     private readonly IPasswordHasher _passwordHasher = passwordHasher;
     private readonly ICurrentUserService _currentUserService = currentUserService;
+    private readonly IJwtTokenService _jwtTokenService = jwtTokenService;
+    private readonly RefreshTokenSettings _refreshTokenSettings = refreshTokenSettings.Value;
+    private readonly IRefreshTokenRepository _refreshTokenRepository = refreshTokenRepository;
 
-    public async Task<Unit> Handle(UpdateUserCommand request, CancellationToken cancellationToken = default)
+    public async Task<EmailChangeResultDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken = default)
     {
         var userId = _currentUserService.UserId ?? throw new UnauthorizedAccessException();
 
@@ -30,28 +39,67 @@ public class UpdateUserCommandHandler(IUserRepository userRepository, IEmailServ
 
         if(request.Name != null)
         {
-            user.ChangeName(request.Name);
+            try
+            {
+                user.ChangeName(request.Name);
+            }
+            catch (DomainArgumentNullException ex)
+            {
+                throw new BusinessRuleValidationException(ex.Message);
+            }
+
         }
+
+        EmailChangeResultDto resultDto;
 
         if (request.Email != null) 
         { 
             if(! await _userRepository.ExistsByEmailAsync(request.Email, cancellationToken))
             {
-                user.ChangeEmail(request.Email);
-                //EMAIL SERVICE
+                try
+                {
+                    user.ChangeEmail(request.Email);
+                }
+                catch (DomainArgumentNullException ex) 
+                {
+                    throw new BusinessRuleValidationException(ex.Message);
+                }
+
+                var accessToken = _jwtTokenService.GenerateAccessToken(user.Id, user.Email, user.UserRole.ToString());
+                var refreshToken = _jwtTokenService.GenerateRefreshToken();
+
+                var token = new Inno_Shop.UserService.Domain.Entities.RefreshToken(user.Id, refreshToken, DateTime.UtcNow.AddDays(_refreshTokenSettings.ExpireDays));
+
+                await _refreshTokenRepository.AddAsync(token, cancellationToken);
+
+                resultDto = new EmailChangeResultDto(accessToken, refreshToken);
             }
             else
             {
                 throw new EmailAlreadyExistsException(ErrorMessages.EmailAlreadyExists);
             }
         }
+        else
+        {
+            resultDto = new EmailChangeResultDto(null, null);
+        }
 
         if (request.NewPassword != null)
         {
-            user.ChangePassword(_passwordHasher.HashPassword(request.NewPassword));
+            try
+            {
+                user.ChangePassword(_passwordHasher.HashPassword(request.NewPassword));
+            }
+            catch (DomainArgumentNullException ex) 
+            {
+                throw new BusinessRuleValidationException(ex.Message);
+            }
         }
-
+        
         await _userRepository.UpdateAsync(user, cancellationToken);
-        return Unit.Value;
+
+        await _emailService.SendAsync(user.Email, EmailTemplate.ProfileChangedUser, new ProfileChangedModel { Name = user.Name }, cancellationToken);
+
+        return resultDto;
     }
 }

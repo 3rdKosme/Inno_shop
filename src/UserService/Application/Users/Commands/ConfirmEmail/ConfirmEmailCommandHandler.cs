@@ -7,6 +7,7 @@ using MediatR;
 using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Exceptions;
+using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ConfirmEmail;
 
@@ -25,10 +26,20 @@ public class ConfirmEmailCommandHandler(IUserRepository userRepository, IEmailCo
         }
 
         var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        try
+        {
+            user.ConfirmEmail();
+            stored.Revoke();
+        }
+        catch (EmailAlreadyConfirmedException ex) 
+        {
+            throw new BusinessRuleValidationException(ex.Message);
+        }
 
-        user.ConfirmEmail();
-
-        await _userRepository.UpdateAsync(user, cancellationToken);       
+        
+        
+        await _userRepository.UpdateAsync(user, cancellationToken);
+        await _emailConfirmationTokenRepository.UpdateAsync(stored, cancellationToken);
 
         return Unit.Value;
     }

@@ -1,12 +1,14 @@
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Constants;
+using Inno_Shop.UserService.Application.Emails.Models;
+using Inno_Shop.UserService.Application.Emails;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 using MediatR;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.LockUser;
 
-public class UnlockUserCommandHandler(IUserRepository userRepository, 
+public class LockUserCommandHandler(IUserRepository userRepository, 
     IEmailService emailService) : IRequestHandler<LockUserCommand, Unit>
 {
     private readonly IUserRepository _userRepository = userRepository;
@@ -27,7 +29,7 @@ public class UnlockUserCommandHandler(IUserRepository userRepository,
 
         await _userRepository.UpdateAsync(user);
 
-        //MAIL SENDING
+        await _emailService.SendAsync(user.Email, EmailTemplate.Locked, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

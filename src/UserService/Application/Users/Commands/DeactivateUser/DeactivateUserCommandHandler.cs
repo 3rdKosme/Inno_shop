@@ -6,6 +6,8 @@ using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
+using Inno_Shop.UserService.Application.Emails.Models;
+using Inno_Shop.UserService.Application.Emails;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 
@@ -43,7 +45,7 @@ public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmail
 
         await _userRepository.UpdateAsync(user);
 
-        //MAIL SENDING
+        await _emailService.SendAsync(user.Email, EmailTemplate.Deactivated, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

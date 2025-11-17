@@ -11,6 +11,7 @@ using Inno_Shop.UserService.Application.Abstractions;
 using System.Security.Claims;
 using Inno_Shop.UserService.Application.Users.Commands.LockUser;
 using Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
+using Inno_Shop.UserService.Application.Users.Commands.UpdateUserAdmin;
 
 [Authorize(Roles = "Admin")]
 [ApiController]
@@ -19,7 +20,7 @@ public class AdminController(IMediator mediator) : ControllerBase
 {
     private readonly IMediator _mediator = mediator;
 
-    [HttpGet("{int:id}")]
+    [HttpGet("{id:int}")]
     public async Task<IActionResult> GetUserById(int id)
     {
         var query = new GetUserByIdAdminQuery(id);
@@ -27,14 +28,12 @@ public class AdminController(IMediator mediator) : ControllerBase
         return Ok(userDto);
     }
 
-    [HttpPut("{int:id}")]
-    public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserRequest request)
+    [HttpPut("{id:int}")]
+    public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserAdminRequest request)
     {
-        var command = new UpdateUserCommand(
-                Password: request.Password,
-                Name: request.Name,
-                Email: request.Email,
-                NewPassword: request.NewPassword
+        var command = new UpdateUserAdminCommand(
+                Id: id,
+                Name: request.Name
             );
 
         await _mediator.Send(command);
@@ -42,7 +41,7 @@ public class AdminController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("{int:id}/lock")]
+    [HttpPost("{id:int}/lock")]
     public async Task<ActionResult> LockUser(int id)
     {
         var command = new LockUserCommand(id);
@@ -52,7 +51,7 @@ public class AdminController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("{int:id}/unlock")]
+    [HttpPost("{id:int}/unlock")]
     public async Task<ActionResult> UnlockUser(int id)
     {
         var command = new UnlockUserCommand(id);
