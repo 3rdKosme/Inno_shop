@@ -10,6 +10,8 @@ public class AppDbContext : DbContext
 
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
+    public DbSet<PasswordResetToken> PasswordResetTokens { get; set; } = null!;
+    public DbSet<EmailConfirmationToken> EmailConfirmationTokens { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,6 +28,28 @@ public class AppDbContext : DbContext
             entity.Property(u => u.IsActive).IsRequired();
 
             entity.HasIndex(u => u.Email).IsUnique();
+        });
+
+        modelBuilder.Entity<PasswordResetToken>(entity =>
+        {
+            entity.HasKey(u => u.Id);
+            entity.Property(x => x.Token).IsRequired().HasMaxLength(256);
+            entity.Property(x => x.ExpiresAt).IsRequired();
+            entity.Property(x => x.IsRevoked).HasDefaultValue(false);
+            entity.HasIndex(x => x.Token).IsUnique();
+
+            entity.HasOne<User>().WithMany(u => u.PasswordResetTokens).HasForeignKey(u => u.UserId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<EmailConfirmationToken>(entity =>
+        {
+            entity.HasKey(u => u.Id);
+            entity.Property(x => x.Token).IsRequired().HasMaxLength(256);
+            entity.Property(x => x.ExpiresAt).IsRequired();
+            entity.Property(x => x.IsRevoked).HasDefaultValue(false);
+            entity.HasIndex(x => x.Token).IsUnique();
+
+            entity.HasOne<User>().WithMany(u => u.EmailConfirmationTokens).HasForeignKey(u => u.UserId).OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<RefreshToken>(entity =>

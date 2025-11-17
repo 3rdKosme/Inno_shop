@@ -1214,10 +1214,13 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "FluentValidation.DependencyInjectionExtensions": "12.1.0",
+          "Microsoft.Extensions.Configuration": "10.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "10.0.0",
           "Shared.Application": "1.0.0",
           "UserService.Domain": "1.0.0",
           "fluentvalidation": "12.1.0",
-          "mediatr": "13.1.0"
+          "mediatr": "13.1.0",
+          "microsoft.extensions.options": "10.0.0"
         },
         "compile": {
           "bin/placeholder/UserService.Application.dll": {}

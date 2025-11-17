@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Inno_Shop.UserService.Application.Users.Queries.GetUserById;
+using Inno_Shop.UserService.Application.Users.Queries.GetUserByIdAdmin;
 using Inno_Shop.UserService.Application.Users.Commands.AddUser;
 using Inno_Shop.UserService.Api.DTOs;
 using Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
@@ -9,7 +9,8 @@ using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Abstractions;
 using System.Security.Claims;
-using Inno_Shop.UserService.Application.Users.Queries.GetUserByIdAdmin;
+using Inno_Shop.UserService.Application.Users.Commands.LockUser;
+using Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
 
 [Authorize(Roles = "Admin")]
 [ApiController]
@@ -41,20 +42,20 @@ public class AdminController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("me")]
-    public async Task<ActionResult> DeactivateUser([FromBody] DeactivateUserRequest request)
+    [HttpPost("{int:id}/lock")]
+    public async Task<ActionResult> LockUser(int id)
     {
-        var command = new DeactivateUserCommand(request.Password);
+        var command = new LockUserCommand(id);
 
         await _mediator.Send(command);
 
         return NoContent();
     }
 
-    [HttpPost("me/activate")]
-    public async Task<ActionResult> ActivateUser([FromBody] ActivateUserRequest request)
+    [HttpPost("{int:id}/unlock")]
+    public async Task<ActionResult> UnlockUser(int id)
     {
-        var command = new ActivateUserCommand(request.Password);
+        var command = new UnlockUserCommand(id);
 
         await _mediator.Send(command);
 

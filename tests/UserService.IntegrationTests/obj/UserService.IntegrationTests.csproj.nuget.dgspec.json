@@ -229,6 +229,14 @@
               "target": "Package",
               "version": "[12.1.0, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "fluentvalidation": {
               "target": "Package",
               "version": "[12.1.0, )"
@@ -236,6 +244,10 @@
             "mediatr": {
               "target": "Package",
               "version": "[13.1.0, )"
+            },
+            "microsoft.extensions.options": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
           "imports": [

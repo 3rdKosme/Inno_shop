@@ -31,7 +31,7 @@ public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailSe
         {
             user.Activate();
         }
-        catch (AlreadyActivatedException ex)
+        catch (AlreadyDoneException ex)
         {
             throw new BusinessRuleValidationException(ex.Message);
         }

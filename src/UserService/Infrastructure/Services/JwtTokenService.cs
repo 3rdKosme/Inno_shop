@@ -17,7 +17,6 @@ public class JwtTokenService(IOptions<JwtSettings> options) : IJwtTokenService
 
     public string GenerateAccessToken(int userId, string email, string role)
     {
-        Console.WriteLine($"{_jwtSettings.Issuer}, {_jwtSettings.Audience}, {_jwtSettings.Key}, {_jwtSettings.ExpireMinutes}");
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),

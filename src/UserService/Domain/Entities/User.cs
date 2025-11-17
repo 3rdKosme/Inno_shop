@@ -9,17 +9,19 @@ using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Domain.Entities
 {
-    public class User
+    public class User : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public UserRole UserRole { get; set; }
         public bool IsEmailConfirmed { get; set; }
         public bool IsActive { get; set; }
+        public bool IsLocked { get; set; }
         public DateTime CreatedAt { get; set; }
         public List<RefreshToken> RefreshTokens { get; set; } = new();
+        public List<PasswordResetToken> PasswordResetTokens { get; set; } = new();
+        public List<EmailConfirmationToken> EmailConfirmationTokens { get; set; } = new();
 
         public User() { }
 
@@ -37,6 +39,7 @@ namespace Inno_Shop.UserService.Domain.Entities
                 UserRole = UserRole.User,
                 IsEmailConfirmed = false,
                 IsActive = true,
+                IsLocked = false,
                 CreatedAt = DateTime.UtcNow,
             };
         }
@@ -74,16 +77,33 @@ namespace Inno_Shop.UserService.Domain.Entities
         {
             if (!IsActive)
             {
-                throw new AlreadyDeactivatedException();
+                throw new AlreadyDoneException();
             }
             IsActive = false;
         }
         public void Activate() {
             if (IsActive)
             {
-                throw new AlreadyActivatedException();
+                throw new AlreadyDoneException();
             }
             IsActive = true;
+        }
+
+        public void Lock()
+        {
+            if (IsLocked) {
+                throw new AlreadyDoneException();
+            }
+            IsLocked = true; 
+        }
+
+        public void Unlock()
+        {
+            if (!IsLocked)
+            {
+                throw new AlreadyDoneException();
+            }
+            IsLocked = false;
         }
     }
 }

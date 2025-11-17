@@ -9,6 +9,8 @@ using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Abstractions;
 using System.Security.Claims;
+using Inno_Shop.UserService.Application.Users.Commands.SendEmailConfirmationCode;
+using Inno_Shop.UserService.Application.Users.Commands.ConfirmEmail;
 
 [Authorize]
 [ApiController]
@@ -40,7 +42,7 @@ public class UserController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("me")]
+    [HttpPost("me/deactivate")]
     public async Task<ActionResult> DeactivateUser([FromBody] DeactivateUserRequest request)
     {
         var command = new DeactivateUserCommand(request.Password);
@@ -54,6 +56,26 @@ public class UserController(IMediator mediator) : ControllerBase
     public async Task<ActionResult> ActivateUser([FromBody] ActivateUserRequest request)
     {
         var command = new ActivateUserCommand(request.Password);
+
+        await _mediator.Send(command);
+
+        return NoContent();
+    }
+
+    [HttpPost("me/sendEmailConformationCode")]
+    public async Task<ActionResult> SendEmailConfirmationCode()
+    {
+        var command = new SendEmailConfirmationCodeCommand();
+        
+        await _mediator.Send(command);
+
+        return NoContent();
+    }
+
+    [HttpPost("me/confirmEmail")]
+    public async Task<ActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request)
+    {
+        var command = new ConfirmEmailCommand(request.Token);
 
         await _mediator.Send(command);
 

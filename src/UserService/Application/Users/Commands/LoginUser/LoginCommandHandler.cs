@@ -1,5 +1,7 @@
 using Inno_Shop.UserService.Application.Abstractions;
+using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Application.DTOs;
+using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Users.Commands.LoginUser;
 using Inno_Shop.UserService.Domain.Entities;
 using MediatR;
@@ -16,16 +18,9 @@ public class LoginCommandHandler(IUserRepository userRepository, IPasswordHasher
     {
         var user = await _userRepository.GetByEmailAsync(request.Email, cancellationToken);
 
-
-        //if (_passwordHasher.VerifyPassword(request.Password, user.PasswordHash)) throw new Exception($"req: {request.Password}, hash: {user.PasswordHash}");
-
-
-
-
-
         if (user == null || !_passwordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {
-            throw new UnauthorizedAccessException();
+            throw new InvalidCredentialsException(ErrorMessages.IncorrectPassword);
         }
 
         var accessToken = _jwtTokenService.GenerateAccessToken(user.Id, user.Email, user.UserRole.ToString());

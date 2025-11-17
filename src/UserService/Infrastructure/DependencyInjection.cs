@@ -16,14 +16,18 @@ public static class DependencyInjection
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
         services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
+        services.Configure<SmtpSettings>(configuration.GetSection("TokenGeneratorSettings"));
+
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+        services.AddScoped<IEmailConfirmationTokenRepository, EmailConfirmationTokenTokenRepository>();
+        services.AddScoped<IPasswordResetTokenRepository, PasswordResetTokenRepository>();
 
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddScoped<IEmailService, SmtpEmailService>();
         services.AddScoped<IPasswordHasher, PasswordHasher>();
-        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<ITokenGenerator, TokenGenerator>();
 
         return services;
     }

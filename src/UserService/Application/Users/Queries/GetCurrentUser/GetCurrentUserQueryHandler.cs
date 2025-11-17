@@ -8,7 +8,8 @@ using Inno_Shop.UserService.Application.Users.Queries.Common;
 
 namespace Inno_Shop.UserService.Application.Users.Queries.GetCurrentUser;
 
-public class GetCurrentUserQueryHandler(IUserRepository userRepository, ICurrentUserService currentUserService) : UserQueryHandlerBase(userRepository), IRequestHandler<GetCurrentUserQuery, UserDto>
+public class GetCurrentUserQueryHandler(IUserRepository userRepository, ICurrentUserService currentUserService)
+    : UserQueryHandlerBase(userRepository), IRequestHandler<GetCurrentUserQuery, UserDto>
 {
     private readonly ICurrentUserService _currentUserService = currentUserService;
 

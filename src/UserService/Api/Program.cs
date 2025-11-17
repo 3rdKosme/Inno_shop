@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Inno_Shop.UserService.Application.Common.Settings;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,11 +19,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpContextAccessor();
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 
+
 var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSettings>();
-Console.WriteLine($"{jwtSettings.Issuer}, {jwtSettings.Audience}, {jwtSettings.Key}, {jwtSettings.ExpireMinutes}");
+
 builder.Services.AddInfrastructure(builder.Configuration);
 
-builder.Services.AddApplicationServices();
+builder.Services.AddApplicationServices(builder.Configuration);
 
 
 builder.Services.AddControllers()

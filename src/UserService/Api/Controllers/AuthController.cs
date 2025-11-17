@@ -4,6 +4,7 @@ using Inno_Shop.UserService.Api.DTOs;
 using Inno_Shop.UserService.Application.Users.Commands.LoginUser;
 using Inno_Shop.UserService.Application.Users.Commands.RefreshToken;
 using Inno_Shop.UserService.Application.Users.Commands.AddUser;
+using Inno_Shop.UserService.Application.Users.Commands.SendPasswordResetCode;
 using Microsoft.AspNetCore.Authorization;
 
 [AllowAnonymous]
@@ -47,5 +48,25 @@ public class AuthController(IMediator mediator) : ControllerBase
         var authResult = await _mediator.Send(command);
 
         return Ok(authResult);
+    }
+
+    [HttpPost("forgotPassword")]
+    public async Task<ActionResult> SendPasswordResetCode([FromBody] SendPasswordResetCodeRequest request)
+    {
+        var command = new SendPasswordResetCodeCommand(request.Email);
+
+        await _mediator.Send(command);
+
+        return Ok();
+    }
+
+    [HttpPost("validateResetToken")]
+    public async Task<ActionResult> ValidateResetToken([FromBody] ResetPasswordRequest request)
+    {
+        var command = new ResetPasswordRequest(request.Token, request.NewPassword);
+
+        await _mediator.Send(command);
+
+        return Ok();
     }
 }

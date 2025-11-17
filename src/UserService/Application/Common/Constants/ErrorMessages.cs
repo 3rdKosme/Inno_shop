@@ -15,6 +15,8 @@ public static class ErrorMessages
     public static string IncorrectPassword = "a9";
     public static string CurrentPasswordIsRequired = "a10";
     public static string RefreshTokenIsRequired = "a11";
-
+    public static string TokenIsRequired = "a13";
+    public static string IncorrectToken = "a14";
+    public static string TokenIsExpiredOrRevoked = "a15";
     public static string UserNotFound = "a12";
 }

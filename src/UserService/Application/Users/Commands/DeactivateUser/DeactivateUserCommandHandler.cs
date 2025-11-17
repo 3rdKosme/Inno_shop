@@ -36,7 +36,7 @@ public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmail
         {
             user.Deactivate();
         }
-        catch (AlreadyDeactivatedException ex)
+        catch (AlreadyDoneException ex)
         {
             throw new BusinessRuleValidationException(ex.Message);
         }
