@@ -38,7 +38,7 @@ public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailSe
             throw new BusinessRuleValidationException(ex.Message);
         }
 
-        await _userRepository.UpdateAsync(user);
+        await _userRepository.UpdateAsync(user, cancellationToken);
 
         await _emailService.SendAsync(user.Email, EmailTemplate.Activated, new StatusChangedModel { Name = user.Name }, cancellationToken);
 

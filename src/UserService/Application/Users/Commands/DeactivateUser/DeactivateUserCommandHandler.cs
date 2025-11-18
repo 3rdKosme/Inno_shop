@@ -1,13 +1,11 @@
 using MediatR;
-using Inno_Shop.UserService.Application.DTOs;
-using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Abstractions;
-using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 using Inno_Shop.UserService.Application.Emails.Models;
 using Inno_Shop.UserService.Application.Emails;
+using Inno_Shop.Shared.Application.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 
@@ -23,11 +21,7 @@ public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmail
     {
         var userId = _currentUserService.UserId ?? throw new UnauthorizedAccessException();
 
-        var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
-
-        if (user == null) {
-            throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
-        }
+        var user = await _userRepository.GetByIdAsync(userId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         if (!_passwordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {
@@ -43,7 +37,7 @@ public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmail
             throw new BusinessRuleValidationException(ex.Message);
         }
 
-        await _userRepository.UpdateAsync(user);
+        await _userRepository.UpdateAsync(user, cancellationToken);
 
         await _emailService.SendAsync(user.Email, EmailTemplate.Deactivated, new StatusChangedModel { Name = user.Name }, cancellationToken);
 

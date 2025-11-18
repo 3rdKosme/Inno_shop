@@ -1,7 +1,5 @@
 using Inno_Shop.UserService.Application.Abstractions;
-using System;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace Inno_Shop.UserService.Infrastructure.Services;
 

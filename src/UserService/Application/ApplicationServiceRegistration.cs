@@ -3,9 +3,7 @@ using MediatR;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-using System.Reflection;
 using Inno_Shop.UserService.Application.Common.Settings;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Inno_Shop.UserService.Application;
 

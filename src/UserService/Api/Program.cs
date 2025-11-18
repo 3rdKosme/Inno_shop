@@ -1,4 +1,4 @@
-using FluentValidation;
+﻿using FluentValidation;
 using Inno_Shop.Shared.Application.Exceptions;
 using Inno_Shop.UserService.Application;
 using Inno_Shop.UserService.Application.Exceptions;
@@ -7,11 +7,11 @@ using Inno_Shop.UserService.Infrastructure.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 using System.Text;
 using Microsoft.OpenApi.Models;
-using Inno_Shop.UserService.Application.Common.Settings;
+using Inno_Shop.UserService.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +20,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 
 
-var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSettings>();
+var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSettings>() ?? throw new Exception("JwtSettings not configured");
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -132,6 +132,10 @@ app.Map("/error", (HttpContext context) =>
             statusCode: 500)
     };
 });
+
+using var scope = app.Services.CreateScope();
+var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+db.Database.Migrate();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();

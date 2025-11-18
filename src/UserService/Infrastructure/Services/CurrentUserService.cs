@@ -1,7 +1,5 @@
 using Inno_Shop.UserService.Application.Abstractions;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Abstractions;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace Inno_Shop.UserService.Infrastructure.Services;
@@ -25,14 +23,6 @@ public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICur
         get
         {
             return _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Email)?.Value;
-        }
-    }
-
-    public string? Role
-    {
-        get
-        {
-            return _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Role)?.Value;
         }
     }
 }

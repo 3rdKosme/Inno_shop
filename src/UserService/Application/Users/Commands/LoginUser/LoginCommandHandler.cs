@@ -3,10 +3,10 @@ using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Application.DTOs;
 using Inno_Shop.UserService.Application.Exceptions;
-using Inno_Shop.UserService.Application.Users.Commands.LoginUser;
-using Inno_Shop.UserService.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.Options;
+
+namespace Inno_Shop.UserService.Application.Users.Commands.LoginUser;
 
 public class LoginCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher, 
     IJwtTokenService jwtTokenService, IRefreshTokenRepository refreshTokenRepository, IOptions<RefreshTokenSettings> refreshTokenSettings) : IRequestHandler<LoginCommand, AuthResultDto>
@@ -29,7 +29,7 @@ public class LoginCommandHandler(IUserRepository userRepository, IPasswordHasher
         var accessToken = _jwtTokenService.GenerateAccessToken(user.Id, user.Email, user.UserRole.ToString());
         var refreshToken = _jwtTokenService.GenerateRefreshToken();
 
-        var token = new RefreshToken(user.Id, refreshToken, DateTime.UtcNow.AddDays(_refreshTokenSettings.ExpireDays));
+        var token = new Domain.Entities.RefreshToken(user.Id, refreshToken, DateTime.UtcNow.AddDays(_refreshTokenSettings.ExpireDays));
 
         await _refreshTokenRepository.AddAsync(token, cancellationToken);
 

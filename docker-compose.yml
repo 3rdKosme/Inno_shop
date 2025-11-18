@@ -1,0 +1,57 @@
+services:
+  users-db:
+    image: postgres:16
+    container_name: users-db
+    environment:
+      POSTGRES_DB: users-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 70323337
+    ports:
+      - "5432:5432"
+    volumes:
+      - users_pgdata:/var/lib/postgresql/data
+    networks:
+      - inno-net
+    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+  user-service:
+    build:
+      context: .
+      dockerfile: ./src/UserService/Api/Dockerfile
+    container_name: user-service
+    depends_on:
+      users-db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+
+      ConnectionStrings__DefaultConnection: "Host=users-db;Port=5432;Database=users-db;Username=postgres;Password=70323337"
+
+      SmtpSettings__Host: "smtp.gmail.com"
+      SmtpSettings__Port: 587
+      SmtpSettings__Username: "v.moiseif67@gmail.com"
+      SmtpSettings__Password: "zbytmbtkodemlsum"
+      SmtpSettings__FromAddress: "v.moiseif67@gmail.com"
+      SmtpSettings__EnableSsl: true
+
+      Jwt__Key: "e364a977eba7f368aaee5b94d351f09c4a41c8fd35b979094eec477696623a8a2"
+      Jwt__Issuer: "InnoShop.UserService"
+      Jwt__Audience: "InnoShop.Client"
+      Jwt__ExpireMinutes: 60
+
+    ports:
+      - "5001:8080"
+    networks:
+      - inno-net
+
+volumes:
+  users_pgdata:
+
+networks:
+  inno-net:

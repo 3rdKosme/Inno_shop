@@ -1,17 +1,13 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Inno_Shop.UserService.Application.Users.Queries.GetUserByIdAdmin;
-using Inno_Shop.UserService.Application.Users.Commands.AddUser;
 using Inno_Shop.UserService.Api.DTOs;
-using Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
-using Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
-using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 using Microsoft.AspNetCore.Authorization;
-using Inno_Shop.UserService.Application.Abstractions;
-using System.Security.Claims;
 using Inno_Shop.UserService.Application.Users.Commands.LockUser;
 using Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
 using Inno_Shop.UserService.Application.Users.Commands.UpdateUserAdmin;
+
+namespace Inno_Shop.UserService.Api.Controllers;
 
 [Authorize(Roles = "Admin")]
 [ApiController]

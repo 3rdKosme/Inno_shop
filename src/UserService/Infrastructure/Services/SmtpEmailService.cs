@@ -5,7 +5,6 @@ using Inno_Shop.UserService.Infrastructure.Options;
 using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
-using System.Runtime;
 
 namespace Inno_Shop.UserService.Infrastructure.Services;
 

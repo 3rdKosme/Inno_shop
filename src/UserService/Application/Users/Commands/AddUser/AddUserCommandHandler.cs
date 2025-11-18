@@ -2,7 +2,6 @@ using MediatR;
 using Inno_Shop.UserService.Application.DTOs;
 using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Abstractions;
-using System.ComponentModel.DataAnnotations;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;

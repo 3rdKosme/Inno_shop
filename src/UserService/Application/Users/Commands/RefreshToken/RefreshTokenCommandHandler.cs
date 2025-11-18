@@ -23,12 +23,7 @@ public class RefreshTokenCommandHandler(IRefreshTokenRepository refreshTokenRepo
             throw new UnauthorizedAccessException();
         }
 
-        var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken);
-
-        if (user == null) 
-        { 
-            throw new UnauthorizedAccessException();
-        }
+        var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new UnauthorizedAccessException();
 
         stored.Revoke();
 

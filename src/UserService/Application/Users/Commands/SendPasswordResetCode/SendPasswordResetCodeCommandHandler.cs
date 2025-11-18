@@ -1,4 +1,3 @@
-using FluentValidation;
 using Inno_Shop.Shared.Application.Exceptions;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Constants;

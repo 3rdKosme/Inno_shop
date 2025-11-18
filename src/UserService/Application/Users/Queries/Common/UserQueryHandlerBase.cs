@@ -1,5 +1,3 @@
-using MediatR;
-using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.DTOs;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.Shared.Application.Exceptions;

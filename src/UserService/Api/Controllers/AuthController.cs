@@ -8,6 +8,8 @@ using Inno_Shop.UserService.Application.Users.Commands.SendPasswordResetCode;
 using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Users.Commands.ResetPassword;
 
+namespace Inno_Shop.UserService.Api.Controllers;
+
 [AllowAnonymous]
 [ApiController]
 [Route("api/[controller]")]

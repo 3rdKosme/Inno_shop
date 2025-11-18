@@ -1,16 +1,15 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Inno_Shop.UserService.Application.Users.Queries.GetCurrentUser;
-using Inno_Shop.UserService.Application.Users.Commands.AddUser;
 using Inno_Shop.UserService.Api.DTOs;
 using Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
 using Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 using Microsoft.AspNetCore.Authorization;
-using Inno_Shop.UserService.Application.Abstractions;
-using System.Security.Claims;
 using Inno_Shop.UserService.Application.Users.Commands.SendEmailConfirmationCode;
 using Inno_Shop.UserService.Application.Users.Commands.ConfirmEmail;
+
+namespace Inno_Shop.UserService.Api.Controllers;
 
 [Authorize]
 [ApiController]

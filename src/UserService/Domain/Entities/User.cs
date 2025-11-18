@@ -1,10 +1,5 @@
 ﻿using Inno_Shop.UserService.Domain.Enums;
 using Inno_Shop.UserService.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Inno_Shop.UserService.Domain.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 
@@ -12,17 +7,17 @@ namespace Inno_Shop.UserService.Domain.Entities
 {
     public class User : BaseEntity
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string PasswordHash { get; set; }
+        public string Name { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string PasswordHash { get; set; } = null!;
         public UserRole UserRole { get; set; }
         public bool IsEmailConfirmed { get; set; }
         public bool IsActive { get; set; }
         public bool IsLocked { get; set; }
         public DateTime CreatedAt { get; set; }
-        public List<RefreshToken> RefreshTokens { get; set; } = new();
-        public List<PasswordResetToken> PasswordResetTokens { get; set; } = new();
-        public List<EmailConfirmationToken> EmailConfirmationTokens { get; set; } = new();
+        public List<RefreshToken> RefreshTokens { get; set; } = [];
+        public List<PasswordResetToken> PasswordResetTokens { get; set; } = [];
+        public List<EmailConfirmationToken> EmailConfirmationTokens { get; set; } = [];
 
         public User() { }
 

@@ -1,5 +1,4 @@
-﻿using Inno_Shop.UserService.Application.Emails;
-using Inno_Shop.UserService.Application.Emails.Models;
+﻿using Inno_Shop.UserService.Application.Emails.Models;
 
 namespace Inno_Shop.UserService.Application.Emails.Templates;
 

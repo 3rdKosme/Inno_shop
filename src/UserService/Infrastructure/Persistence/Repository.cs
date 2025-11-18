@@ -17,7 +17,7 @@ public class Repository<T>(AppDbContext context) : IRepository<T> where T : Base
 
     public virtual async Task<bool> UpdateAsync(T entity, CancellationToken cancellationToken = default)
     {
-        var existing = await _dbSet.FindAsync(new object[] { entity.Id }, cancellationToken);
+        var existing = await _dbSet.FindAsync([entity.Id], cancellationToken);
         if(existing ==  null) return false;
 
         _context.Entry(existing).CurrentValues.SetValues(entity);
