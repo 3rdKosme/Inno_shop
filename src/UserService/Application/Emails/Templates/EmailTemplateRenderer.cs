@@ -10,92 +10,114 @@ public static class EmailTemplateRenderer
         return template switch
         {
             EmailTemplate.PasswordReset => (
-                "Reset Your Password",
+                Subjects.PasswordReset,
                 PasswordReset((PasswordResetModel)model)
             ),
 
             EmailTemplate.EmailConfirmation => (
-                "Confirm Your Email",
+                Subjects.EmailConfirmation,
                 EmailConfirmation((EmailConfirmationModel)model)
             ),
 
             EmailTemplate.ProfileChangedUser => (
-                "Your Profile Was Updated",
+                Subjects.ProfileChangedUser,
                 ProfileChangedUser((ProfileChangedModel)model)
             ),
 
             EmailTemplate.ProfileChangedAdmin => (
-                "A User Profile Was Updated",
+                Subjects.ProfileChangedAdmin,
                 ProfileChangedAdmin((ProfileChangedModel)model)
             ),
 
             EmailTemplate.Activated => (
-                "Account Activated",
-                Status("Your account has been activated.", model)
+                Subjects.Activated,
+                Status("Ваш аккаунт был успешно активирован.")
             ),
 
             EmailTemplate.Deactivated => (
-                "Account Deactivated",
-                Status("Your account has been deactivated.", model)
+                Subjects.Deactivated,
+                Status("Ваш аккаунт был деактивирован.")
             ),
 
             EmailTemplate.Locked => (
-                "Account Locked",
-                Status("Your account has been locked.", model)
+                Subjects.Locked,
+                Status("Ваш аккаунт был заблокирован.")
             ),
 
             EmailTemplate.Unlocked => (
-                "Account Unlocked",
-                Status("Your account has been unlocked.", model)
+                Subjects.Unlocked,
+                Status("Ваш аккаунт был разблокирован.")
             ),
 
             EmailTemplate.ProfileCreated => (
-                "Welcome to InnoShop!",
+                Subjects.ProfileCreated,
                 ProfileCreated((ProfileCreatedModel)model)
             ),
 
-            _ => ("Notification", "<p>No template found</p>")
+            _ => ("Уведомление", Layout("<p>Шаблон не найден.</p>"))
         };
     }
 
+    private static string Layout(string body) =>
+$@"<html>
+<body style=""font-family:Arial;padding:20px;line-height:1.6;font-size:15px;color:#333;"">
+    {body}
+</body>
+</html>";
+
+    private static string Button(string url, string text) =>
+$@"<a href=""{url}"" 
+    style=""padding:12px 20px;background:#007bff;color:white;
+           text-decoration:none;border-radius:6px;display:inline-block;margin-top:10px;"">
+        {text}
+</a>";
+
     private static string PasswordReset(PasswordResetModel m) =>
-$@"<html><body style=""font-family:Arial;padding:20px;"">
-    <h2>Password Reset</h2>
-    <p>Click the link below to reset your password:</p>
-    <a href=""{m.ResetLink}"" style=""padding:10px 20px;background:#007bff;color:white;text-decoration:none;border-radius:6px;"">
-        Reset Password
-    </a>
-</body></html>";
+        Layout($@"
+            <h2>Сброс пароля</h2>
+            <p>Чтобы сбросить пароль, нажмите на кнопку ниже:</p>
+            {Button(m.ResetLink, "Сбросить пароль")}
+        ");
 
     private static string EmailConfirmation(EmailConfirmationModel m) =>
-$@"<html><body style=""font-family:Arial;padding:20px;"">
-    <h2>Confirm Your Email</h2>
-    <a href=""{m.ConfirmationLink}"" style=""padding:10px 20px;background:#28a745;color:white;text-decoration:none;border-radius:6px;"">
-        Confirm Email
-    </a>
-</body></html>";
+        Layout($@"
+            <h2>Подтверждение email</h2>
+            <p>Для подтверждения вашего адреса электронной почты нажмите кнопку:</p>
+            {Button(m.ConfirmationLink, "Подтвердить email")}
+        ");
 
     private static string ProfileChangedUser(ProfileChangedModel m) =>
-$@"<html><body style=""font-family:Arial;padding:20px;"">
-    <h2>Profile Updated</h2>
-    <p>Hello {m.Name}, your profile has been updated.</p>
-</body></html>";
+        Layout($@"
+            <h2>Ваш профиль был обновлён</h2>
+            <p>Здравствуйте, {m.Name}. Ваш профиль был успешно изменён.</p>
+        ");
 
     private static string ProfileChangedAdmin(ProfileChangedModel m) =>
-$@"<html><body style=""font-family:Arial;padding:20px;"">
-    <h2>User Profile Updated</h2>
-    <p>User {m.Name} updated their profile.</p>
-</body></html>";
+        Layout($@"
+            <h2>Профиль пользователя обновлён</h2>
+            <p>Пользователь {m.Name} обновил данные своего профиля.</p>
+        ");
 
-    private static string Status(string message, object model) =>
-$@"<html><body style=""font-family:Arial;padding:20px;"">
-    <p>{message}</p>
-</body></html>";
+    private static string Status(string message) =>
+        Layout($@"<p>{message}</p>");
 
     private static string ProfileCreated(ProfileCreatedModel m) =>
-$@"<html><body style=""font-family:Arial;padding:20px;"">
-    <h2>Добро пожаловать, {m.Name}!</h2>
-    <p>Ваш профиль был успешно создан в InnoShop.</p>
-    <p>Мы рады видеть вас с нами!</p>
-</body></html>";
+        Layout($@"
+            <h2>Добро пожаловать, {m.Name}!</h2>
+            <p>Ваш профиль был успешно создан в системе InnoShop.</p>
+            <p>Мы рады видеть вас среди наших пользователей!</p>
+        ");
+    
+    private static class Subjects
+    {
+        public const string PasswordReset = "Сброс пароля";
+        public const string EmailConfirmation = "Подтверждение email";
+        public const string ProfileChangedUser = "Ваш профиль обновлён";
+        public const string ProfileChangedAdmin = "Профиль пользователя обновлён";
+        public const string Activated = "Аккаунт активирован";
+        public const string Deactivated = "Аккаунт деактивирован";
+        public const string Locked = "Аккаунт заблокирован";
+        public const string Unlocked = "Аккаунт разблокирован";
+        public const string ProfileCreated = "Добро пожаловать в InnoShop!";
+    }
 }

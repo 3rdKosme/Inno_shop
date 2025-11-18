@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Inno_Shop.UserService.Domain.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Domain.Entities
@@ -69,7 +70,7 @@ namespace Inno_Shop.UserService.Domain.Entities
         }
         public void ConfirmEmail()
         {
-            if (IsEmailConfirmed) throw new EmailAlreadyConfirmedException();
+            if (IsEmailConfirmed) throw new EmailAlreadyConfirmedException(ErrorMessages.EmailAlreadyConfirmed);
             IsEmailConfirmed = true;
         }
 
@@ -77,14 +78,14 @@ namespace Inno_Shop.UserService.Domain.Entities
         {
             if (!IsActive)
             {
-                throw new AlreadyDoneException();
+                throw new AlreadyDoneException(ErrorMessages.AlreadyDeactivated);
             }
             IsActive = false;
         }
         public void Activate() {
             if (IsActive)
             {
-                throw new AlreadyDoneException();
+                throw new AlreadyDoneException(ErrorMessages.AlreadyActivated);
             }
             IsActive = true;
         }
@@ -92,7 +93,7 @@ namespace Inno_Shop.UserService.Domain.Entities
         public void Lock()
         {
             if (IsLocked) {
-                throw new AlreadyDoneException();
+                throw new AlreadyDoneException(ErrorMessages.AlreadyLocked);
             }
             IsLocked = true; 
         }
@@ -101,7 +102,7 @@ namespace Inno_Shop.UserService.Domain.Entities
         {
             if (!IsLocked)
             {
-                throw new AlreadyDoneException();
+                throw new AlreadyDoneException(ErrorMessages.AlreadyUnlocked);
             }
             IsLocked = false;
         }

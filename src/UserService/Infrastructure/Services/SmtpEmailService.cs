@@ -19,7 +19,9 @@ public class SmtpEmailService(IOptions<SmtpSettings> options) : IEmailService
         using var client = new SmtpClient(_smtpSettings.Host, _smtpSettings.Port)
         {
             Credentials = new NetworkCredential(_smtpSettings.Username, _smtpSettings.Password),
-            EnableSsl = _smtpSettings.EnableSsl
+            EnableSsl = _smtpSettings.EnableSsl,
+            DeliveryMethod = SmtpDeliveryMethod.Network,
+            UseDefaultCredentials = false
         };
 
         using var message = new MailMessage(_smtpSettings.FromAddress, to)

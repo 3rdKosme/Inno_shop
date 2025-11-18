@@ -26,6 +26,7 @@ public class ConfirmEmailCommandHandler(IUserRepository userRepository, IEmailCo
         }
 
         var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+
         try
         {
             user.ConfirmEmail();
