@@ -5,6 +5,7 @@ using Inno_Shop.UserService.Application.Emails;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
 using MediatR;
+using Inno_Shop.Shared.Application.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
 
@@ -16,7 +17,7 @@ public class UnlockUserCommandHandler(IUserRepository userRepository,
 
     public async Task<Unit> Handle(UnlockUserCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
+        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         try
         {

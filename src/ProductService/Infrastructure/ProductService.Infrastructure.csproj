@@ -2,6 +2,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\ProductService.Domain.csproj" />
+	<ProjectReference Include="..\Application\ProductService.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
   </ItemGroup>
 
   <PropertyGroup>

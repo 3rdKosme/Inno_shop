@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Users.Commands.LockUser;
 using Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
 using Inno_Shop.UserService.Application.Users.Commands.UpdateUserAdmin;
+using Inno_Shop.UserService.Application.Users.Commands.PromoteUserToAdmin;
 
 namespace Inno_Shop.UserService.Api.Controllers;
 
@@ -51,6 +52,16 @@ public class AdminController(IMediator mediator) : ControllerBase
     public async Task<ActionResult> UnlockUser(int id)
     {
         var command = new UnlockUserCommand(id);
+
+        await _mediator.Send(command);
+
+        return NoContent();
+    }
+
+    [HttpPost("{id:int}/promoteToAdmin")]
+    public async Task<ActionResult> PromoteToAdmin(int id)
+    {
+        var command = new PromoteUserToAdminCommand(id);
 
         await _mediator.Send(command);
 
