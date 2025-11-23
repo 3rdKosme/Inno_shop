@@ -2,6 +2,6 @@ namespace Inno_Shop.UserService.Application.Abstractions;
 
 public interface ICurrentUserService
 {
-    int? UserId { get; }
-    string? Email { get; }
+    public int? UserId { get; }
+    public string? Email { get; }
 }

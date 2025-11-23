@@ -15,26 +15,19 @@ public class ResetPasswordCommandHandler(IUserRepository userRepository, IEmailS
     IOptions<PasswordResetTokenSettings> passwordResetTokenSettings, 
     ITokenGenerator tokenGenerator) : IRequestHandler<SendPasswordResetCodeCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IEmailService _emailService = emailService;
-    private readonly IPasswordResetTokenRepository _passwordTokenRepository = passwordResetTokenRepository;
-    private readonly ITokenGenerator _tokenGenerator = tokenGenerator;
-    private readonly PasswordResetTokenSettings _passwordResetTokenSettings = passwordResetTokenSettings.Value;
-    private readonly AppSettings _appSettings = appSettings.Value;
-
     public async Task<Unit> Handle(SendPasswordResetCodeCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByEmailAsync(request.Email, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByEmailAsync(request.Email, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
-        var token = _tokenGenerator.GenerateSecureToken();
+        var token = tokenGenerator.GenerateSecureToken();
 
-        var resetToken = new PasswordResetToken(user.Id, token, DateTime.UtcNow.AddMinutes(_passwordResetTokenSettings.ExpireMinutes));
+        var resetToken = new PasswordResetToken(user.Id, token, DateTime.UtcNow.AddMinutes(passwordResetTokenSettings.Value.ExpireMinutes));
 
-        await _passwordTokenRepository.AddAsync(resetToken, cancellationToken);
+        await passwordResetTokenRepository.AddAsync(resetToken, cancellationToken);
 
-        var resetLink = $"{_appSettings.FrontendUrl}/reset-password?token={token}";
+        var resetLink = $"{appSettings.Value.FrontendUrl}/reset-password?token={token}";
 
-        await _emailService.SendAsync(user.Email, EmailTemplate.PasswordReset, new PasswordResetModel { ResetLink = resetLink }, cancellationToken);
+        await emailService.SendAsync(user.Email, EmailTemplate.PasswordReset, new PasswordResetModel { ResetLink = resetLink }, cancellationToken);
 
         return Unit.Value;
     }

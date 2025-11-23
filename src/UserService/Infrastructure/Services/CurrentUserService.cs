@@ -6,13 +6,11 @@ namespace Inno_Shop.UserService.Infrastructure.Services;
 
 public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICurrentUserService
 {
-    private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
-
     public int? UserId
     {
         get
         {
-            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userIdClaim = httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             return int.TryParse(userIdClaim, out var userId) ? userId : null;
         }
@@ -22,7 +20,7 @@ public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICur
     {
         get
         {
-            return _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Email)?.Value;
+            return httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.Email)?.Value;
         }
     }
 }

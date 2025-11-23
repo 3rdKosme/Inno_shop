@@ -2,6 +2,6 @@
 
 public class TokenCleanupPolicy
 {
-    public int ExecutionIntervalMinutes { get; set; }
-    public int ExpirationGracePeriodHours { get; set; }
+    public required int ExecutionIntervalMinutes { get; init; }
+    public required int ExpirationGracePeriodHours { get; init; }
 }

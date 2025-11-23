@@ -2,7 +2,7 @@
 
 public static class ErrorMessages
 {
-    public const string IdGreaterThan0 = "Идентификатор должен быть больше нуля.";
+    public const string IdMustBeGreaterThan0 = "Идентификатор должен быть больше нуля.";
     public const string NameIsRequired = "Имя является обязательным для заполнения.";
     public const string NameMustNotExceed = "Длина имени превышает допустимое значение.";
     public const string EmailIsRequired = "Адрес электронной почты является обязательным для заполнения.";

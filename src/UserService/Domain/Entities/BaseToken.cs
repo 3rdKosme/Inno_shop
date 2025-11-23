@@ -2,14 +2,14 @@
 {
     public class BaseToken : BaseEntity
     {
-        public int UserId { get; set; }
-        public string Token { get; set; } = null!;
-        public DateTime ExpiresAt { get; set; }
-        public bool IsRevoked { get; set; }
+        public int UserId { get; init; }
+        public string Token { get; init; } = null!;
+        public DateTime ExpiresAt { get; init; }
+        public bool IsRevoked { get; private set; }
 
         protected BaseToken() { }
 
-        public BaseToken(int userId, string token, DateTime expiresAt)
+        protected BaseToken(int userId, string token, DateTime expiresAt)
         {
             UserId = userId;
             Token = token;

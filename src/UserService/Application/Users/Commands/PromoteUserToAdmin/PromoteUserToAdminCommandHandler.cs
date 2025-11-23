@@ -10,11 +10,9 @@ namespace Inno_Shop.UserService.Application.Users.Commands.PromoteUserToAdmin;
 public class PromoteUserToAdminCommandHandler(IUserRepository userRepository) 
     : IRequestHandler<PromoteUserToAdminCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-
     public async Task<Unit> Handle(PromoteUserToAdminCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         try
         {
@@ -25,7 +23,7 @@ public class PromoteUserToAdminCommandHandler(IUserRepository userRepository)
             throw new BusinessRuleValidationException(ex.Message);
         }
 
-        await _userRepository.UpdateAsync(user, cancellationToken);
+        await userRepository.UpdateAsync(user, cancellationToken);
 
         return Unit.Value;
     }

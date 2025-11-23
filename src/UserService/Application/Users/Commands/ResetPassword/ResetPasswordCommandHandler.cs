@@ -14,24 +14,21 @@ namespace Inno_Shop.UserService.Application.Users.Commands.ResetPassword;
 public class ResetPasswordCommandHandler(IUserRepository userRepository, IPasswordResetTokenRepository passwordResetTokenRepository,
     IPasswordHasher passwordHasher) : IRequestHandler<ResetPasswordCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IPasswordResetTokenRepository _passwordTokenRepository = passwordResetTokenRepository;
-    private readonly IPasswordHasher _passwordHasher = passwordHasher;
-
     public async Task<Unit> Handle(ResetPasswordCommand request, CancellationToken cancellationToken = default)
     {
-        var stored = await _passwordTokenRepository.GetByTokenAsync(request.Token, cancellationToken) ?? throw new InvalidCredentialsException(ErrorMessages.IncorrectToken);
+        var stored = await passwordResetTokenRepository.GetByTokenAsync(request.Token, cancellationToken) 
+                     ?? throw new InvalidCredentialsException(ErrorMessages.IncorrectToken);
 
         if(stored.IsExpired || stored.IsRevoked)
         {
             throw new TokenIsExpiredOrRevokedException(ErrorMessages.TokenIsExpiredOrRevoked);
         }
 
-        var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         try
         {
-            user.ChangePassword(_passwordHasher.HashPassword(request.NewPassword));
+            user.ChangePassword(passwordHasher.HashPassword(request.NewPassword));
             stored.Revoke();
         }
         catch (DomainArgumentNullException ex)
@@ -39,8 +36,8 @@ public class ResetPasswordCommandHandler(IUserRepository userRepository, IPasswo
             throw new BusinessRuleValidationException(ex.Message);
         }
        
-        await _userRepository.UpdateAsync(user, cancellationToken);       
-        await _passwordTokenRepository.UpdateAsync(stored, cancellationToken);
+        await userRepository.UpdateAsync(user, cancellationToken);       
+        await passwordResetTokenRepository.UpdateAsync(stored, cancellationToken);
 
         return Unit.Value;
     }

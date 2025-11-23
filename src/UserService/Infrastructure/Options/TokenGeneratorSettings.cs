@@ -2,5 +2,5 @@
 
 public class TokenGeneratorSettings
 {
-    public int TokenLength { get; set; }
+    public required int TokenLength { get; init; }
 }

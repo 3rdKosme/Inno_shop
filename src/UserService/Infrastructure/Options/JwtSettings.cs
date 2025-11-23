@@ -2,8 +2,8 @@ namespace Inno_Shop.UserService.Infrastructure.Options;
 
 public class JwtSettings
 {
-    public string Key { get; set; } = null!;
-    public string Issuer { get; set; } = null!;
-    public string Audience { get; set; } = null!;
+    public required string Key { get; set; }
+    public required string Issuer { get; set; }
+    public required string Audience { get; set; }
     public int ExpireMinutes { get; set; }
 }

@@ -6,20 +6,17 @@ using Microsoft.Extensions.Options;
 
 namespace Inno_Shop.UserService.Infrastructure.BackgroundServices;
 
-public class TokenCleanupService(IServiceProvider serviceProvider, IOptions<TokenCleanupPolicy> tokenCleanupPolicy) : BackgroundService
+public class TokenCleanupHostService(IServiceProvider serviceProvider, IOptions<TokenCleanupPolicy> tokenCleanupPolicy) : BackgroundService
 {
-    private readonly IServiceProvider _serviceProvider = serviceProvider;
-    private readonly TokenCleanupPolicy _tokenCleanupPolicy = tokenCleanupPolicy.Value;
-
     protected override async Task ExecuteAsync(CancellationToken cancellationToken)
     {
         while (!cancellationToken.IsCancellationRequested)
         {
-            using var scope = _serviceProvider.CreateScope();
+            using var scope = serviceProvider.CreateScope();
             var service = scope.ServiceProvider.GetRequiredService<ITokenCleanupService>();
 
             await service.CleanupAsync();
-            await Task.Delay(TimeSpan.FromHours(-_tokenCleanupPolicy.ExecutionIntervalMinutes), cancellationToken);
+            await Task.Delay(TimeSpan.FromMinutes(tokenCleanupPolicy.Value.ExecutionIntervalMinutes), cancellationToken);
         }
     }
 }

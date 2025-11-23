@@ -7,19 +7,19 @@ namespace Inno_Shop.UserService.Domain.Entities
 {
     public class User : BaseEntity
     {
-        public string Name { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
-        public UserRole UserRole { get; set; }
-        public bool IsEmailConfirmed { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsLocked { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public List<RefreshToken> RefreshTokens { get; set; } = [];
-        public List<PasswordResetToken> PasswordResetTokens { get; set; } = [];
-        public List<EmailConfirmationToken> EmailConfirmationTokens { get; set; } = [];
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+        public string PasswordHash { get; private set; }
+        public UserRole UserRole { get; private set; }
+        public bool IsEmailConfirmed { get; private set; }
+        public bool IsActive { get; private set; }
+        public bool IsLocked { get; private set; }
+        public DateTime CreatedAt { get; init; }
+        public List<RefreshToken> RefreshTokens { get; init; } = [];
+        public List<PasswordResetToken> PasswordResetTokens { get; init; } = [];
+        public List<EmailConfirmationToken> EmailConfirmationTokens { get; init; } = [];
 
-        public User() { }
+        private User() { }
 
         public static User Create(string name, string email, string passwordHash)
         {

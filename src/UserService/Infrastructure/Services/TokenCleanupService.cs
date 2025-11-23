@@ -3,20 +3,17 @@ using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Domain.Entities;
 using Microsoft.Extensions.Options;
 
-namespace Inno_Shop.UserService.Application.Services;
+namespace Inno_Shop.UserService.Infrastructure.Services;
 
 public class TokenCleanupService(ITokenRepository<BaseToken> tokenRepository, IOptions<TokenCleanupPolicy> tokenCleanupPolicy) : ITokenCleanupService
 {
-    private readonly ITokenRepository<BaseToken> _tokenRepository = tokenRepository;
-    private readonly TokenCleanupPolicy _tokenCleanupPolicy = tokenCleanupPolicy.Value;
-
     public async Task CleanupAsync()
     {
-        var tokens = await _tokenRepository.GetObsoleteTokensAsync(DateTime.UtcNow.AddHours(_tokenCleanupPolicy.ExpirationGracePeriodHours));
+        var tokens = await tokenRepository.GetObsoleteTokensAsync(DateTime.UtcNow.AddHours(tokenCleanupPolicy.Value.ExpirationGracePeriodHours));
 
         foreach (var token in tokens)
         {
-            await _tokenRepository.DeleteAsync(token.Id);
+            await tokenRepository.DeleteAsync(token.Id);
         }
     }
 }

@@ -7,21 +7,25 @@ using Inno_Shop.UserService.Application.Common.Settings;
 
 namespace Inno_Shop.UserService.Application;
 
-public static class ApplicationServiceRegistration
+public static class ApplicationDependencyInjection
 {
+    private const string AppSettingsSectionName = "AppSettings";
+    private const string EmailConfirmationSectionName = "EmailConfirmationTokenSettings";
+    private const string PasswordResetSectionName = "PasswordResetTokenSettings";
+    private const string RefreshSectionName = "RefreshTokenSettings";
+    private const string TokenCleanupPolicySectionName = "TokenLifetime";
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
-        var assembly = typeof(ApplicationServiceRegistration).Assembly;
-        services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
-        services.Configure<EmailConfirmationTokenSettings>(configuration.GetSection("EmailConfirmationTokenSettings"));
-        services.Configure<PasswordResetTokenSettings>(configuration.GetSection("PasswordResetTokenSettings"));
-        services.Configure<RefreshTokenSettings>(configuration.GetSection("RefreshTokenSettings"));
-        services.Configure<TokenCleanupPolicy>(configuration.GetSection("TokenLifetime"));
+        var assembly = typeof(ApplicationDependencyInjection).Assembly;
+        services.Configure<AppSettings>(configuration.GetSection(AppSettingsSectionName));
+        services.Configure<EmailConfirmationTokenSettings>(configuration.GetSection(EmailConfirmationSectionName));
+        services.Configure<PasswordResetTokenSettings>(configuration.GetSection(PasswordResetSectionName));
+        services.Configure<RefreshTokenSettings>(configuration.GetSection(RefreshSectionName));
+        services.Configure<TokenCleanupPolicy>(configuration.GetSection(TokenCleanupPolicySectionName));
 
         services.AddMediatR(cfg =>
             cfg.RegisterServicesFromAssembly(assembly));
         
-
         services.AddValidatorsFromAssembly(assembly);
 
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));

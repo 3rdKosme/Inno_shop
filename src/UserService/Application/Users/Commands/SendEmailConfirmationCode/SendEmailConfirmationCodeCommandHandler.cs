@@ -15,29 +15,24 @@ public class SendEmailConfirmationCodeCommandHandler(IUserRepository userReposit
     IOptions<EmailConfirmationTokenSettings> emailConfirmationTokenSettings,
     ITokenGenerator tokenGenerator, ICurrentUserService currentUserService) : IRequestHandler<SendEmailConfirmationCodeCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IEmailService _emailService = emailService;
-    private readonly IEmailConfirmationTokenRepository _emailConfirmationTokenRepository = emailConfirmationTokenRepository;
-    private readonly ITokenGenerator _tokenGenerator = tokenGenerator;
-    private readonly ICurrentUserService _currentUserService = currentUserService;
-    private readonly EmailConfirmationTokenSettings _emailConfirmationTokenSettings = emailConfirmationTokenSettings.Value;
-    private readonly AppSettings _appSettings = appSettings.Value;
-
     public async Task<Unit> Handle(SendEmailConfirmationCodeCommand request, CancellationToken cancellationToken = default)
     {
-        var userEmail = _currentUserService.Email ?? throw new UnauthorizedAccessException();
+        var userEmail = currentUserService.Email 
+                        ?? throw new UnauthorizedAccessException();
 
-        var user = await _userRepository.GetByEmailAsync(userEmail, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByEmailAsync(userEmail, cancellationToken) 
+                   ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
-        var emailToken = _tokenGenerator.GenerateSecureToken();
+        var emailToken = tokenGenerator.GenerateSecureToken();
 
-        var token = new EmailConfirmationToken(user.Id, emailToken, DateTime.UtcNow.AddMinutes(_emailConfirmationTokenSettings.ExpireMinutes));
+        var token = new EmailConfirmationToken(user.Id, emailToken, DateTime.UtcNow.AddMinutes(emailConfirmationTokenSettings.Value.ExpireMinutes));
 
-        await _emailConfirmationTokenRepository.AddAsync(token, cancellationToken);
+        await emailConfirmationTokenRepository.AddAsync(token, cancellationToken);
 
-        var emailConfirmationLink = $"{_appSettings.FrontendUrl}/confirm-email?token={emailToken}";
+        var emailConfirmationLink = $"{appSettings.Value.FrontendUrl}/confirm-email?token={emailToken}";
 
-        await _emailService.SendAsync(user.Email, EmailTemplate.EmailConfirmation, new EmailConfirmationModel { ConfirmationLink = emailConfirmationLink }, cancellationToken);
+        await emailService.SendAsync(user.Email, EmailTemplate.EmailConfirmation, new EmailConfirmationModel 
+            { ConfirmationLink = emailConfirmationLink }, cancellationToken);
 
         return Unit.Value;
     }

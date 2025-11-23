@@ -1,11 +1,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Inno_Shop.UserService.Application.Users.Queries.GetUserByIdAdmin;
-using Inno_Shop.UserService.Api.DTOs;
+using Inno_Shop.UserService.Api.Requests.Admin;
 using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Users.Commands.LockUser;
 using Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
-using Inno_Shop.UserService.Application.Users.Commands.UpdateUserAdmin;
 using Inno_Shop.UserService.Application.Users.Commands.PromoteUserToAdmin;
 
 namespace Inno_Shop.UserService.Api.Controllers;
@@ -15,55 +14,41 @@ namespace Inno_Shop.UserService.Api.Controllers;
 [Route("api/[controller]")]
 public class AdminController(IMediator mediator) : ControllerBase
 {
-    private readonly IMediator _mediator = mediator;
-
-    [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetUserById(int id)
+    [HttpGet("user/{id:int}")]
+    public async Task<IActionResult> GetUserById(int id, CancellationToken cancellationToken)
     {
-        var query = new GetUserByIdAdminQuery(id);
-        var userDto = await _mediator.Send(query);
+        var userDto = await mediator.Send(new GetUserByIdAdminQuery(id), cancellationToken);
         return Ok(userDto);
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserAdminRequest request)
+    [HttpPut("user/{id:int}")]
+    public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserAdminRequest request, CancellationToken cancellationToken)
     {
-        var command = new UpdateUserAdminCommand(
-                Id: id,
-                Name: request.Name
-            );
-
-        await _mediator.Send(command);
+        await mediator.Send(request.ToCommand(id), cancellationToken);
 
         return NoContent();
     }
 
-    [HttpPost("{id:int}/lock")]
-    public async Task<ActionResult> LockUser(int id)
+    [HttpPost("user/{id:int}/lock")]
+    public async Task<ActionResult> LockUser(int id, CancellationToken cancellationToken)
     {
-        var command = new LockUserCommand(id);
-
-        await _mediator.Send(command);
+        await mediator.Send(new LockUserCommand(id), cancellationToken);
 
         return NoContent();
     }
 
-    [HttpPost("{id:int}/unlock")]
-    public async Task<ActionResult> UnlockUser(int id)
+    [HttpPost("user/{id:int}/unlock")]
+    public async Task<ActionResult> UnlockUser(int id, CancellationToken cancellationToken)
     {
-        var command = new UnlockUserCommand(id);
-
-        await _mediator.Send(command);
+        await mediator.Send(new UnlockUserCommand(id), cancellationToken);
 
         return NoContent();
     }
 
-    [HttpPost("{id:int}/promoteToAdmin")]
-    public async Task<ActionResult> PromoteToAdmin(int id)
+    [HttpPost("user/{id:int}/promoteToAdmin")]
+    public async Task<ActionResult> PromoteToAdmin(int id, CancellationToken cancellationToken)
     {
-        var command = new PromoteUserToAdminCommand(id);
-
-        await _mediator.Send(command);
+        await mediator.Send(new PromoteUserToAdminCommand(id), cancellationToken);
 
         return NoContent();
     }

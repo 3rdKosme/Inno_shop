@@ -15,6 +15,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             entity.Property(p => p.Id).ValueGeneratedOnAdd();
             entity.Property(p => p.Name).IsRequired().HasMaxLength(128);
             entity.Property(p => p.Description).IsRequired().HasMaxLength(512);
+            entity.Property(p => p.Price).IsRequired();
             entity.Property(p => p.IsAvailable).IsRequired();
             entity.Property(p => p.UserId).IsRequired();
             entity.Property(p => p.CreatedAt).IsRequired();

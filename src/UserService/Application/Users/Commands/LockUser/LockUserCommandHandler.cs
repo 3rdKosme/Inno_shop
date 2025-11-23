@@ -16,7 +16,7 @@ public class LockUserCommandHandler(IUserRepository userRepository,
 
     public async Task<Unit> Handle(LockUserCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
 
         try
         {
@@ -27,9 +27,9 @@ public class LockUserCommandHandler(IUserRepository userRepository,
             throw new BusinessRuleValidationException(ex.Message);
         }
 
-        await _userRepository.UpdateAsync(user, cancellationToken);
+        await userRepository.UpdateAsync(user, cancellationToken);
 
-        await _emailService.SendAsync(user.Email, EmailTemplate.Locked, new StatusChangedModel { Name = user.Name }, cancellationToken);
+        await emailService.SendAsync(user.Email, EmailTemplate.Locked, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

@@ -11,10 +11,8 @@ using Inno_Shop.UserService.Infrastructure.Options;
 
 namespace Inno_Shop.UserService.Infrastructure.Services;
 
-public class JwtTokenService(IOptions<JwtSettings> options) : IJwtTokenService
+public class JwtTokenService(IOptions<JwtSettings> jwtSettings) : IJwtTokenService
 {
-    private readonly JwtSettings _jwtSettings = options.Value;
-
     public string GenerateAccessToken(int userId, string email, string role)
     {
         var claims = new[]
@@ -24,14 +22,14 @@ public class JwtTokenService(IOptions<JwtSettings> options) : IJwtTokenService
             new Claim(ClaimTypes.Role, role)
         };
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Value.Key));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
-            issuer: _jwtSettings.Issuer,
-            audience: _jwtSettings.Audience,
+            issuer: jwtSettings.Value.Issuer,
+            audience: jwtSettings.Value.Audience,
             claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpireMinutes),
+            expires: DateTime.UtcNow.AddMinutes(jwtSettings.Value.ExpireMinutes),
             signingCredentials: creds
             );
 

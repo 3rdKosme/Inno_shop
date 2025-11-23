@@ -6,10 +6,10 @@ namespace Inno_Shop.UserService.Infrastructure.Persistence;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<User> Users { get; set; } = null!;
-    public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
-    public DbSet<PasswordResetToken> PasswordResetTokens { get; set; } = null!;
-    public DbSet<EmailConfirmationToken> EmailConfirmationTokens { get; set; } = null!;
+    public required DbSet<User> Users { get; set; }
+    public required DbSet<RefreshToken> RefreshTokens { get; set; }
+    public required DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
+    public required DbSet<EmailConfirmationToken> EmailConfirmationTokens { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -61,10 +61,23 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             entity.HasOne<User>().WithMany(u => u.RefreshTokens).HasForeignKey(x => x.UserId).OnDelete(DeleteBehavior.Cascade);
         });
 
-        var admin = new User() { Id = 1, Name = "admin", Email = "admin@innoshop.local", PasswordHash = "100000;7S4vRC7ZJjsaA1CS+18xRg==;yqKI3ru76delDG4BLgt2HIQQkwiaOHqAJObzEr8CS/o=", UserRole = UserRole.Admin, IsActive = true, IsEmailConfirmed = true, CreatedAt = DateTime.SpecifyKind(new DateTime(2025, 11, 11), DateTimeKind.Utc) };
+        //var admin = new User() { Id = 1, Name = "admin", Email = "admin@innoshop.local", PasswordHash = "100000;7S4vRC7ZJjsaA1CS+18xRg==;yqKI3ru76delDG4BLgt2HIQQkwiaOHqAJObzEr8CS/o=", UserRole = UserRole.Admin, IsActive = true, IsEmailConfirmed = true, CreatedAt = DateTime.SpecifyKind(new DateTime(2025, 11, 11), DateTimeKind.Utc) };
 
-
-        modelBuilder.Entity<User>().HasData(admin);
+        modelBuilder.Entity<User>().HasData(
+            new
+            {
+                Id = 1,
+                Name = "admin",
+                Email = "admin@innoshop.local",
+                PasswordHash = "100000;7S4vRC7ZJjsaA1CS+18xRg==;yqKI3ru76delDG4BLgt2HIQQkwiaOHqAJObzEr8CS/o=",
+                UserRole = UserRole.Admin,
+                IsEmailConfirmed = true,
+                IsActive = true,
+                IsLocked = false,
+                CreatedAt = DateTime.SpecifyKind(new DateTime(2025, 11, 11), DateTimeKind.Utc)
+            }
+        );
+        //modelBuilder.Entity<User>().HasData(admin);
 
         base.OnModelCreating(modelBuilder);
     }

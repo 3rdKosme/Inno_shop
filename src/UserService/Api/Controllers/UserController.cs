@@ -1,13 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Inno_Shop.UserService.Application.Users.Queries.GetCurrentUser;
-using Inno_Shop.UserService.Api.DTOs;
-using Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
-using Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
-using Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
+using Inno_Shop.UserService.Api.Requests.User;
 using Microsoft.AspNetCore.Authorization;
 using Inno_Shop.UserService.Application.Users.Commands.SendEmailConfirmationCode;
-using Inno_Shop.UserService.Application.Users.Commands.ConfirmEmail;
 
 namespace Inno_Shop.UserService.Api.Controllers;
 
@@ -16,65 +12,47 @@ namespace Inno_Shop.UserService.Api.Controllers;
 [Route("api/[controller]")]
 public class UserController(IMediator mediator) : ControllerBase
 {
-    private readonly IMediator _mediator = mediator;
-
     [HttpGet("me")]
-    public async Task<IActionResult> GetCurrentUser()
+    public async Task<IActionResult> GetCurrentUser(CancellationToken cancellationToken)
     {
-        var query = new GetCurrentUserQuery();
-        var userDto = await _mediator.Send(query);
+        var userDto = await mediator.Send(new GetCurrentUserQuery(), cancellationToken);
         return Ok(userDto);
     }
 
     [HttpPut("me")]
-    public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request)
+    public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request, CancellationToken cancellationToken)
     {
-        var command = new UpdateUserCommand(
-                Password: request.Password,
-                Name: request.Name,
-                Email: request.Email,
-                NewPassword: request.NewPassword
-            );
-
-        return Ok(await _mediator.Send(command));
+        return Ok(await mediator.Send(request.ToCommand(), cancellationToken));
     }
 
     [HttpPost("me/deactivate")]
-    public async Task<ActionResult> DeactivateUser([FromBody] DeactivateUserRequest request)
+    public async Task<ActionResult> DeactivateUser([FromBody] DeactivateUserRequest request, CancellationToken cancellationToken)
     {
-        var command = new DeactivateUserCommand(request.Password);
-
-        await _mediator.Send(command);
+        await mediator.Send(request.ToCommand(), cancellationToken);
 
         return NoContent();
     }
 
     [HttpPost("me/activate")]
-    public async Task<ActionResult> ActivateUser([FromBody] ActivateUserRequest request)
+    public async Task<ActionResult> ActivateUser([FromBody] ActivateUserRequest request, CancellationToken cancellationToken)
     {
-        var command = new ActivateUserCommand(request.Password);
-
-        await _mediator.Send(command);
+        await mediator.Send(request.ToCommand(), cancellationToken);
 
         return NoContent();
     }
 
     [HttpPost("me/sendEmailConfirmationCode")]
-    public async Task<ActionResult> SendEmailConfirmationCode()
+    public async Task<ActionResult> SendEmailConfirmationCode(CancellationToken cancellationToken)
     {
-        var command = new SendEmailConfirmationCodeCommand();
-        
-        await _mediator.Send(command);
+        await mediator.Send(new SendEmailConfirmationCodeCommand(), cancellationToken);
 
         return NoContent();
     }
 
     [HttpPost("me/confirmEmail")]
-    public async Task<ActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request)
+    public async Task<ActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request, CancellationToken cancellationToken)
     {
-        var command = new ConfirmEmailCommand(request.Token);
-
-        await _mediator.Send(command);
+        await mediator.Send(request.ToCommand(), cancellationToken);
 
         return NoContent();
     }

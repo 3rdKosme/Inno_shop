@@ -4,14 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Inno_Shop.ProductService.Infrastructure.Persistence;
 
-public class ProductRepository(AppDbContext context) : IProductRepository
+public class ProductWriteRepository(AppDbContext context) : IProductWriteRepository
 {
     private readonly AppDbContext _context = context;
-
-    public async Task<IEnumerable<Product>> GetAllAsync(CancellationToken cancellationToken = default)
-    {
-        return await _context.Products.Where(p => !p.IsDeleted).ToListAsync(cancellationToken);
-    }
 
     public async Task<Product?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
     {

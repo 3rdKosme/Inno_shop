@@ -12,11 +12,9 @@ namespace Inno_Shop.UserService.Application.Users.Commands.UpdateUserAdmin;
 public class UpdateUserAdminCommandHandler(IUserRepository userRepository, IEmailService emailService)
     : IRequestHandler<UpdateUserAdminCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IEmailService _emailService = emailService;
     public async Task<Unit> Handle(UpdateUserAdminCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         if(request.Name != null)
         {
@@ -31,9 +29,9 @@ public class UpdateUserAdminCommandHandler(IUserRepository userRepository, IEmai
             }
         }
 
-        await _userRepository.UpdateAsync(user, cancellationToken);
+        await userRepository.UpdateAsync(user, cancellationToken);
 
-        await _emailService.SendAsync(user.Email, EmailTemplate.ProfileChangedAdmin, new ProfileChangedModel { Name = user.Name }, cancellationToken);
+        await emailService.SendAsync(user.Email, EmailTemplate.ProfileChangedAdmin, new ProfileChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

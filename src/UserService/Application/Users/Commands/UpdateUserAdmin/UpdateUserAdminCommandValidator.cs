@@ -7,7 +7,7 @@ public class UpdateUserAdminCommandValidator : AbstractValidator<UpdateUserAdmin
 {
     public UpdateUserAdminCommandValidator()
     {
-        RuleFor(x => x.Id).GreaterThan(0).WithMessage(ErrorMessages.IdGreaterThan0);
+        RuleFor(x => x.Id).GreaterThan(0).WithMessage(ErrorMessages.IdMustBeGreaterThan0);
 
         RuleFor(x => x.Name).MaximumLength(100).WithMessage(ErrorMessages.NameMustNotExceed);
     }

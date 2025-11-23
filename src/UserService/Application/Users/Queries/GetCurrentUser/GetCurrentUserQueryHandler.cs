@@ -8,11 +8,9 @@ namespace Inno_Shop.UserService.Application.Users.Queries.GetCurrentUser;
 public class GetCurrentUserQueryHandler(IUserRepository userRepository, ICurrentUserService currentUserService)
     : UserQueryHandlerBase(userRepository), IRequestHandler<GetCurrentUserQuery, UserDto>
 {
-    private readonly ICurrentUserService _currentUserService = currentUserService;
-
     public async Task<UserDto> Handle(GetCurrentUserQuery request, CancellationToken cancellationToken = default)
     {
-        var userId = _currentUserService.UserId ?? throw new UnauthorizedAccessException();
+        var userId = currentUserService.UserId ?? throw new UnauthorizedAccessException();
 
         return await GetUserByIdAsync(userId, cancellationToken);
     }

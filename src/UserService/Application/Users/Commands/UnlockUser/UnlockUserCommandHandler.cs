@@ -12,12 +12,9 @@ namespace Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
 public class UnlockUserCommandHandler(IUserRepository userRepository, 
     IEmailService emailService) : IRequestHandler<UnlockUserCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IEmailService _emailService = emailService;
-
     public async Task<Unit> Handle(UnlockUserCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await _userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         try
         {
@@ -28,9 +25,9 @@ public class UnlockUserCommandHandler(IUserRepository userRepository,
             throw new BusinessRuleValidationException(ex.Message);
         }
 
-        await _userRepository.UpdateAsync(user, cancellationToken);
+        await userRepository.UpdateAsync(user, cancellationToken);
 
-        await _emailService.SendAsync(user.Email, EmailTemplate.Unlocked, new StatusChangedModel { Name = user.Name }, cancellationToken);
+        await emailService.SendAsync(user.Email, EmailTemplate.Unlocked, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;
     }

@@ -9,30 +9,26 @@ namespace Inno_Shop.UserService.Application.Users.Commands.RefreshToken;
 public class RefreshTokenCommandHandler(IRefreshTokenRepository refreshTokenRepository, IUserRepository userRepository, 
     IJwtTokenService jwtTokenService, IOptions<RefreshTokenSettings> refreshTokenSettings) : IRequestHandler<RefreshTokenCommand, AuthResultDto>
 {
-    private readonly IRefreshTokenRepository _refreshTokenRepository = refreshTokenRepository;
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IJwtTokenService _jwtTokenService = jwtTokenService;
-    private readonly RefreshTokenSettings _refreshTokenSettings = refreshTokenSettings.Value;
-
     public async Task<AuthResultDto> Handle(RefreshTokenCommand request, CancellationToken cancellationToken = default)
     {
-        var stored = await _refreshTokenRepository.GetByTokenAsync(request.RefreshToken, cancellationToken);
+        var stored = await refreshTokenRepository.GetByTokenAsync(request.RefreshToken, cancellationToken);
 
         if (stored == null || stored.IsRevoked || stored.IsExpired)
         {
             throw new UnauthorizedAccessException();
         }
 
-        var user = await _userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new UnauthorizedAccessException();
+        var user = await userRepository.GetByIdAsync(stored.UserId, cancellationToken) ?? throw new UnauthorizedAccessException();
 
         stored.Revoke();
 
-        await _refreshTokenRepository.UpdateAsync(stored, cancellationToken);
+        await refreshTokenRepository.UpdateAsync(stored, cancellationToken);
 
-        var newAccess = _jwtTokenService.GenerateAccessToken(user.Id, user.Email, user.UserRole.ToString());
-        var newRefresh = _jwtTokenService.GenerateRefreshToken();
+        var newAccess = jwtTokenService.GenerateAccessToken(user.Id, user.Email, user.UserRole.ToString());
+        var newRefresh = jwtTokenService.GenerateRefreshToken();
 
-        await _refreshTokenRepository.AddAsync(new Domain.Entities.RefreshToken(user.Id, newRefresh, DateTime.UtcNow.AddDays(_refreshTokenSettings.ExpireDays)), cancellationToken);
+        await refreshTokenRepository.AddAsync(new Domain.Entities.RefreshToken
+            (user.Id, newRefresh, DateTime.UtcNow.AddDays(refreshTokenSettings.Value.ExpireDays)), cancellationToken);
 
         return new AuthResultDto(newAccess, newRefresh);
     }

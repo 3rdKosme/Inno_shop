@@ -7,6 +7,7 @@ public class Product : BaseEntity
 {
     public string Name { get; set; } = null!;
     public string Description { get; set; } = null!;
+    public double Price { get; set; }
     public bool IsAvailable { get; set; }
     public int UserId { get; set; }
     public DateTime CreatedAt { get; set; }
@@ -14,7 +15,7 @@ public class Product : BaseEntity
 
     private Product() { }
 
-    public Product(string name, string description, int userId)
+    public Product(string name, string description, int userId, double price)
     {
         Name = name;
         Description = description;
@@ -22,6 +23,7 @@ public class Product : BaseEntity
         UserId = userId;
         CreatedAt = DateTime.UtcNow;
         IsDeleted = false;
+        Price = price;
     }
 
     public void ChangeName(string name)
