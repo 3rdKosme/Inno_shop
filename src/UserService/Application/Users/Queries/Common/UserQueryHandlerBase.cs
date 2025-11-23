@@ -7,8 +7,7 @@ namespace Inno_Shop.UserService.Application.Users.Queries.Common;
 
 public abstract class UserQueryHandlerBase(IUserRepository userRepository)
 {
-
-    public async Task<UserDto> GetUserByIdAsync(int userId, CancellationToken cancellationToken = default)
+    protected async Task<UserDto> GetUserByIdAsync(int userId, CancellationToken cancellationToken = default)
     {
         var user = await userRepository.GetByIdAsync(userId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 

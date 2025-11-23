@@ -5,7 +5,7 @@ namespace Inno_Shop.ProductService.Infrastructure.Persistence;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<Product> Products { get; set; } = null!;
+    public required DbSet<Product> Products { get; init; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

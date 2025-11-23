@@ -11,7 +11,7 @@ using Inno_Shop.UserService.Infrastructure.Options;
 
 namespace Inno_Shop.UserService.Infrastructure;
 
-public static class DependencyInjection
+public static class InfrastructureDependencyInjection
 {
     private const string ConnectionStringSectionName = "DefaultConnection";
     private const string SmtpSettingsSectionName = "SmtpSettings";

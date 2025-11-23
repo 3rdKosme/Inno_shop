@@ -1,3 +1,4 @@
+using Inno_Shop.ProductService.Domain.Common;
 using Inno_Shop.ProductService.Domain.Common.Constants;
 using Inno_Shop.ProductService.Domain.Common.Exceptions;
 
@@ -5,18 +6,23 @@ namespace Inno_Shop.ProductService.Domain.Entities;
 
 public class Product : BaseEntity
 {
-    public string Name { get; set; } = null!;
-    public string Description { get; set; } = null!;
-    public double Price { get; set; }
-    public bool IsAvailable { get; set; }
-    public int UserId { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public bool IsDeleted { get; set; }
+    public string Name { get; private set; }
+    public string Description { get; private set; }
+    public double Price { get; private set; }
+    public bool IsAvailable { get; private set; }
+    public int UserId { get; init; }
+    public DateTime CreatedAt { get; init; }
+    public bool IsDeleted { get; private set; }
 
     private Product() { }
 
     public Product(string name, string description, int userId, double price)
     {
+        Guard.AgainstNullOrWhiteSpace(name, nameof(name));
+        Guard.AgainstNullOrWhiteSpace(description, nameof(description));
+        Guard.AgainstNullOrNegative<int>(userId, nameof(userId));
+        Guard.AgainstNullOrNegative<double>(price, nameof(price));
+        
         Name = name;
         Description = description;
         IsAvailable = true;
@@ -28,12 +34,19 @@ public class Product : BaseEntity
 
     public void ChangeName(string name)
     {
+        Guard.AgainstNullOrWhiteSpace(name, nameof(name));
         Name = name;
     }
 
     public void ChangeDescription(string description) 
-    { 
+    {
+        Guard.AgainstNullOrWhiteSpace(description, nameof(description));
         Description = description;
+    }
+
+    public void ChangePrice(double price)
+    {
+        Price = price;
     }
 
     public void SetAvailable()

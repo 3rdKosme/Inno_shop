@@ -11,9 +11,6 @@ namespace Inno_Shop.UserService.Application.Users.Commands.LockUser;
 public class LockUserCommandHandler(IUserRepository userRepository, 
     IEmailService emailService) : IRequestHandler<LockUserCommand, Unit>
 {
-    private readonly IUserRepository _userRepository = userRepository;
-    private readonly IEmailService _emailService = emailService;
-
     public async Task<Unit> Handle(LockUserCommand request, CancellationToken cancellationToken = default)
     {
         var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
