@@ -11,7 +11,8 @@ using Inno_Shop.Shared.Application.Abstractions;
 namespace Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 
 public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, 
-    IPasswordHasher passwordHasher, ICurrentUserService currentUserService) : IRequestHandler<DeactivateUserCommand, Unit>
+    IPasswordHasher passwordHasher, ICurrentUserService currentUserService, IProductServiceClient productServiceClient) 
+    : IRequestHandler<DeactivateUserCommand, Unit>
 { 
     public async Task<Unit> Handle(DeactivateUserCommand request, CancellationToken cancellationToken = default)
     {
@@ -34,6 +35,8 @@ public class DeactivateUserCommandHandler(IUserRepository userRepository, IEmail
         }
 
         await userRepository.UpdateAsync(user, cancellationToken);
+        
+        await productServiceClient.DeactivateProductsAsync(userId, cancellationToken);
 
         await emailService.SendAsync(user.Email, EmailTemplate.Deactivated, new StatusChangedModel { Name = user.Name }, cancellationToken);
 

@@ -11,9 +11,7 @@ public class RecoverProductCommandHandler(ICurrentUserService currentUserService
 {
     public async Task<Unit> Handle(RecoverProductCommand request, CancellationToken cancellationToken)
     {
-        var userId = currentUserService.UserId ?? throw new UnauthorizedAccessException(ErrorMessages.UserNotFound);
-
-        var products = await productRepository.GetAllByUserIdAsync(userId, cancellationToken);
+        var products = await productRepository.GetAllByUserIdAsync(request.Id, cancellationToken);
 
         foreach (var product in products)
         {

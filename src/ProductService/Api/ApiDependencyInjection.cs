@@ -22,6 +22,7 @@ public static class ApiDependencyInjection
         }
 
         app.UseCustomExceptionHandler()
+            .UseCustomMiddleware()
             .UseHttpsRedirection()
             .UseAuthentication()
             .UseAuthorization();

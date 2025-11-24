@@ -9,7 +9,8 @@ using MediatR;
 namespace Inno_Shop.UserService.Application.Users.Commands.LockUser;
 
 public class LockUserCommandHandler(IUserRepository userRepository, 
-    IEmailService emailService) : IRequestHandler<LockUserCommand, Unit>
+    IEmailService emailService, IProductServiceClient productServiceClient) 
+    : IRequestHandler<LockUserCommand, Unit>
 {
     public async Task<Unit> Handle(LockUserCommand request, CancellationToken cancellationToken = default)
     {
@@ -25,7 +26,9 @@ public class LockUserCommandHandler(IUserRepository userRepository,
         }
 
         await userRepository.UpdateAsync(user, cancellationToken);
-
+        
+        await productServiceClient.DeactivateProductsAsync(user.Id, cancellationToken);
+        
         await emailService.SendAsync(user.Email, EmailTemplate.Locked, new StatusChangedModel { Name = user.Name }, cancellationToken);
 
         return Unit.Value;

@@ -10,7 +10,8 @@ using Inno_Shop.Shared.Application.Exceptions;
 namespace Inno_Shop.UserService.Application.Users.Commands.UnlockUser;
 
 public class UnlockUserCommandHandler(IUserRepository userRepository, 
-    IEmailService emailService) : IRequestHandler<UnlockUserCommand, Unit>
+    IEmailService emailService, IProductServiceClient productServiceClient) 
+    : IRequestHandler<UnlockUserCommand, Unit>
 {
     public async Task<Unit> Handle(UnlockUserCommand request, CancellationToken cancellationToken = default)
     {
@@ -26,6 +27,8 @@ public class UnlockUserCommandHandler(IUserRepository userRepository,
         }
 
         await userRepository.UpdateAsync(user, cancellationToken);
+        
+        await productServiceClient.RecoverProductsAsync(user.Id, cancellationToken);
 
         await emailService.SendAsync(user.Email, EmailTemplate.Unlocked, new StatusChangedModel { Name = user.Name }, cancellationToken);
 

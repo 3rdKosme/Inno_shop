@@ -12,7 +12,9 @@ using Inno_Shop.UserService.Application.Emails.Models;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ActivateUser;
 
-public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, IPasswordHasher passwordHasher, ICurrentUserService currentUserService) : IRequestHandler<ActivateUserCommand, Unit>
+public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, 
+    IPasswordHasher passwordHasher, ICurrentUserService currentUserService, IProductServiceClient productServiceClient) 
+    : IRequestHandler<ActivateUserCommand, Unit>
 {
     public async Task<Unit> Handle(ActivateUserCommand request, CancellationToken cancellationToken = default)
     {
@@ -35,6 +37,8 @@ public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailSe
         }
 
         await userRepository.UpdateAsync(user, cancellationToken);
+        
+        await productServiceClient.RecoverProductsAsync(user.Id, cancellationToken);
 
         await emailService.SendAsync(user.Email, EmailTemplate.Activated, new StatusChangedModel { Name = user.Name }, cancellationToken);
 

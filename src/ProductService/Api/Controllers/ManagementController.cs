@@ -28,17 +28,4 @@ public class ManagementController(IMediator mediator) : ControllerBase
         return Ok();
     }
 
-    [HttpPost("hide-by-user")]
-    public async Task<ActionResult> SoftDeleteProducts(CancellationToken cancellationToken)
-    {
-        await mediator.Send(new SoftDeleteProductCommand(), cancellationToken);
-        return NoContent();
-    }
-
-    [HttpPost("recover-by-user")]
-    public async Task<ActionResult> RecoverProducts(CancellationToken cancellationToken)
-    {
-        await mediator.Send(new RecoverProductCommand(), cancellationToken);
-        return NoContent();
-    }
 }
