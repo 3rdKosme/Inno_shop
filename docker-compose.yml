@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 70323337
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - users_pgdata:/var/lib/postgresql/data
     networks:
@@ -15,6 +15,27 @@ services:
     
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+      
+  products-db:
+    image: postgres:16
+    container_name: products-db
+    environment:
+      POSTGRES_DB: products-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 70323337
+    ports:
+      - "5434:5432"
+    volumes:
+      - products_pgdata:/var/lib/postgresql/data
+    networks:
+      - inno-net
+
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -40,18 +61,49 @@ services:
       SmtpSettings__FromAddress: "v.moiseif67@gmail.com"
       SmtpSettings__EnableSsl: true
 
+      JwtSettings__Key: "e364a977eba7f368aaee5b94d351f09c4a41c8fd35b979094eec477696623a8a2"
+      JwtSettings__Issuer: "InnoShop.UserService"
+      JwtSettings__Audience: "InnoShop.Client"
+      JwtSettings__ExpireMinutes: 60
+      
+      ProductServiceSettings__BaseAddress: "http://product-service:8080"
+      ProductServiceSettings__HeaderName: "ProductServiceKey"
+      ProductServiceSettings__ServiceKey: "e22dba5e0bb667ead9234aad5a372c4dc1373684248d5224f33f65f65222dc3f"
+
+    ports:
+      - "5001:8080"
+    networks:
+      - inno-net
+        
+  product-service:
+    build:
+      context: .
+      dockerfile: ./src/ProductService/Api/Dockerfile
+    container_name: product-service
+    depends_on:
+      products-db:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+
+      ConnectionStrings__DefaultConnection: "Host=products-db;Port=5432;Database=products-db;Username=postgres;Password=70323337"
+
+      ProductServiceOptions__HeaderName: "ProductServiceKey"
+      ProductServiceOptions__ServiceKey: "e22dba5e0bb667ead9234aad5a372c4dc1373684248d5224f33f65f65222dc3f"
+
       Jwt__Key: "e364a977eba7f368aaee5b94d351f09c4a41c8fd35b979094eec477696623a8a2"
       Jwt__Issuer: "InnoShop.UserService"
       Jwt__Audience: "InnoShop.Client"
       Jwt__ExpireMinutes: 60
 
     ports:
-      - "5001:8080"
+      - "5002:8080"
     networks:
       - inno-net
 
 volumes:
   users_pgdata:
+  products_pgdata:
 
 networks:
   inno-net:
