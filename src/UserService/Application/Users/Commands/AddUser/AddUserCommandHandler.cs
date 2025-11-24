@@ -11,7 +11,7 @@ using Inno_Shop.UserService.Application.Emails;
 namespace Inno_Shop.UserService.Application.Users.Commands.AddUser;
 
 public class AddUserCommandHandler(IUserRepository userRepository, IEmailService emailService, IPasswordHasher passwordHasher, 
-    IJwtTokenService jwtTokenService, IRefreshTokenRepository refreshTokenRepository) : IRequestHandler<AddUserCommand, AuthResultDto>
+    IJwtTokenService jwtTokenService, ITokenRepository<Domain.Entities.RefreshToken> refreshTokenRepository) : IRequestHandler<AddUserCommand, AuthResultDto>
 {
     public async Task<AuthResultDto> Handle(AddUserCommand request, CancellationToken cancellationToken = default)
     {

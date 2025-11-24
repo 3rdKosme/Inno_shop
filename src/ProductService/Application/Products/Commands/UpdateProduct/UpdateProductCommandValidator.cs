@@ -3,9 +3,9 @@ using Inno_Shop.ProductService.Application.Common.Constants;
 
 namespace Inno_Shop.ProductService.Application.Products.Commands.UpdateProduct;
 
-public class UpdateProductsQueryValidator : AbstractValidator<UpdateProductCommand>
+public class UpdateProductCommandValidator : AbstractValidator<UpdateProductCommand>
 {
-    public UpdateProductsQueryValidator()
+    public UpdateProductCommandValidator()
     {
         RuleFor(x => x.Name).MaximumLength(100).WithMessage(ErrorMessages.NameMustNotExceed);
         RuleFor(x => x.Description).MaximumLength(500).WithMessage(ErrorMessages.DescriptionMustNotExceed);

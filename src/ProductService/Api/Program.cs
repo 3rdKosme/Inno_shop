@@ -1,22 +1,20 @@
 using Inno_Shop.ProductService.Application;
 using Inno_Shop.ProductService.Infrastructure;
+using Inno_Shop.ProductService.Api;
+using Inno_Shop.ProductService.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
-{
-    options.SuppressModelStateInvalidFilter = true;
-});
-builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddApplicationServices()
+    .AddInfrastructure(builder.Configuration)
+    .AddApi(builder.Configuration);
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+app.UseApi();
+app.ApplyMigration();
 app.MapControllers();
+
 app.Run();

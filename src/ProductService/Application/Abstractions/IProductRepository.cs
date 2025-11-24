@@ -6,6 +6,7 @@ namespace Inno_Shop.ProductService.Application.Abstractions;
 public interface IProductRepository
 {
     Task<IEnumerable<Product>> GetProductsAsync(ProductFilter filter, CancellationToken cancellationToken = default);
+    Task<IEnumerable<Product>> GetAllByUserIdAsync(int userId, CancellationToken cancellationToken = default);
     Task<Product?> GetProductByIdAsync(int id, CancellationToken cancellationToken = default);
     Task AddProductAsync(Product product, CancellationToken cancellationToken = default);
     Task UpdateProductAsync(Product product, CancellationToken cancellationToken = default);

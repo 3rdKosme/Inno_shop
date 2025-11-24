@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.RefreshToken;
 
-public class RefreshTokenCommandHandler(IRefreshTokenRepository refreshTokenRepository, IUserRepository userRepository, 
+public class RefreshTokenCommandHandler(ITokenRepository<Domain.Entities.RefreshToken> refreshTokenRepository, IUserRepository userRepository, 
     IJwtTokenService jwtTokenService, IOptions<RefreshTokenSettings> refreshTokenSettings) : IRequestHandler<RefreshTokenCommand, AuthResultDto>
 {
     public async Task<AuthResultDto> Handle(RefreshTokenCommand request, CancellationToken cancellationToken = default)

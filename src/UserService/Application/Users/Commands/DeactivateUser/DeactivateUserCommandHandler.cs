@@ -6,6 +6,7 @@ using Inno_Shop.UserService.Domain.Common.Exceptions;
 using Inno_Shop.UserService.Application.Emails.Models;
 using Inno_Shop.UserService.Application.Emails;
 using Inno_Shop.Shared.Application.Exceptions;
+using Inno_Shop.Shared.Application.Abstractions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.DeactivateUser;
 

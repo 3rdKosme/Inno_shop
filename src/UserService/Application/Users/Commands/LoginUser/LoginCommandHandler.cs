@@ -9,7 +9,8 @@ using Microsoft.Extensions.Options;
 namespace Inno_Shop.UserService.Application.Users.Commands.LoginUser;
 
 public class LoginCommandHandler(IUserRepository userRepository, IPasswordHasher passwordHasher, 
-    IJwtTokenService jwtTokenService, IRefreshTokenRepository refreshTokenRepository, IOptions<RefreshTokenSettings> refreshTokenSettings) : IRequestHandler<LoginCommand, AuthResultDto>
+    IJwtTokenService jwtTokenService, ITokenRepository<Domain.Entities.RefreshToken> refreshTokenRepository, IOptions<RefreshTokenSettings> refreshTokenSettings) 
+    : IRequestHandler<LoginCommand, AuthResultDto>
 {
     public async Task<AuthResultDto> Handle(LoginCommand request, CancellationToken cancellationToken = default)
     {

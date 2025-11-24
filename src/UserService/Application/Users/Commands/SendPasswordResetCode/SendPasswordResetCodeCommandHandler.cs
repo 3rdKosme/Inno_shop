@@ -11,7 +11,7 @@ using Inno_Shop.UserService.Application.Emails;
 namespace Inno_Shop.UserService.Application.Users.Commands.SendPasswordResetCode;
 
 public class ResetPasswordCommandHandler(IUserRepository userRepository, IEmailService emailService, 
-    IPasswordResetTokenRepository passwordResetTokenRepository, IOptions<AppSettings> appSettings,
+    ITokenRepository<PasswordResetToken> passwordResetTokenRepository, IOptions<AppSettings> appSettings,
     IOptions<PasswordResetTokenSettings> passwordResetTokenSettings, 
     ITokenGenerator tokenGenerator) : IRequestHandler<SendPasswordResetCodeCommand, Unit>
 {

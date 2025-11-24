@@ -13,7 +13,7 @@ public static class ApplicationDependencyInjection
     private const string EmailConfirmationSectionName = "EmailConfirmationTokenSettings";
     private const string PasswordResetSectionName = "PasswordResetTokenSettings";
     private const string RefreshSectionName = "RefreshTokenSettings";
-    private const string TokenCleanupPolicySectionName = "TokenLifetime";
+    private const string TokenCleanupPolicySectionName = "TokenCleanupPolicy";
     public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
     {
         var assembly = typeof(ApplicationDependencyInjection).Assembly;

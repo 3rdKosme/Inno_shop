@@ -2,6 +2,7 @@ using MediatR;
 using Inno_Shop.UserService.Application.DTOs;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Users.Queries.Common;
+using Inno_Shop.Shared.Application.Abstractions;
 
 namespace Inno_Shop.UserService.Application.Users.Queries.GetCurrentUser;
 

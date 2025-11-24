@@ -1,4 +1,5 @@
 using Inno_Shop.Shared.Application.Exceptions;
+using Inno_Shop.Shared.Application.Abstractions;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Microsoft.Extensions.Options;
@@ -11,7 +12,7 @@ using Inno_Shop.UserService.Application.Emails;
 namespace Inno_Shop.UserService.Application.Users.Commands.SendEmailConfirmationCode;
 
 public class SendEmailConfirmationCodeCommandHandler(IUserRepository userRepository, IEmailService emailService, 
-    IEmailConfirmationTokenRepository emailConfirmationTokenRepository, IOptions<AppSettings> appSettings,
+    ITokenRepository<EmailConfirmationToken> emailConfirmationTokenRepository, IOptions<AppSettings> appSettings,
     IOptions<EmailConfirmationTokenSettings> emailConfirmationTokenSettings,
     ITokenGenerator tokenGenerator, ICurrentUserService currentUserService) : IRequestHandler<SendEmailConfirmationCodeCommand, Unit>
 {

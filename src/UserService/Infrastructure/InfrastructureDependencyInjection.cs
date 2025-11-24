@@ -3,10 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Inno_Shop.UserService.Infrastructure.Services;
 using Inno_Shop.UserService.Application.Abstractions;
-using Inno_Shop.UserService.Application.Common.Settings;
 using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Infrastructure.BackgroundServices;
 using Microsoft.Extensions.Configuration;
+using Inno_Shop.Shared.Infrastructure.Services;
+using Inno_Shop.Shared.Application.Abstractions;
 using Inno_Shop.UserService.Infrastructure.Options;
 
 namespace Inno_Shop.UserService.Infrastructure;

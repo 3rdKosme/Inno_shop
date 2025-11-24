@@ -6,10 +6,11 @@ using Microsoft.Extensions.Options;
 using MediatR;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
+using Inno_Shop.UserService.Domain.Entities;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ConfirmEmail;
 
-public class ConfirmEmailCommandHandler(IUserRepository userRepository, IEmailConfirmationTokenRepository emailConfirmationTokenRepository) : IRequestHandler<ConfirmEmailCommand, Unit>
+public class ConfirmEmailCommandHandler(IUserRepository userRepository, ITokenRepository<EmailConfirmationToken> emailConfirmationTokenRepository) : IRequestHandler<ConfirmEmailCommand, Unit>
 {
     public async Task<Unit> Handle(ConfirmEmailCommand request, CancellationToken cancellationToken = default)
     {

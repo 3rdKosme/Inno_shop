@@ -21,7 +21,7 @@ public class TokenRepository<T>(AppDbContext context) : Repository<T>(context), 
         return await context.SaveChangesAsync(cancellationToken) > 0;
     }
 
-    public virtual async Task<IEnumerable<BaseToken>> GetObsoleteTokensAsync(DateTime threshold, CancellationToken cancellationToken = default)
+    public virtual async Task<IEnumerable<T>> GetObsoleteTokensAsync(DateTime threshold, CancellationToken cancellationToken = default)
     {
         return await context.Set<T>().AsQueryable().Where(t => t.IsRevoked || t.ExpiresAt < DateTime.UtcNow && t.ExpiresAt < threshold).ToListAsync(cancellationToken);
     }

@@ -1,4 +1,4 @@
-namespace Inno_Shop.UserService.Application.Abstractions;
+namespace Inno_Shop.Shared.Application.Abstractions;
 
 public interface ICurrentUserService
 {

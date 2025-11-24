@@ -52,6 +52,11 @@ public class ProductRepository(AppDbContext context) : IProductRepository
         return await q.ToListAsync(cancellationToken);
     }
 
+    public async Task<IEnumerable<Product>> GetAllByUserIdAsync(int userId, CancellationToken cancellationToken = default)
+    {
+        return await context.Products.Where(p => p.UserId == userId).ToListAsync(cancellationToken);
+    }
+
     public async Task<Product?> GetProductByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         return await context.Products.FindAsync([id], cancellationToken);

@@ -1,8 +1,8 @@
-using Inno_Shop.UserService.Application.Abstractions;
+using Inno_Shop.Shared.Application.Abstractions;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-namespace Inno_Shop.UserService.Infrastructure.Services;
+namespace Inno_Shop.Shared.Infrastructure.Services;
 
 public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICurrentUserService
 {

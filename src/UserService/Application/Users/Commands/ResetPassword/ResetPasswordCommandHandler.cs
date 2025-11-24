@@ -11,7 +11,7 @@ using Inno_Shop.UserService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.UserService.Application.Users.Commands.ResetPassword;
 
-public class ResetPasswordCommandHandler(IUserRepository userRepository, IPasswordResetTokenRepository passwordResetTokenRepository,
+public class ResetPasswordCommandHandler(IUserRepository userRepository, ITokenRepository<PasswordResetToken> passwordResetTokenRepository,
     IPasswordHasher passwordHasher) : IRequestHandler<ResetPasswordCommand, Unit>
 {
     public async Task<Unit> Handle(ResetPasswordCommand request, CancellationToken cancellationToken = default)

@@ -14,7 +14,6 @@ public class TokenCleanupHostService(IServiceProvider serviceProvider, IOptions<
         {
             using var scope = serviceProvider.CreateScope();
             var service = scope.ServiceProvider.GetRequiredService<ITokenCleanupService>();
-
             await service.CleanupAsync();
             await Task.Delay(TimeSpan.FromMinutes(tokenCleanupPolicy.Value.ExecutionIntervalMinutes), cancellationToken);
         }

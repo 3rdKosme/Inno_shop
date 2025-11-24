@@ -6,5 +6,5 @@ public interface ITokenRepository<T> : IRepository<T> where T : BaseToken
 {
     public Task<T?> GetByTokenAsync(string token, CancellationToken cancellationToken = default);
     public Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default);
-    public Task<IEnumerable<BaseToken>> GetObsoleteTokensAsync(DateTime threshold, CancellationToken cancellationToken = default);
+    public Task<IEnumerable<T>> GetObsoleteTokensAsync(DateTime threshold, CancellationToken cancellationToken = default);
 }

@@ -4,6 +4,7 @@ using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.Shared.Application.Exceptions;
+using Inno_Shop.Shared.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Settings;
 using Microsoft.Extensions.Options;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
@@ -14,7 +15,8 @@ namespace Inno_Shop.UserService.Application.Users.Commands.UpdateUser;
 
 public class UpdateUserCommandHandler(IUserRepository userRepository, IEmailService emailService, 
     IPasswordHasher passwordHasher, ICurrentUserService currentUserService, IJwtTokenService jwtTokenService, 
-    IOptions<RefreshTokenSettings> refreshTokenSettings, IRefreshTokenRepository refreshTokenRepository) : IRequestHandler<UpdateUserCommand, EmailChangeResultDto>
+    IOptions<RefreshTokenSettings> refreshTokenSettings, ITokenRepository<Domain.Entities.RefreshToken> refreshTokenRepository) 
+    : IRequestHandler<UpdateUserCommand, EmailChangeResultDto>
 {
     public async Task<EmailChangeResultDto> Handle(UpdateUserCommand request, CancellationToken cancellationToken = default)
     {
