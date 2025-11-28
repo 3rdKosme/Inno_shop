@@ -1,8 +1,6 @@
 using Inno_Shop.ProductService.Application.Abstractions;
 using Inno_Shop.ProductService.Domain.Entities;
-using Inno_Shop.ProductService.Application.DTOs;
 using Microsoft.EntityFrameworkCore;
-using System.Data;
 using Inno_Shop.ProductService.Application.Products.Common;
 
 namespace Inno_Shop.ProductService.Infrastructure.Persistence;
@@ -73,10 +71,5 @@ public class ProductRepository(AppDbContext context) : IProductRepository
     {
         context.Products.Update(product);
         await context.SaveChangesAsync(cancellationToken);
-    }
-
-    public async Task<bool> ExistsByIdAsync(int id, CancellationToken cancellationToken = default)
-    {
-        return await context.Products.AnyAsync(p => p.Id == id, cancellationToken);
     }
 }

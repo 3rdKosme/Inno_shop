@@ -1,9 +1,7 @@
 using Inno_Shop.ProductService.Application.Abstractions;
-using Inno_Shop.ProductService.Application.Common.Constants;
 using Inno_Shop.ProductService.Application.Common.Exceptions;
 using Inno_Shop.ProductService.Domain.Common.Exceptions;
 using Inno_Shop.Shared.Application.Exceptions;
-using Inno_Shop.Shared.Application.Common.Constants;
 using Inno_Shop.Shared.Application.Abstractions;
 using MediatR;
 

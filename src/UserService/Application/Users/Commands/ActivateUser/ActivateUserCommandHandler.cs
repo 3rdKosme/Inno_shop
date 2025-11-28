@@ -1,9 +1,7 @@
 using MediatR;
-using Inno_Shop.UserService.Application.DTOs;
-using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.Shared.Application.Abstractions;
-using System.ComponentModel.DataAnnotations;
+using Inno_Shop.Shared.Application.Exceptions;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
@@ -20,7 +18,7 @@ public class ActivateUserCommandHandler(IUserRepository userRepository, IEmailSe
     {
         var userId = currentUserService.UserId ?? throw new UnauthorizedAccessException();
 
-        var user = await userRepository.GetByIdAsync(userId, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(userId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         if (!passwordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {

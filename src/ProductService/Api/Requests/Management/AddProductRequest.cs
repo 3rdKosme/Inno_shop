@@ -9,5 +9,5 @@ public record AddProductRequest(
     string Description,
     double Price)
 {
-    public AddProductCommand ToCommand() => new AddProductCommand(Name, Description, Price);
+    public AddProductCommand ToCommand() => new (Name, Description, Price);
 }

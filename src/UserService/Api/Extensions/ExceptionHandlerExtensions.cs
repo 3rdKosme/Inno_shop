@@ -23,6 +23,7 @@ public static class ExceptionHandlerExtensions
                     InvalidCredentialsException e => Results.Problem(e.Message, statusCode: StatusCodes.Status401Unauthorized),
                     NotFoundException e => Results.Problem(e.Message, statusCode: StatusCodes.Status404NotFound),
                     TokenIsExpiredOrRevokedException e => Results.Problem(e.Message, statusCode: StatusCodes.Status406NotAcceptable),
+                    UnauthorizedAccessException e => Results.Problem(e.Message, statusCode: StatusCodes.Status401Unauthorized),
                     _ => Results.Problem("Internal server error", statusCode: StatusCodes.Status500InternalServerError)
                 };
 

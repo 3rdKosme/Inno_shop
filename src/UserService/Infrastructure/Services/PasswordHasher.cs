@@ -5,10 +5,10 @@ namespace Inno_Shop.UserService.Infrastructure.Services;
 
 public class PasswordHasher : IPasswordHasher
 {
-    private readonly int SaltSize = 16;
-    private readonly int KeySize = 32;
-    private readonly int Iterations = 100000;
-    private readonly char Delimiter = ';';
+    private const int SaltSize = 16;
+    private const int KeySize = 32;
+    private const int Iterations = 100000;
+    private const char Delimiter = ';';
 
     public string HashPassword(string password)
     {

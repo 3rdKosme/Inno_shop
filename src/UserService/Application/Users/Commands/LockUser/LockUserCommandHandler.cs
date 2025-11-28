@@ -1,3 +1,4 @@
+using Inno_Shop.Shared.Application.Exceptions;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Constants;
 using Inno_Shop.UserService.Application.Emails.Models;
@@ -14,7 +15,7 @@ public class LockUserCommandHandler(IUserRepository userRepository,
 {
     public async Task<Unit> Handle(LockUserCommand request, CancellationToken cancellationToken = default)
     {
-        var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new DirectoryNotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(request.Id, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         try
         {

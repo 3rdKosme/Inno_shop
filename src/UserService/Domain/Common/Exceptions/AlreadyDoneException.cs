@@ -1,6 +1,6 @@
 namespace Inno_Shop.UserService.Domain.Common.Exceptions;
 
-public class AlreadyDoneException : Exception
+public class AlreadyDoneException(string message) : Exception(message)
 {
-    public AlreadyDoneException(string message) : base(message) { }
+    
 }

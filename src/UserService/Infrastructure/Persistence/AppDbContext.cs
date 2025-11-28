@@ -61,8 +61,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             entity.HasOne<User>().WithMany(u => u.RefreshTokens).HasForeignKey(x => x.UserId).OnDelete(DeleteBehavior.Cascade);
         });
 
-        //var admin = new User() { Id = 1, Name = "admin", Email = "admin@innoshop.local", PasswordHash = "100000;7S4vRC7ZJjsaA1CS+18xRg==;yqKI3ru76delDG4BLgt2HIQQkwiaOHqAJObzEr8CS/o=", UserRole = UserRole.Admin, IsActive = true, IsEmailConfirmed = true, CreatedAt = DateTime.SpecifyKind(new DateTime(2025, 11, 11), DateTimeKind.Utc) };
-
         modelBuilder.Entity<User>().HasData(
             new
             {
@@ -77,7 +75,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
                 CreatedAt = DateTime.SpecifyKind(new DateTime(2025, 11, 11), DateTimeKind.Utc)
             }
         );
-        //modelBuilder.Entity<User>().HasData(admin);
 
         base.OnModelCreating(modelBuilder);
     }

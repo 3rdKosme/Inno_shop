@@ -11,17 +11,17 @@ namespace Inno_Shop.UserService.Api.Controllers;
 
 [Authorize(Roles = "Admin")]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/user/{id:int}")]
 public class AdminController(IMediator mediator) : ControllerBase
 {
-    [HttpGet("user/{id:int}")]
+    [HttpGet]
     public async Task<IActionResult> GetUserById(int id, CancellationToken cancellationToken)
     {
         var userDto = await mediator.Send(new GetUserByIdAdminQuery(id), cancellationToken);
         return Ok(userDto);
     }
 
-    [HttpPut("user/{id:int}")]
+    [HttpPut]
     public async Task<ActionResult> UpdateUser(int id, [FromBody] UpdateUserAdminRequest request, CancellationToken cancellationToken)
     {
         await mediator.Send(request.ToCommand(id), cancellationToken);
@@ -29,7 +29,7 @@ public class AdminController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("user/{id:int}/lock")]
+    [HttpPost("lock")]
     public async Task<ActionResult> LockUser(int id, CancellationToken cancellationToken)
     {
         await mediator.Send(new LockUserCommand(id), cancellationToken);
@@ -37,7 +37,7 @@ public class AdminController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("user/{id:int}/unlock")]
+    [HttpPost("unlock")]
     public async Task<ActionResult> UnlockUser(int id, CancellationToken cancellationToken)
     {
         await mediator.Send(new UnlockUserCommand(id), cancellationToken);
@@ -45,7 +45,7 @@ public class AdminController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("user/{id:int}/promoteToAdmin")]
+    [HttpPost("promoteToAdmin")]
     public async Task<ActionResult> PromoteToAdmin(int id, CancellationToken cancellationToken)
     {
         await mediator.Send(new PromoteUserToAdminCommand(id), cancellationToken);

@@ -12,26 +12,12 @@ public class TokenCleanupService(ITokenRepository<RefreshToken> refreshTokenRepo
 {
     public async Task CleanupAsync()
     {
-        var refreshTokens = await refreshTokenRepository.GetObsoleteTokensAsync(DateTime.UtcNow.AddHours(tokenCleanupPolicy.Value.ExpirationGracePeriodHours));
-
-        foreach (var token in refreshTokens)
-        {
-            await refreshTokenRepository.DeleteAsync(token.Id);
-        }
-        
-        var passwordTokens = await passwordResetTokenRepository.GetObsoleteTokensAsync(DateTime.UtcNow.AddHours(tokenCleanupPolicy.Value.ExpirationGracePeriodHours));
-
-        foreach (var token in passwordTokens)
-        {
-            await passwordResetTokenRepository.DeleteAsync(token.Id);
-        }
-        
-        var emailConfirmationTokens = await emailConfirmationTokenRepository.GetObsoleteTokensAsync(DateTime.UtcNow.AddHours(tokenCleanupPolicy.Value.ExpirationGracePeriodHours));
-
-        foreach (var token in emailConfirmationTokens)
-        {
-            await emailConfirmationTokenRepository.DeleteAsync(token.Id);
-        }
+        var cutoffDate = DateTime.UtcNow.AddHours(tokenCleanupPolicy.Value.ExpirationGracePeriodHours);
+        var totalDeleted = 0;
+        totalDeleted += await CleanupTokensAsync(refreshTokenRepository, cutoffDate, "RefreshToken");
+        totalDeleted += await CleanupTokensAsync(passwordResetTokenRepository, cutoffDate, "PasswordResetToken");
+        totalDeleted += await CleanupTokensAsync(emailConfirmationTokenRepository, cutoffDate, "EmailConfirmationToken");
+        //logger
     }
     
     private async Task<int> CleanupTokensAsync<T>(

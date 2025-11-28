@@ -61,6 +61,7 @@ namespace Inno_Shop.UserService.Domain.Entities
 
         public void PromoteToAdmin()
         {
+            if (UserRole == UserRole.Admin) throw new AlreadyDoneException(ErrorMessages.AlreadyPromoted);
             UserRole = UserRole.Admin;
         }
         public void ConfirmEmail()

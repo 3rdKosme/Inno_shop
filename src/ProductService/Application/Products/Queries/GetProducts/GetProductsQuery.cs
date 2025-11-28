@@ -15,7 +15,7 @@ public sealed record GetProductsQuery(
     int PageSize
 ) : IRequest<IEnumerable<ProductDto>>
 {
-    public ProductFilter ToFilter() => new ProductFilter(Search: Search, MaxPrice: MaxPrice, 
+    public ProductFilter ToFilter() => new (Search: Search, MaxPrice: MaxPrice, 
         MinPrice: MinPrice, IsAvailable: IsAvailable, UserId: UserId, Sort: Sort, 
         Page: Page, PageSize: PageSize);
 }

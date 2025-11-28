@@ -3,7 +3,7 @@
 public abstract class BaseToken : BaseEntity
 {
     public int UserId { get; init; }
-    public string Token { get; init; } = null!;
+    public string Token { get; init; }
     public DateTime ExpiresAt { get; init; }
     public bool IsRevoked { get; private set; }
 

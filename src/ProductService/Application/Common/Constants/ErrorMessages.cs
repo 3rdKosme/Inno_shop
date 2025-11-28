@@ -13,7 +13,6 @@ public static class ErrorMessages
     public const string DescriptionMustNotExceed = "aa";
     public const string PriceIsRequired = "cb";
     public const string PriceMustBePositive = "cc";
-    public const string UserIdIsRequired = "cd";
     public const string IdIsRequired = "cf";
     public const string IdMustBePositive = "ce";
     public const string ProductNotFound = "cg";
