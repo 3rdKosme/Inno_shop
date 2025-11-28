@@ -6,7 +6,7 @@ using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.User;
+namespace Inno_Shop.UserService.IntegrationTests.User;
 
 public class ActivateUserTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
 {

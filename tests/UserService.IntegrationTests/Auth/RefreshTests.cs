@@ -5,7 +5,7 @@ using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.Auth;
+namespace Inno_Shop.UserService.IntegrationTests.Auth;
 
 public class RefreshTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
 {

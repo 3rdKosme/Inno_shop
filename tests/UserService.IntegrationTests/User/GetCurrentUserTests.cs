@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.User;
+namespace Inno_Shop.UserService.IntegrationTests.User;
 
 public class GetCurrentUserTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
 {

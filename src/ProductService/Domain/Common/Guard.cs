@@ -19,7 +19,7 @@ public static class Guard
     {
         if (value is null)
             throw new DomainArgumentException(ErrorMessages.DomainArgumentNull(parameterName));
-        if (value < T.Zero)
+        if (value <= T.Zero)
             throw new DomainArgumentException(ErrorMessages.DomainArgumentNegative(parameterName));
     }
 }

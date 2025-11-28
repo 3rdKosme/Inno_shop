@@ -4,7 +4,7 @@ using System.Text.Json;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.Auth;
+namespace Inno_Shop.UserService.IntegrationTests.Auth;
 
 public class SendPasswordResetCodeTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
 {
