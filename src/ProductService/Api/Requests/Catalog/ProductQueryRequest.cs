@@ -1,4 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
 using Inno_Shop.ProductService.Application.Products.Queries.GetProducts;
 
 namespace Inno_Shop.ProductService.Api.Requests.Catalog;
@@ -13,7 +12,7 @@ public record ProductQueryRequest(
     int Page = 1,
     int PageSize = 20)
 {
-    public GetProductsQuery ToQuery() => new GetProductsQuery(Search: Search, MaxPrice: MaxPrice, 
+    public GetProductsQuery ToQuery() => new (Search: Search, MaxPrice: MaxPrice, 
         MinPrice: MinPrice, IsAvailable: IsAvailable, UserId: UserId, Sort: Sort, 
         Page: Page, PageSize: PageSize);
 }

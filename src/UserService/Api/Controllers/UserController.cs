@@ -9,23 +9,23 @@ namespace Inno_Shop.UserService.Api.Controllers;
 
 [Authorize]
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/me")]
 public class UserController(IMediator mediator) : ControllerBase
 {
-    [HttpGet("me")]
+    [HttpGet]
     public async Task<IActionResult> GetCurrentUser(CancellationToken cancellationToken)
     {
         var userDto = await mediator.Send(new GetCurrentUserQuery(), cancellationToken);
         return Ok(userDto);
     }
 
-    [HttpPut("me")]
+    [HttpPut]
     public async Task<ActionResult> UpdateUser([FromBody] UpdateUserRequest request, CancellationToken cancellationToken)
     {
         return Ok(await mediator.Send(request.ToCommand(), cancellationToken));
     }
 
-    [HttpPost("me/deactivate")]
+    [HttpPost("deactivate")]
     public async Task<ActionResult> DeactivateUser([FromBody] DeactivateUserRequest request, CancellationToken cancellationToken)
     {
         await mediator.Send(request.ToCommand(), cancellationToken);
@@ -33,7 +33,7 @@ public class UserController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("me/activate")]
+    [HttpPost("activate")]
     public async Task<ActionResult> ActivateUser([FromBody] ActivateUserRequest request, CancellationToken cancellationToken)
     {
         await mediator.Send(request.ToCommand(), cancellationToken);
@@ -41,7 +41,7 @@ public class UserController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("me/sendEmailConfirmationCode")]
+    [HttpPost("sendEmailConfirmationCode")]
     public async Task<ActionResult> SendEmailConfirmationCode(CancellationToken cancellationToken)
     {
         await mediator.Send(new SendEmailConfirmationCodeCommand(), cancellationToken);
@@ -49,7 +49,7 @@ public class UserController(IMediator mediator) : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("me/confirmEmail")]
+    [HttpPost("confirmEmail")]
     public async Task<ActionResult> ConfirmEmail([FromBody] ConfirmEmailRequest request, CancellationToken cancellationToken)
     {
         await mediator.Send(request.ToCommand(), cancellationToken);

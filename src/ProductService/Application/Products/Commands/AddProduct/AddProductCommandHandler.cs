@@ -1,7 +1,6 @@
 using Inno_Shop.ProductService.Application.Abstractions;
 using Inno_Shop.ProductService.Domain.Entities;
 using Inno_Shop.Shared.Application.Abstractions;
-using Inno_Shop.Shared.Application.Exceptions;
 using Inno_Shop.Shared.Application.Common.Constants;
 using MediatR;
 
@@ -12,7 +11,8 @@ public class AddProductCommandHandler(ICurrentUserService currentUserService, IP
 {
     public async Task<Unit> Handle(AddProductCommand request, CancellationToken cancellationToken)
     {
-        var userId = currentUserService.UserId ?? throw new UnauthorizedAccessException(ErrorMessages.UserNotFound);
+        var userId = currentUserService.UserId 
+                     ?? throw new UnauthorizedAccessException(ErrorMessages.UserNotFound);
         var product = new Product(request.Name, request.Description, userId, request.Price);
         await productRepository.AddProductAsync(product, cancellationToken);
         return Unit.Value;

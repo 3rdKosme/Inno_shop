@@ -1,8 +1,6 @@
 using Inno_Shop.UserService.Application.Abstractions;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -23,14 +21,14 @@ public class JwtTokenService(IOptions<JwtSettings> jwtSettings) : IJwtTokenServi
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Value.Key));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+        var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
             issuer: jwtSettings.Value.Issuer,
             audience: jwtSettings.Value.Audience,
             claims: claims,
             expires: DateTime.UtcNow.AddMinutes(jwtSettings.Value.ExpireMinutes),
-            signingCredentials: creds
+            signingCredentials: credentials
             );
 
         return new JwtSecurityTokenHandler().WriteToken(token);

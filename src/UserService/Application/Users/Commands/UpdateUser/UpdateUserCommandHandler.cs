@@ -22,7 +22,8 @@ public class UpdateUserCommandHandler(IUserRepository userRepository, IEmailServ
     {
         var userId = currentUserService.UserId ?? throw new UnauthorizedAccessException();
 
-        var user = await userRepository.GetByIdAsync(userId, cancellationToken) ?? throw new NotFoundException(ErrorMessages.UserNotFound);
+        var user = await userRepository.GetByIdAsync(userId, cancellationToken) 
+                   ?? throw new NotFoundException(ErrorMessages.UserNotFound);
 
         if(!passwordHasher.VerifyPassword(request.Password, user.PasswordHash))
         {

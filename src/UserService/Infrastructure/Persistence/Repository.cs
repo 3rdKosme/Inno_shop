@@ -1,6 +1,5 @@
 using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Application.Abstractions;
-using Microsoft.EntityFrameworkCore;
 
 namespace Inno_Shop.UserService.Infrastructure.Persistence;
 

@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Inno_Shop.ProductService.Api.Requests.Management;
-using Inno_Shop.ProductService.Application.Products.Commands.RecoverProduct;
-using Inno_Shop.ProductService.Application.Products.Commands.SoftDeleteProduct;
 
 namespace Inno_Shop.ProductService.Api.Controllers;
 

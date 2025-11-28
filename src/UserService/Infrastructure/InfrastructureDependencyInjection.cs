@@ -10,6 +10,7 @@ using Inno_Shop.Shared.Infrastructure.Services;
 using Inno_Shop.Shared.Application.Abstractions;
 using Inno_Shop.UserService.Infrastructure.Clients;
 using Inno_Shop.UserService.Infrastructure.Options;
+using Microsoft.Extensions.Hosting;
 
 namespace Inno_Shop.UserService.Infrastructure;
 
@@ -19,11 +20,15 @@ public static class InfrastructureDependencyInjection
     private const string SmtpSettingsSectionName = "SmtpSettings";
     private const string TokenGeneratorSettingsSectionName = "TokenGeneratorSettings";
     private const string ProductServiceSettingsSectionName = "ProductServiceSettings";
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration, IHostEnvironment? environment = null)
     {
-        
-        services.AddDbContext<AppDbContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString(ConnectionStringSectionName)));
+        if (environment?.EnvironmentName != "Testing")
+        {
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseNpgsql(configuration.GetConnectionString(ConnectionStringSectionName)));
+        }
+        // services.AddDbContext<AppDbContext>(options =>
+        //     options.UseNpgsql(configuration.GetConnectionString(ConnectionStringSectionName)));
         
         var productServiceSettings = configuration.GetSection(ProductServiceSettingsSectionName).Get<ProductServiceSettings>() 
                                      ?? throw new Exception("Product service settings not configured");

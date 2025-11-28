@@ -8,6 +8,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<RootNamespace>Inno_Shop.Shared.Infrastructure</RootNamespace>
+	<AssemblyName>Inno_Shop.Shared.Infrastructure</AssemblyName>
   </PropertyGroup>
 
 </Project>

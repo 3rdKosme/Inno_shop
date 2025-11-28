@@ -1,8 +1,6 @@
-using FluentValidation;
 using Inno_Shop.Shared.Application.Exceptions;
 using Inno_Shop.UserService.Application.Abstractions;
 using Inno_Shop.UserService.Application.Common.Constants;
-using Microsoft.Extensions.Options;
 using MediatR;
 using Inno_Shop.UserService.Application.Exceptions;
 using Inno_Shop.UserService.Domain.Common.Exceptions;
