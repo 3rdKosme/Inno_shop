@@ -119,7 +119,7 @@ public class RefreshTokenCommandHandlerTests
     [Fact]
     public async Task Handle_ShouldThrowUnauthorized_WhenTokenExpired()
     {
-        var stored = new RefreshToken(5, "old-refresh", DateTime.UtcNow.AddDays(-1)); // expired
+        var stored = new RefreshToken(5, "old-refresh", DateTime.UtcNow.AddDays(-1));
 
         _refreshTokenRepoMock
             .Setup(r => r.GetByTokenAsync("old-refresh", It.IsAny<CancellationToken>()))

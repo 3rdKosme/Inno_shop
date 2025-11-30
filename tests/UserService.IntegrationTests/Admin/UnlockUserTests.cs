@@ -13,10 +13,10 @@ public class UnlockUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("Adm1", "adm1@adm.com", "1");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var u = Inno_Shop.UserService.Domain.Entities.User.Create("lockX", "b@b.com", "c");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsLocked")!.SetValue(u, true);
+        var admin = Domain.Entities.User.Create("Adm1", "adm1@adm.com", "1");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var u = Domain.Entities.User.Create("lockX", "b@b.com", "c");
+        typeof(Domain.Entities.User).GetProperty("IsLocked")!.SetValue(u, true);
         db.Users.Add(admin);
         db.Users.Add(u);
         await db.SaveChangesAsync();
@@ -32,8 +32,8 @@ public class UnlockUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("Adm2", "adm2@adm.com", "2");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var admin = Domain.Entities.User.Create("Adm2", "adm2@adm.com", "2");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
         db.Users.Add(admin);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -48,9 +48,9 @@ public class UnlockUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var u1 = Inno_Shop.UserService.Domain.Entities.User.Create("U3", "u3@u.com", "r");
-        var u2 = Inno_Shop.UserService.Domain.Entities.User.Create("U2", "u2@u.com", "x");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsLocked")!.SetValue(u2, true);
+        var u1 = Domain.Entities.User.Create("U3", "u3@u.com", "r");
+        var u2 = Domain.Entities.User.Create("U2", "u2@u.com", "x");
+        typeof(Domain.Entities.User).GetProperty("IsLocked")!.SetValue(u2, true);
         db.Users.Add(u1);
         db.Users.Add(u2);
         await db.SaveChangesAsync();
@@ -66,10 +66,10 @@ public class UnlockUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("Adm4", "adm4@adm.com", "4");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var u = Inno_Shop.UserService.Domain.Entities.User.Create("NotLocked", "notLocked@b.com", "pw4");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsLocked")!.SetValue(u, false);
+        var admin = Domain.Entities.User.Create("Adm4", "adm4@adm.com", "4");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var u = Domain.Entities.User.Create("NotLocked", "notLocked@b.com", "pw4");
+        typeof(Domain.Entities.User).GetProperty("IsLocked")!.SetValue(u, false);
         db.Users.Add(admin);
         db.Users.Add(u);
         await db.SaveChangesAsync();

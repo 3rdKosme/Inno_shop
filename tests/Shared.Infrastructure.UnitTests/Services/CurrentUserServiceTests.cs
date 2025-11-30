@@ -139,7 +139,7 @@ public class CurrentUserServiceTests
     [Fact]
     public void Email_Should_Return_Null_When_HttpContext_Is_Null()
     {
-        _httpContextAccessorMock.Setup(a => a.HttpContext).Returns(default(HttpContext?));
+        _httpContextAccessorMock.Setup(a => a.HttpContext).Returns((HttpContext?)null);
 
         var sut = CreateService();
         

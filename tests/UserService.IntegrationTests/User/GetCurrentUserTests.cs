@@ -13,7 +13,7 @@ public class GetCurrentUserTests(CustomWebApplicationFactory factory) : IClassFi
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Test User", "testuser@mail.com", "hash");
+        var user = Domain.Entities.User.Create("Test User", "testuser@mail.com", "hash");
         db.Users.Add(user);
         await db.SaveChangesAsync();
 

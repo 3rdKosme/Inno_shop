@@ -15,7 +15,7 @@ public class ConfirmEmailTests(CustomWebApplicationFactory factory) : IClassFixt
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("T1", "te@te.com", "hhh");
+        var user = Domain.Entities.User.Create("T1", "te@te.com", "hhh");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var tokenStr = "valid-token";
@@ -36,7 +36,7 @@ public class ConfirmEmailTests(CustomWebApplicationFactory factory) : IClassFixt
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("T2", "t2@t2.com", "hash");
+        var user = Domain.Entities.User.Create("T2", "t2@t2.com", "hash");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -53,7 +53,7 @@ public class ConfirmEmailTests(CustomWebApplicationFactory factory) : IClassFixt
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("V2", "v@v.com", "a");
+        var user = Domain.Entities.User.Create("V2", "v@v.com", "a");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var tokenStr = "expired-token";
@@ -92,8 +92,8 @@ public class ConfirmEmailTests(CustomWebApplicationFactory factory) : IClassFixt
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("A", "a@a.com", "x");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsEmailConfirmed")!.SetValue(user, true);
+        var user = Domain.Entities.User.Create("A", "a@a.com", "x");
+        typeof(Domain.Entities.User).GetProperty("IsEmailConfirmed")!.SetValue(user, true);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var tokenStr = "confirmed-token";

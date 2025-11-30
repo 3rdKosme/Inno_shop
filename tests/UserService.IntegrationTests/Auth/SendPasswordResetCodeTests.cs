@@ -6,14 +6,15 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Inno_Shop.UserService.IntegrationTests.Auth;
 
-public class SendPasswordResetCodeTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
+public class SendPasswordResetCodeTests(CustomWebApplicationFactory factory)
+    : IClassFixture<CustomWebApplicationFactory>
 {
     [Fact]
     public async Task ForgotPassword_SendsEmail_OnValidEmail()
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Any", "forgot@auth.com", "hhh");
+        var user = Domain.Entities.User.Create("Any", "forgot@auth.com", "hhh");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();

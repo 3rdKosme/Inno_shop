@@ -18,7 +18,7 @@ public class DeactivateUserTests(CustomWebApplicationFactory factory) : IClassFi
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "pass123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Active", "active@user.com", passwordHash);
+        var user = Domain.Entities.User.Create("Active", "active@user.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -44,7 +44,7 @@ public class DeactivateUserTests(CustomWebApplicationFactory factory) : IClassFi
     {
         var client = factory.CreateClient();
         client.DefaultRequestHeaders.Authorization =
-            new AuthenticationHeaderValue("Bearer", "test-jwt-token-for-9999999-role-User"); // несуществующий id
+            new AuthenticationHeaderValue("Bearer", "test-jwt-token-for-9999999-role-User");
         var req = new { Password = "aPw123456" };
         var res = await client.PostAsync("/api/user/me/deactivate",
             new StringContent(JsonSerializer.Serialize(req), Encoding.UTF8, "application/json"));
@@ -59,7 +59,7 @@ public class DeactivateUserTests(CustomWebApplicationFactory factory) : IClassFi
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var correctPassword = "pwdpass123";
         var passwordHash = passwordHasher.HashPassword(correctPassword);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("ToPwd", "d@u.com", passwordHash);
+        var user = Domain.Entities.User.Create("ToPwd", "d@u.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -79,8 +79,8 @@ public class DeactivateUserTests(CustomWebApplicationFactory factory) : IClassFi
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "zz123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Xxx", "a@b.com", passwordHash);
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, false);
+        var user = Domain.Entities.User.Create("Xxx", "a@b.com", passwordHash);
+        typeof(Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, false);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();

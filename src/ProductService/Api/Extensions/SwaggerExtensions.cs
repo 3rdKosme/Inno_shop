@@ -9,7 +9,7 @@ public static class SwaggerExtensions
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new() { Title = "UserService API", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "UserService API", Version = "v1" });
 
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
@@ -20,7 +20,7 @@ public static class SwaggerExtensions
                 In = ParameterLocation.Header,
                 Description = "Example: Bearer {token}"
             });
-            c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {
                     new OpenApiSecurityScheme
@@ -29,7 +29,7 @@ public static class SwaggerExtensions
                         {
                             Type = ReferenceType.SecurityScheme,
                             Id = "Bearer"
-                        },
+                        }
                     },
                     new List<string>()
                 }

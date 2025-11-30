@@ -13,10 +13,10 @@ public class PromoteToAdminTests(CustomWebApplicationFactory factory) : IClassFi
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("PA1", "pa@a.com", "1");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var u = Inno_Shop.UserService.Domain.Entities.User.Create("MakeAdmin", "m@m.com", "p");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(u, UserRole.User);
+        var admin = Domain.Entities.User.Create("PA1", "pa@a.com", "1");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var u = Domain.Entities.User.Create("MakeAdmin", "m@m.com", "p");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(u, UserRole.User);
         db.Users.Add(admin);
         db.Users.Add(u);
         await db.SaveChangesAsync();
@@ -32,8 +32,8 @@ public class PromoteToAdminTests(CustomWebApplicationFactory factory) : IClassFi
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("PA2", "pa2@a.com", "2");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var admin = Domain.Entities.User.Create("PA2", "pa2@a.com", "2");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
         db.Users.Add(admin);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -48,8 +48,8 @@ public class PromoteToAdminTests(CustomWebApplicationFactory factory) : IClassFi
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user1 = Inno_Shop.UserService.Domain.Entities.User.Create("Y1", "y1@y.com", "r");
-        var user2 = Inno_Shop.UserService.Domain.Entities.User.Create("YY", "yy@y.com", "s");
+        var user1 = Domain.Entities.User.Create("Y1", "y1@y.com", "r");
+        var user2 = Domain.Entities.User.Create("YY", "yy@y.com", "s");
         db.Users.Add(user1);
         db.Users.Add(user2);
         await db.SaveChangesAsync();
@@ -65,10 +65,10 @@ public class PromoteToAdminTests(CustomWebApplicationFactory factory) : IClassFi
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("A1", "a1@a.com", "p");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var u = Inno_Shop.UserService.Domain.Entities.User.Create("ADM", "adm@b.com", "w");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(u, UserRole.Admin);
+        var admin = Domain.Entities.User.Create("A1", "a1@a.com", "p");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var u = Domain.Entities.User.Create("ADM", "adm@b.com", "w");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(u, UserRole.Admin);
         db.Users.Add(admin);
         db.Users.Add(u);
         await db.SaveChangesAsync();

@@ -2,7 +2,6 @@
 using Moq;
 using Inno_Shop.ProductService.Application.Abstractions;
 using Inno_Shop.ProductService.Application.Products.Queries.GetProductById;
-using Inno_Shop.ProductService.Application.DTOs;
 using Inno_Shop.ProductService.Domain.Entities;
 using Inno_Shop.Shared.Application.Exceptions;
 

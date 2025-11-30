@@ -13,7 +13,7 @@ public class ResetPasswordTests(CustomWebApplicationFactory factory) : IClassFix
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("HasReset", "reset@do.com", "old");
+        var user = Domain.Entities.User.Create("HasReset", "reset@do.com", "old");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var tokenStr = "valid-reset-token";

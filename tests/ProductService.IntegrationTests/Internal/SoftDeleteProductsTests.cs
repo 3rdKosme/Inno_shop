@@ -31,9 +31,9 @@ public class SoftDeleteProductsTests(CustomWebApplicationFactory factory) : ICla
         var deleted2 = await db2.Products.FindAsync(product2.Id);
         var notDeleted = await db2.Products.FindAsync(product3.Id);
 
-        Assert.True(deleted1.IsDeleted);
-        Assert.True(deleted2.IsDeleted);
-        Assert.False(notDeleted.IsDeleted);
+        Assert.True(deleted1?.IsDeleted);
+        Assert.True(deleted2?.IsDeleted);
+        Assert.False(notDeleted?.IsDeleted);
 
     }
 

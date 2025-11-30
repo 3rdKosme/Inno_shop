@@ -14,7 +14,7 @@ public class RefreshTests(CustomWebApplicationFactory factory) : IClassFixture<C
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Name1", "r@t.com", "pw1");
+        var user = Domain.Entities.User.Create("Name1", "r@t.com", "pw1");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var refreshToken = new RefreshToken(user.Id, "real-refresh-token", DateTime.UtcNow.AddDays(1));

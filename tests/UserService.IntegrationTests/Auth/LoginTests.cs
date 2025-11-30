@@ -17,7 +17,7 @@ public class LoginTests(CustomWebApplicationFactory factory) : IClassFixture<Cus
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "password123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("U", "u@a.com", passwordHash);
+        var user = Domain.Entities.User.Create("U", "u@a.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -35,7 +35,7 @@ public class LoginTests(CustomWebApplicationFactory factory) : IClassFixture<Cus
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var correctPassword = "correctpass";
         var passwordHash = passwordHasher.HashPassword(correctPassword);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("U", "qqq@a.com", passwordHash);
+        var user = Domain.Entities.User.Create("U", "qqq@a.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();

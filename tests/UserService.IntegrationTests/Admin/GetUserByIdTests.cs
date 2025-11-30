@@ -13,9 +13,9 @@ public class GetUserByIdTests(CustomWebApplicationFactory factory) : IClassFixtu
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("A1", "admin@ad.com", "y");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Normal", "any@b.com", "pa");
+        var admin = Domain.Entities.User.Create("A1", "admin@ad.com", "y");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var user = Domain.Entities.User.Create("Normal", "any@b.com", "pa");
         db.Users.Add(admin);
         db.Users.Add(user);
         await db.SaveChangesAsync();
@@ -31,8 +31,8 @@ public class GetUserByIdTests(CustomWebApplicationFactory factory) : IClassFixtu
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("A1", "admin2@ad.com", "y");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var admin = Domain.Entities.User.Create("A1", "admin2@ad.com", "y");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
         db.Users.Add(admin);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -47,7 +47,7 @@ public class GetUserByIdTests(CustomWebApplicationFactory factory) : IClassFixtu
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("U", "u@us.com", "u");
+        var user = Domain.Entities.User.Create("U", "u@us.com", "u");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();

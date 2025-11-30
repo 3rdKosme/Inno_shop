@@ -1,6 +1,4 @@
-using System.Security.Cryptography.X509Certificates;
 using Inno_Shop.ProductService.Application.Products.Commands.AddProduct;
-using Inno_Shop.ProductService.Application.Products.Queries.GetProducts;
 
 namespace Inno_Shop.ProductService.Api.Requests.Management;
 
