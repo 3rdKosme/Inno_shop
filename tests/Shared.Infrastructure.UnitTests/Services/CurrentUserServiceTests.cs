@@ -142,11 +142,9 @@ public class CurrentUserServiceTests
         _httpContextAccessorMock.Setup(a => a.HttpContext).Returns(default(HttpContext?));
 
         var sut = CreateService();
-
-        // Act
+        
         var result = sut.Email;
-
-        // Assert
+        
         result.Should().BeNull();
     }
 }

@@ -3,6 +3,7 @@ using Moq;
 using MediatR;
 using Inno_Shop.ProductService.Application.Products.Commands.RecoverProduct;
 using Inno_Shop.ProductService.Application.Abstractions;
+using Inno_Shop.ProductService.Application.Common.Exceptions;
 using Inno_Shop.ProductService.Domain.Entities;
 using Inno_Shop.ProductService.Domain.Common.Exceptions;
 
@@ -67,7 +68,7 @@ namespace Inno_Shop.ProductService.Application.UnitTests.Products.Commands
             Func<Task> act = async () => await _handler.Handle(command, CancellationToken.None);
 
             await act.Should()
-                .ThrowAsync<AlreadyDoneException>();
+                .ThrowAsync<BusinessRuleValidationException>();
 
             _repositoryMock.Verify(
                 r => r.UpdateProductAsync(It.IsAny<Product>(), It.IsAny<CancellationToken>()),
