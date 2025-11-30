@@ -6,7 +6,7 @@ using Inno_Shop.ProductService.Api.Extensions;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationServices()
-    .AddInfrastructure(builder.Configuration)
+    .AddInfrastructure(builder.Configuration, builder.Environment)
     .AddApi(builder.Configuration);
 
 var app = builder.Build();
@@ -14,7 +14,14 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseApi();
-app.ApplyMigration();
+if (!app.Environment.IsEnvironment("Testing"))
+{
+    app.ApplyMigration();
+}
 app.MapControllers();
 
 app.Run();
+
+public partial class Program
+{
+}

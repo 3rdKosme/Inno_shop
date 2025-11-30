@@ -1,15 +1,15 @@
-using Inno_Shop.UserService.Application.Abstractions;
-using Inno_Shop.UserService.Infrastructure.Persistence;
+using Inno_Shop.ProductService.Infrastructure.Options;
+using Inno_Shop.ProductService.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Moq;
+using Microsoft.AspNetCore.TestHost;
+using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Inno_Shop.UserService.IntegrationTests;
+namespace Inno_Shop.ProductService.IntegrationTests;
 
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
@@ -20,17 +20,21 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
         {
             services.RemoveAll<DbContextOptions<AppDbContext>>();
             services.RemoveAll<AppDbContext>();
-            services.AddDbContext<AppDbContext>((sp, options) => options.UseInMemoryDatabase("TestDb"));
+            var root = new InMemoryDatabaseRoot();
 
-            services.RemoveAll<IEmailService>();
-            var emailServiceMock = new Mock<IEmailService>();
-            services.AddSingleton(emailServiceMock.Object);
-            services.RemoveAll<IProductServiceClient>();
-            var productServiceMock = new Mock<IProductServiceClient>();
-            services.AddSingleton(productServiceMock.Object);
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseInMemoryDatabase("TestProductDb", root);
+            });
             
+            services.Configure<ProductServiceOptions>(options =>
+            {
+                options.HeaderName = "ProductServiceKey";
+                options.ServiceKey = "test-service-key";
+            });
+
             services.AddAuthentication("Test")
-                .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>("Test", options => { });
+                .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>("Test", null);
             services.AddScoped<TestAuthHandler>();
             services.PostConfigureAll<AuthenticationOptions>(options =>
             {
@@ -41,3 +45,6 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
         });
     }
 }
+
+
+

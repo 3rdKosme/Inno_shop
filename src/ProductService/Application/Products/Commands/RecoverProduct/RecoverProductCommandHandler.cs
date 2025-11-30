@@ -1,4 +1,6 @@
 ﻿using Inno_Shop.ProductService.Application.Abstractions;
+using Inno_Shop.ProductService.Application.Common.Exceptions;
+using Inno_Shop.ProductService.Domain.Common.Exceptions;
 using MediatR;
 
 namespace Inno_Shop.ProductService.Application.Products.Commands.RecoverProduct;
@@ -12,8 +14,15 @@ public class RecoverProductCommandHandler(IProductRepository productRepository)
 
         foreach (var product in products)
         {
-            product.Recover();
-            await productRepository.UpdateProductAsync(product, cancellationToken);
+            try
+            {
+                product.Recover();
+                await productRepository.UpdateProductAsync(product, cancellationToken);
+            }
+            catch (AlreadyDoneException ex)
+            {
+                throw new BusinessRuleValidationException(ex.Message);
+            }
         }
         
         return Unit.Value;

@@ -5,10 +5,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <RootNamespace>Inno_Shop.ProductService.Domain.UnitTests</RootNamespace>
+    <AssemblyName>Inno_Shop.ProductService.Domain.UnitTests</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="FluentAssertions" Version="8.8.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
     <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
@@ -17,9 +20,8 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
-
+    
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ProductService\Application\ProductService.Application.csproj" />
     <ProjectReference Include="..\..\src\ProductService\Domain\ProductService.Domain.csproj" />
   </ItemGroup>
 

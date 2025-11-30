@@ -6,7 +6,7 @@ using Inno_Shop.UserService.Domain.Entities;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.User;
+namespace Inno_Shop.UserService.IntegrationTests.User;
 
 public class ConfirmEmailTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
 {
@@ -29,7 +29,6 @@ public class ConfirmEmailTests(CustomWebApplicationFactory factory) : IClassFixt
         var res = await client.PostAsync("/api/user/me/confirmEmail",
             new StringContent(JsonSerializer.Serialize(req), Encoding.UTF8, "application/json"));
         Assert.True(res.IsSuccessStatusCode);
-        // можно дополнительно проверить что EmailConfirmed стал true
     }
 
     [Fact]

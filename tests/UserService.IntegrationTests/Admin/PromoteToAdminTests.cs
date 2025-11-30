@@ -4,7 +4,7 @@ using Inno_Shop.UserService.Domain.Enums;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.Admin;
+namespace Inno_Shop.UserService.IntegrationTests.Admin;
 
 public class PromoteToAdminTests(CustomWebApplicationFactory factory) : IClassFixture<CustomWebApplicationFactory>
 {

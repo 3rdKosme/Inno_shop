@@ -1,4 +1,6 @@
 ﻿using Inno_Shop.ProductService.Application.Abstractions;
+using Inno_Shop.ProductService.Application.Common.Exceptions;
+using Inno_Shop.ProductService.Domain.Common.Exceptions;
 using MediatR;
 
 namespace Inno_Shop.ProductService.Application.Products.Commands.SoftDeleteProduct;
@@ -12,8 +14,15 @@ public class SoftDeleteProductCommandHandler(IProductRepository productRepositor
 
         foreach (var product in products)
         {
-            product.Delete();
-            await productRepository.UpdateProductAsync(product, cancellationToken);
+            try
+            {
+                product.Delete();
+                await productRepository.UpdateProductAsync(product, cancellationToken);
+            }
+            catch (AlreadyDoneException ex)
+            {
+                throw new BusinessRuleValidationException(ex.Message);
+            }
         }
         
         return Unit.Value;

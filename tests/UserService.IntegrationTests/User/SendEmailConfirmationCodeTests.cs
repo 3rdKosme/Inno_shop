@@ -3,7 +3,7 @@ using System.Net.Http.Headers;
 using Inno_Shop.UserService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace UserService.IntegrationTests.User;
+namespace Inno_Shop.UserService.IntegrationTests.User;
 
 public class SendEmailConfirmationCodeTests(CustomWebApplicationFactory factory)
     : IClassFixture<CustomWebApplicationFactory>
@@ -37,7 +37,7 @@ public class SendEmailConfirmationCodeTests(CustomWebApplicationFactory factory)
         var client = factory.CreateClient();
         client.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue("Bearer",
-                "test-jwt-token-for-55555-email-test@example.com");
+                "test-jwt-token-for-55555-email-tt@example.com");
         var res = await client.PostAsync("/api/user/me/sendEmailConfirmationCode", null);
         Assert.Equal(HttpStatusCode.NotFound, res.StatusCode);
     }
