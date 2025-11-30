@@ -3,4 +3,4 @@ using Inno_Shop.UserService.Application.Abstractions;
 
 namespace Inno_Shop.UserService.Infrastructure.Persistence;
 
-public class PasswordResetTokenRepository(AppDbContext context) : TokenRepository<PasswordResetToken>(context), IPasswordResetTokenRepository { }
+public class PasswordResetTokenRepository(AppDbContext context) : TokenRepository<PasswordResetToken>(context), IPasswordResetTokenRepository;

@@ -5,7 +5,6 @@ using Inno_Shop.ProductService.Application.Products.Commands.RecoverProduct;
 using Inno_Shop.ProductService.Application.Abstractions;
 using Inno_Shop.ProductService.Application.Common.Exceptions;
 using Inno_Shop.ProductService.Domain.Entities;
-using Inno_Shop.ProductService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.ProductService.Application.UnitTests.Products.Commands
 {

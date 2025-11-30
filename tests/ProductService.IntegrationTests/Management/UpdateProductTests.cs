@@ -22,7 +22,7 @@ public class UpdateProductTests(CustomWebApplicationFactory factory) : IClassFix
         var client = factory.CreateClient();
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "test-jwt-token-for-1-role-User");
         
-        var request = new { Id = product.Id, Name = "Updated", Description = "UpdatedDesc", Price = (double?)150.0 };
+        var request = new { product.Id, Name = "Updated", Description = "UpdatedDesc", Price = (double?)150.0 };
         var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
         
         var response = await client.PutAsync("/api/management", content);
@@ -47,7 +47,7 @@ public class UpdateProductTests(CustomWebApplicationFactory factory) : IClassFix
         await db.SaveChangesAsync();
 
         var client = factory.CreateClient();
-        var request = new { Id = product.Id, Name = "Updated" };
+        var request = new { product.Id, Name = "Updated" };
         var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
         
         var response = await client.PutAsync("/api/management", content);
@@ -79,7 +79,7 @@ public class UpdateProductTests(CustomWebApplicationFactory factory) : IClassFix
         var client = factory.CreateClient();
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "test-jwt-token-for-2-role-User");
         
-        var request = new { Id = product.Id, Name = "Updated" };
+        var request = new { product.Id, Name = "Updated" };
         var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
         
         var response = await client.PutAsync("/api/management", content);
@@ -98,7 +98,7 @@ public class UpdateProductTests(CustomWebApplicationFactory factory) : IClassFix
         var client = factory.CreateClient();
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "test-jwt-token-for-1-role-User");
         
-        var request = new { Id = product.Id, IsAvailable = false };
+        var request = new { product.Id, IsAvailable = false };
         var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
         
         var response = await client.PutAsync("/api/management", content);
@@ -126,7 +126,7 @@ public class UpdateProductTests(CustomWebApplicationFactory factory) : IClassFix
         var client = factory.CreateClient();
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "test-jwt-token-for-1-role-User");
         
-        var request = new { Id = product.Id, IsAvailable = false };
+        var request = new { product.Id, IsAvailable = false };
         var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
         
         var response = await client.PutAsync("/api/management", content);

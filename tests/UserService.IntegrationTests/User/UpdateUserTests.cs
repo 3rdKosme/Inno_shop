@@ -18,7 +18,7 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "validpass123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Main", "main@user.com", passwordHash);
+        var user = Domain.Entities.User.Create("Main", "main@user.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -59,7 +59,7 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var correctPassword = "realpass123";
         var passwordHash = passwordHasher.HashPassword(correctPassword);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Name", "em@fail.com", passwordHash);
+        var user = Domain.Entities.User.Create("Name", "em@fail.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -79,7 +79,7 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "pw1234567";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("NotEmpty", "bus@email.com", passwordHash);
+        var user = Domain.Entities.User.Create("NotEmpty", "bus@email.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -101,8 +101,8 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
         var password2 = "p2pass123";
         var passwordHash1 = passwordHasher.HashPassword(password1);
         var passwordHash2 = passwordHasher.HashPassword(password2);
-        var user1 = Inno_Shop.UserService.Domain.Entities.User.Create("1", "exist@email.com", passwordHash1);
-        var user2 = Inno_Shop.UserService.Domain.Entities.User.Create("2", "other@email.com", passwordHash2);
+        var user1 = Domain.Entities.User.Create("1", "exist@email.com", passwordHash1);
+        var user2 = Domain.Entities.User.Create("2", "other@email.com", passwordHash2);
         db.Users.Add(user1);
         db.Users.Add(user2);
         await db.SaveChangesAsync();
@@ -123,7 +123,7 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "pass123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Email", "emf@err.com", passwordHash);
+        var user = Domain.Entities.User.Create("Email", "emf@err.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -143,7 +143,7 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "pwd123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Some", "some@email.com", passwordHash);
+        var user = Domain.Entities.User.Create("Some", "some@email.com", passwordHash);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();

@@ -4,5 +4,5 @@ namespace Inno_Shop.UserService.Api.Requests.Auth;
 
 public record LoginRequest(string Email, string Password)
 {
-    public LoginCommand ToCommand() => new LoginCommand(Email, Password);
+    public LoginCommand ToCommand() => new (Email, Password);
 }

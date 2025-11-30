@@ -1,5 +1,4 @@
 using System.Net;
-using System.Text.Json;
 using Inno_Shop.ProductService.Domain.Entities;
 using Inno_Shop.ProductService.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;

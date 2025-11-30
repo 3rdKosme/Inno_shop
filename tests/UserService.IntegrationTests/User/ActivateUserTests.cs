@@ -18,8 +18,8 @@ public class ActivateUserTests(CustomWebApplicationFactory factory) : IClassFixt
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "p123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("zzz", "z@z.com", passwordHash);
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, false);
+        var user = Domain.Entities.User.Create("zzz", "z@z.com", passwordHash);
+        typeof(Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, false);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -60,8 +60,8 @@ public class ActivateUserTests(CustomWebApplicationFactory factory) : IClassFixt
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var correctPassword = "secret123";
         var passwordHash = passwordHasher.HashPassword(correctPassword);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("Test", "t1@t.com", passwordHash);
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, false);
+        var user = Domain.Entities.User.Create("Test", "t1@t.com", passwordHash);
+        typeof(Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, false);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -81,8 +81,8 @@ public class ActivateUserTests(CustomWebApplicationFactory factory) : IClassFixt
         var passwordHasher = scope.ServiceProvider.GetRequiredService<IPasswordHasher>();
         var password = "ha123";
         var passwordHash = passwordHasher.HashPassword(password);
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("N", "n@x.com", passwordHash);
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, true);
+        var user = Domain.Entities.User.Create("N", "n@x.com", passwordHash);
+        typeof(Domain.Entities.User).GetProperty("IsActive")!.SetValue(user, true);
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();

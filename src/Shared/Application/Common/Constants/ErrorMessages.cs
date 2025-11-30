@@ -2,5 +2,5 @@
 
 public static class ErrorMessages
 {
-    public const string UserNotFound = "a111";
+    public const string UserNotFound = "Пользователь не найден.";
 }

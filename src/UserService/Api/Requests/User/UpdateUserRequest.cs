@@ -9,5 +9,5 @@ public record UpdateUserRequest(
     string? NewPassword)
 {
     public UpdateUserCommand  ToCommand() => 
-        new UpdateUserCommand(Password, Name, Email, NewPassword);
+        new (Password, Name, Email, NewPassword);
 }

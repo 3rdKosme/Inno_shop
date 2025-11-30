@@ -5,5 +5,5 @@ namespace Inno_Shop.UserService.Api.Requests.Auth;
 public record ResetPasswordRequest(string Token, string NewPassword)
 {
     public ResetPasswordCommand ToCommand() => 
-        new ResetPasswordCommand(Token, NewPassword);
+        new (Token, NewPassword);
 }

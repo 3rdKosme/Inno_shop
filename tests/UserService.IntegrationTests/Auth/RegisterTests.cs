@@ -23,7 +23,7 @@ public class RegisterTests(CustomWebApplicationFactory factory) : IClassFixture<
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        db.Users.Add(Inno_Shop.UserService.Domain.Entities.User.Create("Exist", "z@z.com", "pass"));
+        db.Users.Add(Domain.Entities.User.Create("Exist", "z@z.com", "pass"));
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
         var req = new { Name = "T", Email = "z@z.com", Password = "ValidPass123" };

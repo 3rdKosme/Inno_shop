@@ -15,9 +15,9 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("AdminU", "ad@a.com", "pw");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var u = Inno_Shop.UserService.Domain.Entities.User.Create("ToUpd", "to@up.com", "w");
+        var admin = Domain.Entities.User.Create("AdminU", "ad@a.com", "pw");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var u = Domain.Entities.User.Create("ToUpd", "to@up.com", "w");
         db.Users.Add(admin);
         db.Users.Add(u);
         await db.SaveChangesAsync();
@@ -35,8 +35,8 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("X1", "x@ad.com", "z");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var admin = Domain.Entities.User.Create("X1", "x@ad.com", "z");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
         db.Users.Add(admin);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -53,7 +53,7 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var u1 = Inno_Shop.UserService.Domain.Entities.User.Create("NN", "nn@u.com", "p");
+        var u1 = Domain.Entities.User.Create("NN", "nn@u.com", "p");
         db.Users.Add(u1);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
@@ -70,9 +70,9 @@ public class UpdateUserTests(CustomWebApplicationFactory factory) : IClassFixtur
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var admin = Inno_Shop.UserService.Domain.Entities.User.Create("BNN", "b@ad.com", "sdfg");
-        typeof(Inno_Shop.UserService.Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
-        var u = Inno_Shop.UserService.Domain.Entities.User.Create("ToUpd2", "to2@up.com", "1");
+        var admin = Domain.Entities.User.Create("BNN", "b@ad.com", "sdfg");
+        typeof(Domain.Entities.User).GetProperty("UserRole")!.SetValue(admin, UserRole.Admin);
+        var u = Domain.Entities.User.Create("ToUpd2", "to2@up.com", "1");
         db.Users.Add(admin);
         db.Users.Add(u);
         await db.SaveChangesAsync();

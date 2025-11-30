@@ -27,7 +27,7 @@ public class ConfirmEmailCommandHandlerTests
             "hash123");
     }
 
-    private EmailConfirmationToken CreateToken(int userId, bool expired = false, bool revoked = false)
+    private static EmailConfirmationToken CreateToken(int userId, bool expired = false, bool revoked = false)
     {
         var token = new EmailConfirmationToken(
             userId,

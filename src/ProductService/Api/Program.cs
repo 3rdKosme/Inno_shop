@@ -14,10 +14,12 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseApi();
+
 if (!app.Environment.IsEnvironment("Testing"))
 {
     app.ApplyMigration();
 }
+
 app.MapControllers();
 
 app.Run();

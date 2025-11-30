@@ -4,7 +4,6 @@ using Inno_Shop.ProductService.Application.Abstractions;
 using Inno_Shop.ProductService.Application.Products.Commands.UpdateProductAdmin;
 using Inno_Shop.ProductService.Domain.Entities;
 using Inno_Shop.ProductService.Application.Common.Exceptions;
-using Inno_Shop.ProductService.Domain.Common.Exceptions;
 
 namespace Inno_Shop.ProductService.Application.UnitTests.Products.Commands
 {
@@ -66,9 +65,6 @@ namespace Inno_Shop.ProductService.Application.UnitTests.Products.Commands
         {
             var product = new Product("Old", "Desc", 5, 10);
 
-            // product.Setup(p => p.ChangeName(It.IsAny<string>()))
-            //        .Throws(new DomainArgumentException("Bad name"));
-
             var command = new UpdateProductAdminCommand(1, " ", null);
 
             _repositoryMock
@@ -108,9 +104,6 @@ namespace Inno_Shop.ProductService.Application.UnitTests.Products.Commands
         public async Task Handle_Should_Throw_When_Invalid_Description()
         {
             var product = new Product("Name", "OldDesc", 5, 10);
-
-            // product.Setup(p => p.ChangeDescription(It.IsAny<string>()))
-            //        .Throws(new DomainArgumentException("Bad description"));
 
             var command = new UpdateProductAdminCommand(1, null, " ");
 

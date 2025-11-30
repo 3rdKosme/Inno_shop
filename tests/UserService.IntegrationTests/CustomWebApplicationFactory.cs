@@ -28,7 +28,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
             services.RemoveAll<IProductServiceClient>();
             var productServiceMock = new Mock<IProductServiceClient>();
             services.AddSingleton(productServiceMock.Object);
-            
+
             services.AddAuthentication("Test")
                 .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>("Test", options => { });
             services.AddScoped<TestAuthHandler>();

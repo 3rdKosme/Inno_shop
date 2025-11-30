@@ -27,9 +27,7 @@ public static class InfrastructureDependencyInjection
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString(ConnectionStringSectionName)));
         }
-        // services.AddDbContext<AppDbContext>(options =>
-        //     options.UseNpgsql(configuration.GetConnectionString(ConnectionStringSectionName)));
-        
+
         var productServiceSettings = configuration.GetSection(ProductServiceSettingsSectionName).Get<ProductServiceSettings>() 
                                      ?? throw new Exception("Product service settings not configured");
 

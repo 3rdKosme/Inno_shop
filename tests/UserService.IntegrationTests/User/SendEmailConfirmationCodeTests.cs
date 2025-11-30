@@ -13,7 +13,7 @@ public class SendEmailConfirmationCodeTests(CustomWebApplicationFactory factory)
     {
         using var scope = factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        var user = Inno_Shop.UserService.Domain.Entities.User.Create("T", "test@example.com", "x");
+        var user = Domain.Entities.User.Create("T", "test@example.com", "x");
         db.Users.Add(user);
         await db.SaveChangesAsync();
         var client = factory.CreateClient();
